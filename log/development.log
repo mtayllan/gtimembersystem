@@ -40,3 +40,13 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 416ms (Views: 409.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-10 14:46:45 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/admin_lte_2
+  Rendered home/index.html.erb within layouts/admin_lte_2 (0.5ms)
+  Rendered layouts/_admin_lte_2_header.html.erb (0.3ms)
+  Rendered layouts/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 2721ms (Views: 2717.2ms | ActiveRecord: 0.0ms)
+
+
