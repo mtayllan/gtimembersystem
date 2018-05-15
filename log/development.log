@@ -50,3 +50,575 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 2721ms (Views: 2717.2ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (5014.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "gtimembersystem_development"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (120.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "gtimembersystem_development"[0m
+  [1m[35m (116.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "gtimembersystem_test"[0m
+  [1m[35m (321.4ms)[0m  [1m[35mCREATE DATABASE "gtimembersystem_development" ENCODING = 'unicode'[0m
+  [1m[35m (257.4ms)[0m  [1m[35mCREATE DATABASE "gtimembersystem_test" ENCODING = 'unicode'[0m
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1342058643005049270)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20180508180447)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180508180447"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateAdmins (20180508180451)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_email" ON "admins"  ("email")[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_reset_password_token" ON "admins"  ("reset_password_token")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180508180451"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddInfoToUser (20180515193147)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "birth_date" date[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "address" character varying[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "postal_code" character varying[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "city" character varying[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "gender" character varying[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "phone" character varying[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "photo" character varying[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "role" character varying[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193147"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProjects (20180515193351)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "name" character varying, "value" float, "description" text, "client" character varying, "start_date" date, "end_date" date, "expected_date" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193351"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEvents (20180515193420)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "date" date, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193420"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToAdmin (20180515193453)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "admins" ADD "name" character varying[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193453"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCashFlows (20180515193650)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "cash_flows" ("id" bigserial primary key, "description" character varying, "type" boolean, "value" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193650"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-15 19:59:06.928307"], ["updated_at", "2018-05-15 19:59:06.928307"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1342058643005049270)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "admin@admin.com"], ["encrypted_password", "$2a$11$x70XK3Bxr0j9F8W7TOv1VO0.45XmqC/e3rrFDwv3dDk1gyo0XyWbC"], ["created_at", "2018-05-15 19:59:07.095385"], ["updated_at", "2018-05-15 19:59:07.095385"], ["name", "Admin"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "marjory@bins.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "marjory@bins.net"], ["encrypted_password", "$2a$11$W7/nqyGDVeIKTm0./HSERuB44niH3cIggAy3aRTlgdGflsFvnhcD."], ["created_at", "2018-05-15 20:05:28.695987"], ["updated_at", "2018-05-15 20:05:28.695987"], ["name", "Kattie McClure"], ["birth_date", "1926-07-19"], ["address", "89193 Allie Bridge"], ["postal_code", "53798"], ["city", "East Vincenza"], ["phone", "385-902-4284"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "warren.dicki@wittingschmitt.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "warren.dicki@wittingschmitt.co"], ["encrypted_password", "$2a$11$hkup/Wh99PIgfQv0MzKZrOHwSQSkrjZe0ML0WMWF2kbbMVEpHTHEa"], ["created_at", "2018-05-15 20:05:28.807239"], ["updated_at", "2018-05-15 20:05:28.807239"], ["name", "Mr. Betsy Mitchell"], ["birth_date", "1964-09-25"], ["address", "861 Loren Dale"], ["postal_code", "43447"], ["city", "Khalidborough"], ["phone", "(104) 857-0819"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nyah@hayesbins.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "nyah@hayesbins.name"], ["encrypted_password", "$2a$11$z48fCHELlHv6DgHMOHY/PeNpGWs7TgAyG3OucZDaVxfwaEH9ICNAy"], ["created_at", "2018-05-15 20:05:28.917705"], ["updated_at", "2018-05-15 20:05:28.917705"], ["name", "Ms. Mike Runolfsdottir"], ["birth_date", "1953-02-01"], ["address", "1690 Ebert Throughway"], ["postal_code", "74301-2337"], ["city", "East Emorybury"], ["phone", "864-728-3780 x6697"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "francisco@legros.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "francisco@legros.co"], ["encrypted_password", "$2a$11$s3VoFpN2X9mbsfNrknwEceNd5KCgtiuI28CkdocEnELCNuuNdWQDK"], ["created_at", "2018-05-15 20:05:29.028336"], ["updated_at", "2018-05-15 20:05:29.028336"], ["name", "Isai Stroman III"], ["birth_date", "1925-10-02"], ["address", "16180 Max Views"], ["postal_code", "90255"], ["city", "Aleenhaven"], ["phone", "388.556.6919"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "roxanne@price.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "roxanne@price.com"], ["encrypted_password", "$2a$11$apP5VX2qg5EUWeib6vJMBeRslwezfyi10DhHRb87jDJXYvFgKzOJC"], ["created_at", "2018-05-15 20:05:29.138977"], ["updated_at", "2018-05-15 20:05:29.138977"], ["name", "Yvette Reynolds"], ["birth_date", "1990-10-27"], ["address", "932 Alejandra Plains"], ["postal_code", "91567-3680"], ["city", "North Easterview"], ["phone", "749.631.5857 x64849"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cordell_emmerich@huel.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "cordell_emmerich@huel.net"], ["encrypted_password", "$2a$11$UAREGIqLqyaZ9VB3HzsODeBd9jR5UVgScavnKg7GjSZ45VJAswvGi"], ["created_at", "2018-05-15 20:05:29.261622"], ["updated_at", "2018-05-15 20:05:29.261622"], ["name", "Larissa Turner"], ["birth_date", "2015-06-04"], ["address", "73543 Timmy Center"], ["postal_code", "48937-7845"], ["city", "Lake Juanitamouth"], ["phone", "(280) 352-6089 x012"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "henriette@steuber.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "henriette@steuber.org"], ["encrypted_password", "$2a$11$CSt/SuVNZtVqRfdT3z/Zf.k2w5mGhBvH9Tyg0U1CRBidDiATpPNKu"], ["created_at", "2018-05-15 20:05:29.372217"], ["updated_at", "2018-05-15 20:05:29.372217"], ["name", "Lloyd Grady"], ["birth_date", "1965-02-27"], ["address", "623 Toy Mills"], ["postal_code", "31083-5125"], ["city", "Jasperchester"], ["phone", "(534) 963-3192 x3089"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "judd_parisian@stroman.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "judd_parisian@stroman.info"], ["encrypted_password", "$2a$11$bNtMcHk.DOjUi.xGOYB0AufInbjHJ0c7I6krdw8dLCXe3CEXz8YV2"], ["created_at", "2018-05-15 20:05:29.482839"], ["updated_at", "2018-05-15 20:05:29.482839"], ["name", "Mazie Hauck"], ["birth_date", "2013-12-19"], ["address", "434 Jeremy Islands"], ["postal_code", "57186"], ["city", "Bergstromhaven"], ["phone", "(214) 821-8014"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "thurman@heathcote.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "thurman@heathcote.io"], ["encrypted_password", "$2a$11$DAW0XslSry9eBDXpEnycwuFcWCIgPDmtvBCPl4ZGJm3oGM4XLA1JO"], ["created_at", "2018-05-15 20:05:29.593359"], ["updated_at", "2018-05-15 20:05:29.593359"], ["name", "Jason Keeling I"], ["birth_date", "1935-08-08"], ["address", "8153 Jenkins Wall"], ["postal_code", "57055-0961"], ["city", "Gulgowskifurt"], ["phone", "1-491-692-0217"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "paige@simoniskreiger.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "paige@simoniskreiger.io"], ["encrypted_password", "$2a$11$Y21S0Fz4N0d62pXiaAnII.ZvhwMtBz5EKGsG.rrARpWhZWfj5.Ihu"], ["created_at", "2018-05-15 20:05:29.704230"], ["updated_at", "2018-05-15 20:05:29.704230"], ["name", "Kiarra Treutel"], ["birth_date", "1962-04-21"], ["address", "214 Durgan Ramp"], ["postal_code", "99550-4750"], ["city", "North Saul"], ["phone", "752-063-5324 x19191"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1342058643005049270)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(1342058643005049270)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1342058643005049270)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(1342058643005049270)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (119.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "gtimembersystem_development"[0m
+  [1m[35m (116.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "gtimembersystem_test"[0m
+  [1m[35m (255.6ms)[0m  [1m[35mCREATE DATABASE "gtimembersystem_development" ENCODING = 'unicode'[0m
+  [1m[35m (257.0ms)[0m  [1m[35mCREATE DATABASE "gtimembersystem_test" ENCODING = 'unicode'[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1342058643005049270)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20180508180447)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180508180447"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateAdmins (20180508180451)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_email" ON "admins"  ("email")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_reset_password_token" ON "admins"  ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180508180451"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddInfoToUser (20180515193147)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "birth_date" date[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "address" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "postal_code" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "city" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "gender" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "phone" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "photo" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "role" character varying[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193147"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProjects (20180515193351)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "name" character varying, "value" float, "description" text, "client" character varying, "start_date" date, "end_date" date, "expected_date" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193351"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEvents (20180515193420)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "date" date, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193420"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToAdmin (20180515193453)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "admins" ADD "name" character varying[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193453"]]
+  [1m[35m (9.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCashFlows (20180515193650)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.7ms)[0m  [1m[35mCREATE TABLE "cash_flows" ("id" bigserial primary key, "description" character varying, "type" boolean, "value" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193650"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-15 20:14:27.143823"], ["updated_at", "2018-05-15 20:14:27.143823"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1342058643005049270)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "admin@admin.com"], ["encrypted_password", "$2a$11$PbCpyJ0k76JOh0Gu4WJC1ugAKLBPEFhs4BbTUo/2MzpHIdnDfLNR2"], ["created_at", "2018-05-15 20:14:27.312869"], ["updated_at", "2018-05-15 20:14:27.312869"], ["name", "Admin"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "erin@bogankshlerin.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "erin@bogankshlerin.info"], ["encrypted_password", "$2a$11$7RZlg./MvZsy571toiReHeXixuMIIHCBo4GBkqti/.TYNfR6DKAs."], ["created_at", "2018-05-15 20:14:46.932179"], ["updated_at", "2018-05-15 20:14:46.932179"], ["name", "Dr. Ella Murazik"], ["birth_date", "2013-02-04"], ["address", "424 Cole Lane"], ["postal_code", "37675"], ["city", "Lake Ulices"], ["phone", "243.453.2015 x2842"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "frederick.shields@greenfelder.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "frederick.shields@greenfelder.biz"], ["encrypted_password", "$2a$11$I9W3uFM9dKackayJNG/7L.CIYqzXH7y6nBPtMEkWr/xup8jo.WlOS"], ["created_at", "2018-05-15 20:14:47.043559"], ["updated_at", "2018-05-15 20:14:47.043559"], ["name", "Mrs. Garret Erdman"], ["birth_date", "1946-05-16"], ["address", "681 Karelle Forest"], ["postal_code", "13644"], ["city", "New Eloisa"], ["phone", "680-688-4028 x999"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wilburn.farrell@turcotte.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "wilburn.farrell@turcotte.net"], ["encrypted_password", "$2a$11$rHmQIhf2ihHNg5VuJJHnYuyVohIF7L8ItMhag7zYRlmVskIfeZvPW"], ["created_at", "2018-05-15 20:14:47.154061"], ["updated_at", "2018-05-15 20:14:47.154061"], ["name", "Mateo Farrell"], ["birth_date", "1931-07-31"], ["address", "158 Sofia Grove"], ["postal_code", "16769"], ["city", "South Evansmouth"], ["phone", "(395) 771-4494 x18854"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "turner@stokes.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "turner@stokes.co"], ["encrypted_password", "$2a$11$J0ryITNcx.hjLq..1xe83uCR.pRZv1VmnuZq3w6dh.pMRrdu5TmjW"], ["created_at", "2018-05-15 20:14:47.264683"], ["updated_at", "2018-05-15 20:14:47.264683"], ["name", "Keshaun D'Amore Jr."], ["birth_date", "1997-12-27"], ["address", "896 Jordon Points"], ["postal_code", "10028"], ["city", "New Rosashire"], ["phone", "944.334.1428 x901"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "maudie@abbott.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "maudie@abbott.name"], ["encrypted_password", "$2a$11$eogzWW3P8Z6G.aRMbxd.gO/Eyvc1TCQLic1LKB6I3Ywg6iXVnbCk."], ["created_at", "2018-05-15 20:14:47.375041"], ["updated_at", "2018-05-15 20:14:47.375041"], ["name", "Vella Monahan PhD"], ["birth_date", "1945-08-02"], ["address", "1801 Vandervort Field"], ["postal_code", "70469"], ["city", "Homenickstad"], ["phone", "707-942-3432 x321"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "glennie@armstrong.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "glennie@armstrong.biz"], ["encrypted_password", "$2a$11$IPuddXFH5lWN03Gu0n7sEOYRR1yQTmdLITtgUDja7gU1K0ne1pUcO"], ["created_at", "2018-05-15 20:14:47.485546"], ["updated_at", "2018-05-15 20:14:47.485546"], ["name", "Ms. Merritt Satterfield"], ["birth_date", "1934-09-25"], ["address", "464 Delphia Creek"], ["postal_code", "91019-8112"], ["city", "Adrainview"], ["phone", "1-557-537-9085 x025"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "adrienne.abernathy@wilkinson.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "adrienne.abernathy@wilkinson.net"], ["encrypted_password", "$2a$11$gTAZumPTSynnN.R3ZtldoeBK8VRHQRv1NkpHJDOeVRuHZaPldCRSe"], ["created_at", "2018-05-15 20:14:47.597520"], ["updated_at", "2018-05-15 20:14:47.597520"], ["name", "Carolyn McGlynn"], ["birth_date", "2009-12-14"], ["address", "8504 Angelina Lane"], ["postal_code", "61601"], ["city", "Port Ariel"], ["phone", "(511) 743-0392"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "virginia_runte@keler.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "virginia_runte@keler.info"], ["encrypted_password", "$2a$11$GX4gxg9VctUB40ZQvG6CZeMwH.eK0P.LUc.aFzrkN8MQwPaQ4/AQq"], ["created_at", "2018-05-15 20:14:47.707242"], ["updated_at", "2018-05-15 20:14:47.707242"], ["name", "Hosea Roob"], ["birth_date", "1984-12-07"], ["address", "4192 Luciano Rest"], ["postal_code", "42944"], ["city", "Sauerview"], ["phone", "(579) 632-8467 x3517"]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "katlynn.rippin@mayert.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "katlynn.rippin@mayert.org"], ["encrypted_password", "$2a$11$3yXeL/x8r1gIAqV82Px45uTd6tyK/Jy4bM37ea465tkpqAQ9.unoS"], ["created_at", "2018-05-15 20:14:47.821387"], ["updated_at", "2018-05-15 20:14:47.821387"], ["name", "Dylan Raynor"], ["birth_date", "1960-03-26"], ["address", "5270 Hegmann Meadow"], ["postal_code", "52726"], ["city", "Brennanside"], ["phone", "1-302-663-2527"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sarina_carroll@hermiston.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "sarina_carroll@hermiston.org"], ["encrypted_password", "$2a$11$GBNawoFWJHuxgpKd874k7Ocg3OhXLUvgq06wokcL2qbsen3PGiWHK"], ["created_at", "2018-05-15 20:14:47.942403"], ["updated_at", "2018-05-15 20:14:47.942403"], ["name", "Zola Zboncak DVM"], ["birth_date", "1979-07-20"], ["address", "21628 Spinka Ways"], ["postal_code", "11681-9283"], ["city", "New Vergie"], ["phone", "(348) 299-3312 x29391"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1342058643005049270)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsersProjects (20180515202346)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "users_projects" ("id" bigserial primary key, "user_id" bigint, "project_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_8ed741bcea"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_45dda264fd"
+FOREIGN KEY ("project_id")
+  REFERENCES "projects" ("id")
+)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_users_projects_on_user_id" ON "users_projects"  ("user_id")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_users_projects_on_project_id" ON "users_projects"  ("project_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515202346"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsersEvents (20180515202417)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "users_events" ("id" bigserial primary key, "user_id" bigint, "event_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_3fe6b760ff"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_973e1aefd3"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_users_events_on_user_id" ON "users_events"  ("user_id")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_users_events_on_event_id" ON "users_events"  ("event_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515202417"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1342058643005049270)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1342058643005049270)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProjectUsers (20180515202841)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "project_users" ("id" bigserial primary key, "project_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_1bf16ed5d0"
+FOREIGN KEY ("project_id")
+  REFERENCES "projects" ("id")
+, CONSTRAINT "fk_rails_996d73fecd"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_project_users_on_project_id" ON "project_users"  ("project_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_project_users_on_user_id" ON "project_users"  ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515202841"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEventUsers (20180515202858)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "event_users" ("id" bigserial primary key, "event_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_55572bff4d"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+, CONSTRAINT "fk_rails_2fc76a96e7"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_event_users_on_event_id" ON "event_users"  ("event_id")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_event_users_on_user_id" ON "event_users"  ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515202858"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1342058643005049270)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (119.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "gtimembersystem_development"[0m
+  [1m[35m (118.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "gtimembersystem_test"[0m
+  [1m[35m (250.7ms)[0m  [1m[35mCREATE DATABASE "gtimembersystem_development" ENCODING = 'unicode'[0m
+  [1m[35m (253.6ms)[0m  [1m[35mCREATE DATABASE "gtimembersystem_test" ENCODING = 'unicode'[0m
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1342058643005049270)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20180508180447)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180508180447"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateAdmins (20180508180451)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_email" ON "admins"  ("email")[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_reset_password_token" ON "admins"  ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180508180451"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddInfoToUser (20180515193147)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "birth_date" date[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "address" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "postal_code" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "city" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "gender" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "phone" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "photo" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "role" character varying[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193147"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProjects (20180515193351)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "name" character varying, "value" float, "description" text, "client" character varying, "start_date" date, "end_date" date, "expected_date" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193351"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEvents (20180515193420)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "date" date, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193420"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToAdmin (20180515193453)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "admins" ADD "name" character varying[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193453"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCashFlows (20180515193650)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "cash_flows" ("id" bigserial primary key, "description" character varying, "type" boolean, "value" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193650"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProjectUsers (20180515202841)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "project_users" ("id" bigserial primary key, "project_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_1bf16ed5d0"
+FOREIGN KEY ("project_id")
+  REFERENCES "projects" ("id")
+, CONSTRAINT "fk_rails_996d73fecd"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE  INDEX  "index_project_users_on_project_id" ON "project_users"  ("project_id")[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_project_users_on_user_id" ON "project_users"  ("user_id")[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515202841"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEventUsers (20180515202858)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "event_users" ("id" bigserial primary key, "event_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_55572bff4d"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+, CONSTRAINT "fk_rails_2fc76a96e7"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE  INDEX  "index_event_users_on_event_id" ON "event_users"  ("event_id")[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_event_users_on_user_id" ON "event_users"  ("user_id")[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515202858"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-15 20:32:11.151336"], ["updated_at", "2018-05-15 20:32:11.151336"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1342058643005049270)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "admin@admin.com"], ["encrypted_password", "$2a$11$yAICcqFl5MBPFMW3vyIROuIWwW0xD.xi0p7qbZQEDEpIEkeR4YaRi"], ["created_at", "2018-05-15 20:32:11.351772"], ["updated_at", "2018-05-15 20:32:11.351772"], ["name", "Admin"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "katlynn_kiehn@fay.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "katlynn_kiehn@fay.info"], ["encrypted_password", "$2a$11$YDMvLwBYK44Iaj/zo12iUuGVcOuBkZgj/86ce8P5umdYzLBE7lotq"], ["created_at", "2018-05-15 20:32:11.746822"], ["updated_at", "2018-05-15 20:32:11.746822"], ["name", "Alene Crist"], ["birth_date", "2005-08-01"], ["address", "809 Vladimir Track"], ["postal_code", "80814"], ["city", "Eliezerland"], ["phone", "233-424-0339 x063"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aurelia@bahringergoldner.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "aurelia@bahringergoldner.co"], ["encrypted_password", "$2a$11$1tOiYkwXhoLggMYPw68u6eRUlI7EvMenmyKx0t43Zx.yz.rhrraL2"], ["created_at", "2018-05-15 20:32:11.856385"], ["updated_at", "2018-05-15 20:32:11.856385"], ["name", "Sarai Watsica"], ["birth_date", "1945-11-22"], ["address", "34471 Ettie Unions"], ["postal_code", "54083-1271"], ["city", "Lake Jamirland"], ["phone", "1-942-696-8469 x95134"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nicklaus_mann@leffler.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "nicklaus_mann@leffler.name"], ["encrypted_password", "$2a$11$/sbaIDt1Bgq0taL8w42ZTe66BoXjbB/bu0DA0Ls3yCD8U2w0xbJhW"], ["created_at", "2018-05-15 20:32:11.965850"], ["updated_at", "2018-05-15 20:32:11.965850"], ["name", "Bridget Jacobson"], ["birth_date", "1938-11-10"], ["address", "80389 Treutel Field"], ["postal_code", "40799-8134"], ["city", "Katrinaborough"], ["phone", "884.095.3307 x70289"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "stanley@welch.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "stanley@welch.name"], ["encrypted_password", "$2a$11$f5bqLR4DK7nY/aygRLwjx.uvh9FLQjR71/8WX7xHyvNuAaD4kAa32"], ["created_at", "2018-05-15 20:32:12.075240"], ["updated_at", "2018-05-15 20:32:12.075240"], ["name", "Morris Witting"], ["birth_date", "1920-09-11"], ["address", "8644 Gwendolyn Brooks"], ["postal_code", "82558-1924"], ["city", "East Omarichester"], ["phone", "(342) 624-8610 x6640"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "krystina_lebsack@rempel.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "krystina_lebsack@rempel.biz"], ["encrypted_password", "$2a$11$9NDj2aXe689/5S1bVBvZk.epVzTFcuyuu8A2gnAigMizouN/7VIKK"], ["created_at", "2018-05-15 20:32:12.184601"], ["updated_at", "2018-05-15 20:32:12.184601"], ["name", "Braxton Jacobs"], ["birth_date", "2007-01-28"], ["address", "3863 Lelah Wall"], ["postal_code", "49147-8408"], ["city", "Port Luciusville"], ["phone", "1-382-139-6143"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "una_sawayn@abernathy.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "una_sawayn@abernathy.com"], ["encrypted_password", "$2a$11$9KHIx3wNX4KaRKMfdlKDW.yLjzCbD7h4FN7YCL3Gp8uCKISCPPtwC"], ["created_at", "2018-05-15 20:32:12.294295"], ["updated_at", "2018-05-15 20:32:12.294295"], ["name", "Archibald Stiedemann"], ["birth_date", "1935-10-14"], ["address", "5543 Cummings Streets"], ["postal_code", "41776"], ["city", "West Ovamouth"], ["phone", "(344) 583-9415 x348"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dorothy_braun@howell.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "dorothy_braun@howell.com"], ["encrypted_password", "$2a$11$wqoKUsVqbuAEsMgTz.J8a.U9u6L4Sntipa6chL7.JT0db345.35Ee"], ["created_at", "2018-05-15 20:32:12.403929"], ["updated_at", "2018-05-15 20:32:12.403929"], ["name", "Ebba Crist"], ["birth_date", "1997-04-02"], ["address", "994 Kuphal Expressway"], ["postal_code", "77657-7864"], ["city", "Kovacekmouth"], ["phone", "233.819.5679 x76592"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "myrtis@turner.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "myrtis@turner.net"], ["encrypted_password", "$2a$11$50dZy94OdnbmRz/y/5ThjOgXPFsGc15mstgJFwh2bJM8cjAr9lBQe"], ["created_at", "2018-05-15 20:32:12.513496"], ["updated_at", "2018-05-15 20:32:12.513496"], ["name", "Ms. Melvin Kunde"], ["birth_date", "1924-01-24"], ["address", "54644 Koss Mountains"], ["postal_code", "81389-3123"], ["city", "Walterberg"], ["phone", "1-735-290-8050 x974"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vita_kuhn@emmerich.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "vita_kuhn@emmerich.co"], ["encrypted_password", "$2a$11$0v0p5.xYHD6DbcoM80Ud0.IRi1PwMoqqRaiKidClg/QSH90R5UEAm"], ["created_at", "2018-05-15 20:32:12.642871"], ["updated_at", "2018-05-15 20:32:12.642871"], ["name", "Virginia Stehr"], ["birth_date", "1920-07-17"], ["address", "82074 Caleigh Pines"], ["postal_code", "69688"], ["city", "South Sherwoodland"], ["phone", "(273) 356-2380 x10315"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "winston_schmeler@farrell.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "winston_schmeler@farrell.com"], ["encrypted_password", "$2a$11$Rw8vylQ4UUf.BLHPdSISn.9Bkz.XhTGxOgFiWcxh3LAs7wPsKxdgi"], ["created_at", "2018-05-15 20:32:12.752059"], ["updated_at", "2018-05-15 20:32:12.752059"], ["name", "Mara Toy II"], ["birth_date", "1948-02-22"], ["address", "9634 Hodkiewicz Field"], ["postal_code", "74158"], ["city", "Langbury"], ["phone", "1-250-649-6678 x46005"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (116.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "gtimembersystem_development"[0m
+  [1m[35m (114.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "gtimembersystem_test"[0m
+  [1m[35m (249.7ms)[0m  [1m[35mCREATE DATABASE "gtimembersystem_development" ENCODING = 'unicode'[0m
+  [1m[35m (256.5ms)[0m  [1m[35mCREATE DATABASE "gtimembersystem_test" ENCODING = 'unicode'[0m
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1342058643005049270)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20180508180447)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180508180447"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateAdmins (20180508180451)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_email" ON "admins"  ("email")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_reset_password_token" ON "admins"  ("reset_password_token")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180508180451"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddInfoToUser (20180515193147)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "birth_date" date[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "address" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "postal_code" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "city" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "gender" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "phone" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "photo" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "role" character varying[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193147"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProjects (20180515193351)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "name" character varying, "value" float, "description" text, "client" character varying, "start_date" date, "end_date" date, "expected_date" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193351"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEvents (20180515193420)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "date" date, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193420"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToAdmin (20180515193453)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "name" character varying[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193453"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCashFlows (20180515193650)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "cash_flows" ("id" bigserial primary key, "description" character varying, "type" boolean, "value" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193650"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-15 20:42:30.294066"], ["updated_at", "2018-05-15 20:42:30.294066"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1342058643005049270)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "admin@admin.com"], ["encrypted_password", "$2a$11$3z6OeA9WHot7t3UFFwwJY.hWY93AdXLTBG.SMd2G4l/P.KEO2Qpau"], ["created_at", "2018-05-15 20:42:30.465129"], ["updated_at", "2018-05-15 20:42:30.465129"], ["name", "Admin"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tristin@bartolettieichmann.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "tristin@bartolettieichmann.io"], ["encrypted_password", "$2a$11$Wi0oAXq5XjyVTVtIzDoRZ.b.Shank1GWwcVLIT5OLt2dysMXmuJA6"], ["created_at", "2018-05-15 20:42:30.862458"], ["updated_at", "2018-05-15 20:42:30.862458"], ["name", "Molly Walter PhD"], ["birth_date", "1927-11-27"], ["address", "2954 Oswaldo View"], ["postal_code", "51093"], ["city", "Rosemariefurt"], ["phone", "(460) 873-5244 x3757"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jaylen.kaulke@runolfsdottir.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "jaylen.kaulke@runolfsdottir.io"], ["encrypted_password", "$2a$11$vAP4e48Ywpgiiki9Vu3haOOhRSlRuDMn4C.B3897Ng3ZbklkCF/Qq"], ["created_at", "2018-05-15 20:42:30.973317"], ["updated_at", "2018-05-15 20:42:30.973317"], ["name", "Ebony Jacobs"], ["birth_date", "1934-10-20"], ["address", "115 Pouros Lights"], ["postal_code", "22458-3180"], ["city", "Gorczanybury"], ["phone", "757.829.1760 x9861"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rosie@sporerfunk.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "rosie@sporerfunk.net"], ["encrypted_password", "$2a$11$H78EHOnY84fUNl5aTrUuzO5lJVaBxgqbK0dv5FddmczCmazLT1zoS"], ["created_at", "2018-05-15 20:42:31.083263"], ["updated_at", "2018-05-15 20:42:31.083263"], ["name", "Rylan Schinner"], ["birth_date", "1972-05-04"], ["address", "479 Shaniya Green"], ["postal_code", "78810-7799"], ["city", "West Brayan"], ["phone", "(983) 406-8847 x8488"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "novella_roberts@quitzonwill.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "novella_roberts@quitzonwill.name"], ["encrypted_password", "$2a$11$ki9rUbNXuEdNPutQ8J/UfePQDCkLQFkajTD4i5XiwOYtKJLXfG3RK"], ["created_at", "2018-05-15 20:42:31.193429"], ["updated_at", "2018-05-15 20:42:31.193429"], ["name", "Verner Rau"], ["birth_date", "1977-05-26"], ["address", "307 Crystel Skyway"], ["postal_code", "53507-3020"], ["city", "Mayeside"], ["phone", "1-204-229-8267"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lucienne@lindgrenokeefe.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "lucienne@lindgrenokeefe.info"], ["encrypted_password", "$2a$11$AI/55YxkSBbfNCsCoYn7TeHCNGj5zVzeuNUKElLL5coFdDq0cXWMC"], ["created_at", "2018-05-15 20:42:31.303315"], ["updated_at", "2018-05-15 20:42:31.303315"], ["name", "Marcos Turcotte"], ["birth_date", "1958-11-29"], ["address", "41432 Reichert Cape"], ["postal_code", "59570-1192"], ["city", "North Jenafort"], ["phone", "499.041.6475 x51520"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lee@millchaden.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "lee@millchaden.com"], ["encrypted_password", "$2a$11$Ms2VBQk5UAHDbrP2lMRyU.beF1t/KXIhCVXgJ2c.5lAChK9oIYhqK"], ["created_at", "2018-05-15 20:42:31.413329"], ["updated_at", "2018-05-15 20:42:31.413329"], ["name", "Trenton Corwin"], ["birth_date", "1932-04-28"], ["address", "17480 Pearlie Gardens"], ["postal_code", "90825"], ["city", "Aniyahton"], ["phone", "(514) 801-1669 x25060"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "janet@herman.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "janet@herman.net"], ["encrypted_password", "$2a$11$HwT9GskOxXZHpiYwaWCAQuio6evY6dnL3WKWwqb7/pgEKPgqmVPCC"], ["created_at", "2018-05-15 20:42:31.524037"], ["updated_at", "2018-05-15 20:42:31.524037"], ["name", "Austin Murray"], ["birth_date", "1967-11-06"], ["address", "4923 Huels Lodge"], ["postal_code", "65783-1767"], ["city", "Emilytown"], ["phone", "(185) 774-1152"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "herminio@mcclurebayer.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "herminio@mcclurebayer.org"], ["encrypted_password", "$2a$11$cj7fsdNTrrrNcINXW38oaenmL8uVQuSknYWAmGP86ThOipa.sOzQ."], ["created_at", "2018-05-15 20:42:31.634197"], ["updated_at", "2018-05-15 20:42:31.634197"], ["name", "Kassandra Franecki PhD"], ["birth_date", "1945-03-28"], ["address", "5589 King Radial"], ["postal_code", "31281-1669"], ["city", "Lake Carolanne"], ["phone", "281-299-1519 x898"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "billy_dickinson@kohler.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "billy_dickinson@kohler.io"], ["encrypted_password", "$2a$11$3eGntI75kpNnOMF4jxFbaetar1i4Ip1fpt9Qk.sOZ6HU8qF2EVlsu"], ["created_at", "2018-05-15 20:42:31.745992"], ["updated_at", "2018-05-15 20:42:31.745992"], ["name", "Mr. Waylon Tillman"], ["birth_date", "1980-12-07"], ["address", "647 Maude Bridge"], ["postal_code", "42770-3300"], ["city", "South Grant"], ["phone", "1-161-439-9707 x242"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "melya.grimes@fay.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "melya.grimes@fay.co"], ["encrypted_password", "$2a$11$SAtUhvYg1xkxT0vxXGjy6OGDm4xXD82kidiiCetbp2ZdTrTX4IZs2"], ["created_at", "2018-05-15 20:42:31.855371"], ["updated_at", "2018-05-15 20:42:31.855371"], ["name", "Mellie Waters DDS"], ["birth_date", "1985-03-12"], ["address", "719 Brody Courts"], ["postal_code", "66904"], ["city", "Karolannmouth"], ["phone", "558-146-6817 x187"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1342058643005049270)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJoinTableProjectUser (20180515204353)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "Projects_Users" ("Project_id" bigint NOT NULL, "User_id" bigint NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX  "index_Projects_Users_on_project_id_and_user_id" ON "Projects_Users"  ("project_id", "user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(1342058643005049270)[0m
