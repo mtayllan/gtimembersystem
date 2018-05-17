@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  devise_for :users
+  
+  get 'administrative', to: 'administrative/main#index'
+  
+  devise_for :admins, controllers: {sessions: 'sign/sessions'}
+  devise_for :users,  controllers: {sessions: 'sign/sessions'}
+  
   get 'home/index'
   root 'home#index'
 

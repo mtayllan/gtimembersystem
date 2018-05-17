@@ -4,9 +4,9 @@
   <!-- Logo -->
   <a href="/" class="logo">
     <!-- mini logo for sidebar mini 50x50 pixels -->
-    <span class="logo-mini"><b>A</b>LT</span>
+    <span class="logo-mini"><b>GTi</b>M</span>
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-lg"><b>Admin</b>LTE</span>
+    <span class="logo-lg"><b>GTi</b>Members</span>
   </a>
 
   <!-- Header Navbar -->
@@ -144,7 +144,8 @@
                 <a href="#" class="btn btn-default btn-flat">Profile</a>
               </div>
               <div class="pull-right">
-                <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                <%= link_to 'Sair', destroy_admin_session_path, method: :delete, class:"btn btn-default btn-flat" %>
+                
               </div>
             </li>
           </ul>

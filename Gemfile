@@ -23,7 +23,7 @@ gem 'devise'
 #instalando jquery
 gem 'jquery-rails'
 
-
+gem 'rails-assets-glyphicons', source: 'https://rails-assets.org'
 
 
 # https://github.com/nicolas-besnard/adminlte2-rails
@@ -64,4 +64,3 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-ruby "2.5.0"
