@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  namespace :administrative do
+    get 'events/index'
+  end
+  
   get 'administrative', to: 'administrative/main#index'
   
   devise_for :admins, :skip => [:registrations], controllers: {sessions: 'sign/sessions'}
