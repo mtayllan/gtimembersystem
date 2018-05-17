@@ -1,0 +1,2 @@
+module Administrative::EventsHelper
+end
