@@ -1,4 +1,4 @@
 class AdministrativeController < ApplicationController
-  layout 'admin_lte_2'
+  layout 'administrative'
   before_action :authenticate_admin!
 end

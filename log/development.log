@@ -7656,3 +7656,773 @@ Completed 200 OK in 44ms (Views: 40.2ms | ActiveRecord: 0.5ms)
 
 
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 20:47:14 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Administrative::MainController#index as HTML
+Completed 401 Unauthorized in 19ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 200.19.186.128 at 2018-05-17 20:47:16 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Sign::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/admin_lte_2_login
+  Rendered devise/shared/_links.html.erb (112.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/admin_lte_2_login (126.9ms)
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `new_admin_registration_path' for #<ActionDispatch::Routing::RoutesProxy:0x007f0740277f88>
+Did you mean?  new_admin_session_url):
+    3: <% end -%>
+    4: 
+    5: <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+    6:   <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+    7: <% end -%>
+    8: 
+    9: <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  
+app/views/devise/shared/_links.html.erb:6:in `_app_views_devise_shared__links_html_erb__1441839905475257600_69834559243000'
+app/views/devise/sessions/new.html.erb:26:in `_app_views_devise_sessions_new_html_erb___601678232018491263_69834558848280'
+Started GET "/admins/sign_in" for 200.19.186.128 at 2018-05-17 20:49:24 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Sign::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/admin_lte_2_login
+  Rendered devise/sessions/new.html.erb within layouts/admin_lte_2_login (3.4ms)
+Completed 200 OK in 2162ms (Views: 2159.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 200.19.186.128 at 2018-05-17 20:49:27 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 200.19.186.128 at 2018-05-17 20:49:27 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 200.19.186.128 at 2018-05-17 20:49:27 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/admins/sign_in" for 200.19.186.128 at 2018-05-17 20:49:36 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Sign::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zYyUAY/X8h+WIY0ihXUI/qiPopgNA4ZcGdB8NxlxYQ3wzMVTg0M4+21m89fGD+kkeJLENvJHN9n4bfUUXmILiQ==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "admins"."id" = $5[0m  [["current_sign_in_at", "2018-05-17 20:49:36.888401"], ["last_sign_in_at", "2018-05-17 18:54:16.426282"], ["sign_in_count", 6], ["updated_at", "2018-05-17 20:49:36.890441"], ["id", 1]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://gtimembersystem2-mtayllan.c9users.io/administrative
+Completed 302 Found in 171ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 20:49:37 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.4ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.9ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (0.4ms)
+Completed 200 OK in 152ms (Views: 146.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/info/routes" for 200.19.186.128 at 2018-05-17 20:57:22 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [27 times] (9.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 27ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:03:55 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.6ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (1.1ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (400.4ms)
+Completed 500 Internal Server Error in 435ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `administrative_projects_index_path' for #<#<Class:0x007f074f31fc60>:0x007f074e927c80>
+Did you mean?  administrative_events_index_path
+               administrative_path
+               administrative_events_index_url):
+    25:                 <i class="fa fa-location-arrow"></i>
+    26:                 Eventos
+    27:           <% end %></li>
+    28:           <li><%= link_to administrative_projects_index_path do %>
+    29:                 <i class="fa fa-archive"></i>
+    30:                 Projetos
+    31:           <% end %></li>
+  
+app/views/layouts/administrative_shared/_admin_lte_2_sidebar.html.erb:28:in `_app_views_layouts_administrative_shared__admin_lte___sidebar_html_erb__1549489274417207154_69834677691560'
+app/views/layouts/administrative.html.erb:24:in `_app_views_layouts_administrative_html_erb___1066756734298796787_69834679853100'
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:05:24 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.9ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (322.4ms)
+Completed 500 Internal Server Error in 1850ms (ActiveRecord: 135.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `administrative_projects_index_path' for #<#<Class:0x007f0744c10028>:0x00000004e00d68>
+Did you mean?  administrative_events_index_path
+               administrative_path
+               administrative_events_index_url):
+    25:                 <i class="fa fa-location-arrow"></i>
+    26:                 Eventos
+    27:           <% end %></li>
+    28:           <li><%= link_to administrative_projects_index_path do %>
+    29:                 <i class="fa fa-archive"></i>
+    30:                 Projetos
+    31:           <% end %></li>
+  
+app/views/layouts/administrative_shared/_admin_lte_2_sidebar.html.erb:28:in `_app_views_layouts_administrative_shared__admin_lte___sidebar_html_erb__1549489274417207154_69834644803580'
+app/views/layouts/administrative.html.erb:24:in `_app_views_layouts_administrative_html_erb___1066756734298796787_43915580'
+Started GET "/rails/info/routes" for 200.19.186.128 at 2018-05-17 21:05:54 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [27 times] (17.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 38ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:07:17 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (1.2ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (3.8ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (3.7ms)
+Completed 200 OK in 497ms (Views: 402.1ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/administrative/events/index" for 200.19.186.128 at 2018-05-17 21:07:33 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::EventsController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/index.html.erb within layouts/administrative
+  [1m[36mEvent Load (13.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered administrative/events/index.html.erb within layouts/administrative (18.7ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (2.8ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (1.3ms)
+Completed 200 OK in 125ms (Views: 96.8ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/administrative/projects/index" for 200.19.186.128 at 2018-05-17 21:07:39 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::ProjectsController#index as HTML
+Completed 406 Not Acceptable in 36ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (Administrative::ProjectsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.6) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.6) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/administrative/events/index" for 200.19.186.128 at 2018-05-17 21:07:45 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::EventsController#index as HTML
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/index.html.erb within layouts/administrative
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered administrative/events/index.html.erb within layouts/administrative (1.3ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.9ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (0.9ms)
+Completed 200 OK in 129ms (Views: 123.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/administrative/events/index" for 200.19.186.128 at 2018-05-17 21:07:52 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::EventsController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/index.html.erb within layouts/administrative
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered administrative/events/index.html.erb within layouts/administrative (2.4ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.9ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (0.9ms)
+Completed 200 OK in 79ms (Views: 75.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 200.19.186.128 at 2018-05-17 21:13:11 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/admin_lte_2
+  Rendered home/index.html.erb within layouts/admin_lte_2 (0.6ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.9ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.7ms)
+Completed 200 OK in 249ms (Views: 205.4ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:13:18 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.4ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (1.0ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (1.0ms)
+Completed 200 OK in 155ms (Views: 150.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:20:09 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.7ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.9ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (0.7ms)
+Completed 200 OK in 64ms (Views: 56.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:21:08 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.9ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (0.9ms)
+Completed 200 OK in 148ms (Views: 143.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:21:42 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (0.9ms)
+Completed 200 OK in 176ms (Views: 172.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:23:15 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (0.9ms)
+Completed 200 OK in 113ms (Views: 108.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:24:16 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (1.0ms)
+Completed 200 OK in 52ms (Views: 47.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:27:25 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (1.8ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (5.0ms)
+Completed 200 OK in 190ms (Views: 181.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:28:51 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.4ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (1.1ms)
+Completed 200 OK in 111ms (Views: 106.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:29:08 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (1.1ms)
+Completed 200 OK in 82ms (Views: 78.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:32:04 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.6ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (0.7ms)
+Completed 200 OK in 156ms (Views: 150.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:33:51 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (0.7ms)
+Completed 200 OK in 125ms (Views: 120.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:37:03 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.4ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (1.0ms)
+Completed 200 OK in 63ms (Views: 58.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/info/routes" for 200.19.186.128 at 2018-05-17 21:42:18 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [30 times] (10.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 29ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:42:44 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (0.9ms)
+Completed 200 OK in 122ms (Views: 112.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:43:14 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.6ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (1.3ms)
+Completed 200 OK in 78ms (Views: 73.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:44:06 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.6ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.9ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (1.0ms)
+Completed 200 OK in 200ms (Views: 194.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative/events/index" for 200.19.186.128 at 2018-05-17 21:44:09 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::EventsController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/index.html.erb within layouts/administrative
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered administrative/events/index.html.erb within layouts/administrative (1.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (0.8ms)
+Completed 200 OK in 51ms (Views: 46.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:44:10 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (4.4ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (0.8ms)
+Completed 200 OK in 165ms (Views: 161.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative/events/index" for 200.19.186.128 at 2018-05-17 21:44:12 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::EventsController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/index.html.erb within layouts/administrative
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered administrative/events/index.html.erb within layouts/administrative (1.7ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (0.9ms)
+Completed 200 OK in 143ms (Views: 138.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:44:14 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (0.8ms)
+Completed 200 OK in 50ms (Views: 45.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/administrative/events/index" for 200.19.186.128 at 2018-05-17 21:44:16 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::EventsController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/index.html.erb within layouts/administrative
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered administrative/events/index.html.erb within layouts/administrative (1.4ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (1.0ms)
+Completed 200 OK in 164ms (Views: 160.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-17 21:44:18 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.4ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (0.9ms)
+Completed 200 OK in 149ms (Views: 144.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative/events/index" for 200.19.186.128 at 2018-05-17 21:44:20 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::EventsController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/index.html.erb within layouts/administrative
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered administrative/events/index.html.erb within layouts/administrative (1.7ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (0.9ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (1.0ms)
+Completed 200 OK in 66ms (Views: 61.4ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1342058643005049270)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEventsUsers (20180517215904)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (35.6ms)[0m  [1m[35mCREATE TABLE "events_users" ("id" bigserial primary key, "event_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_0ea30c0a1c"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+, CONSTRAINT "fk_rails_c32bae0acf"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE  INDEX  "index_events_users_on_event_id" ON "events_users"  ("event_id")[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE  INDEX  "index_events_users_on_user_id" ON "events_users"  ("user_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517215904"]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1342058643005049270)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (121.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "gtimembersystem_development"[0m
+  [1m[35m (110.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "gtimembersystem_test"[0m
+  [1m[35m (847.6ms)[0m  [1m[35mCREATE DATABASE "gtimembersystem_development" ENCODING = 'utf8' TEMPLATE = "template0"[0m
+  [1m[35m (841.4ms)[0m  [1m[35mCREATE DATABASE "gtimembersystem_test" ENCODING = 'utf8' TEMPLATE = "template0"[0m
+  [1m[35m (16.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (13.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1342058643005049270)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20180508180447)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180508180447"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateAdmins (20180508180451)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_email" ON "admins"  ("email")[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_reset_password_token" ON "admins"  ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180508180451"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddInfoToUser (20180515193147)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "birth_date" date[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "address" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "postal_code" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "city" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "gender" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "phone" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "photo" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "role" character varying[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193147"]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProjects (20180515193351)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "name" character varying, "value" float, "description" text, "client" character varying, "start_date" date, "end_date" date, "expected_date" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193351"]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEvents (20180515193420)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "date" date, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193420"]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToAdmin (20180515193453)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "admins" ADD "name" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193453"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCashFlows (20180515193650)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE "cash_flows" ("id" bigserial primary key, "description" character varying, "type" boolean, "value" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193650"]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateParticipations (20180517221557)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "participations" ("id" bigserial primary key, "event_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE  INDEX  "index_participations_on_event_id" ON "participations"  ("event_id")[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE  INDEX  "index_participations_on_user_id" ON "participations"  ("user_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517221557"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateContributions (20180517221611)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "contributions" ("id" bigserial primary key, "project_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE  INDEX  "index_contributions_on_project_id" ON "contributions"  ("project_id")[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE  INDEX  "index_contributions_on_user_id" ON "contributions"  ("user_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517221611"]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-17 22:31:44.341516"], ["updated_at", "2018-05-17 22:31:44.341516"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1342058643005049270)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "admin@admin.com"], ["encrypted_password", "$2a$11$TQdDdbUl6vHlaglZ28YZtugotdL6Y8a8zJU7XUTcabuUGSEt9DUlm"], ["created_at", "2018-05-17 22:31:44.611367"], ["updated_at", "2018-05-17 22:31:44.611367"], ["name", "Admin"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fredy_johnston@swift.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "fredy_johnston@swift.biz"], ["encrypted_password", "$2a$11$tIw0hFQLfcijwbGC4DTaaOzp7yP3RmZwn.qo0PvTPW7.x4rYbz4j2"], ["created_at", "2018-05-17 22:31:45.198306"], ["updated_at", "2018-05-17 22:31:45.198306"], ["name", "Xander Rosenbaum"], ["birth_date", "1983-08-31"], ["address", "854 Eichmann Via"], ["postal_code", "22313"], ["city", "South Wyatt"], ["phone", "(806) 954-5891"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ashleigh_wilkinson@roob.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "ashleigh_wilkinson@roob.org"], ["encrypted_password", "$2a$11$bTr2j3kqMywwGxkB6go1o.hwbdU9hel7ruWcV/3vwnMPOl5UgCV1u"], ["created_at", "2018-05-17 22:31:45.340118"], ["updated_at", "2018-05-17 22:31:45.340118"], ["name", "Jarrett Gibson"], ["birth_date", "1926-04-29"], ["address", "669 Frami Station"], ["postal_code", "59858-0895"], ["city", "East Yoshiko"], ["phone", "382-474-2618 x33509"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sonia.johnston@monahan.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "sonia.johnston@monahan.info"], ["encrypted_password", "$2a$11$KjaA9JHpR/YBmi1JeC4KLewMhypPQph9kGoSZuUtSx8NkfSKw5ygK"], ["created_at", "2018-05-17 22:31:45.481168"], ["updated_at", "2018-05-17 22:31:45.481168"], ["name", "Maybell Tremblay"], ["birth_date", "1937-09-09"], ["address", "13737 Rozella Parks"], ["postal_code", "69300-4660"], ["city", "South Libbie"], ["phone", "1-423-888-3981"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "luna_schaden@schmeler.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "luna_schaden@schmeler.info"], ["encrypted_password", "$2a$11$kOMfUmv0nSzgayNjZG/1guFD/VHr59dzBKQBHnK8NGRpY5hbGaDAa"], ["created_at", "2018-05-17 22:31:45.621622"], ["updated_at", "2018-05-17 22:31:45.621622"], ["name", "Lorena Keeling"], ["birth_date", "1980-04-24"], ["address", "791 Carlee Lodge"], ["postal_code", "42847-9710"], ["city", "Octaviaview"], ["phone", "(911) 881-8026 x0715"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mylene.pouros@moen.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "mylene.pouros@moen.io"], ["encrypted_password", "$2a$11$eXf1LyutSJRxnzWjVHyNCOz7LGQ5ec7v9S9HZmGzyEK2o8EYf7riy"], ["created_at", "2018-05-17 22:31:45.761851"], ["updated_at", "2018-05-17 22:31:45.761851"], ["name", "Tia Stracke"], ["birth_date", "1924-12-19"], ["address", "926 Hosea Shores"], ["postal_code", "43542"], ["city", "Port Carlo"], ["phone", "250.443.7471 x8572"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kade_herzog@ankundingmonahan.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "kade_herzog@ankundingmonahan.info"], ["encrypted_password", "$2a$11$kz6fTeR7tvVx19INTq4ytOl.eedt7b0py/Qdv067R/hw/dRpadeKe"], ["created_at", "2018-05-17 22:31:45.903001"], ["updated_at", "2018-05-17 22:31:45.903001"], ["name", "Madelyn Huel"], ["birth_date", "1977-06-17"], ["address", "4746 Perry Walk"], ["postal_code", "25994"], ["city", "Hayesmouth"], ["phone", "(866) 394-5945 x844"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "alec.leuschke@larkin.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "alec.leuschke@larkin.org"], ["encrypted_password", "$2a$11$NcWdXfKpydN4GgrhhVut6uKYsrQ82gYt9S/DpQU/WSr2HuGExUkEy"], ["created_at", "2018-05-17 22:31:46.048430"], ["updated_at", "2018-05-17 22:31:46.048430"], ["name", "Damaris Hand"], ["birth_date", "1961-10-10"], ["address", "704 Mayer Vista"], ["postal_code", "65268"], ["city", "West Nathaniel"], ["phone", "1-167-751-6914 x13520"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jamey@langworth.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "jamey@langworth.io"], ["encrypted_password", "$2a$11$u7lO.BRKDqaf7xXfgpRz3.NMgQ7nxo2.h9q3B2kXvTC/GoLvocxgW"], ["created_at", "2018-05-17 22:31:46.189220"], ["updated_at", "2018-05-17 22:31:46.189220"], ["name", "Albert Koch"], ["birth_date", "1955-02-02"], ["address", "53722 Nayeli Islands"], ["postal_code", "26035-0578"], ["city", "Sammiestad"], ["phone", "(167) 052-4331"]]
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "hector@grant.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "hector@grant.com"], ["encrypted_password", "$2a$11$./H03kSlRzYx/VJam8CDUOe/LestzNixMvOofS.KfVfP2ScbuAuiy"], ["created_at", "2018-05-17 22:31:46.332188"], ["updated_at", "2018-05-17 22:31:46.332188"], ["name", "Presley Ortiz"], ["birth_date", "2014-05-26"], ["address", "604 Autumn Grove"], ["postal_code", "83213"], ["city", "East Arlo"], ["phone", "292.964.3362"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mireya_wiza@kutch.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["email", "mireya_wiza@kutch.io"], ["encrypted_password", "$2a$11$OJ7m9EMgUeaZSJ8eWTOWfuAw8g3f1ubw4Q/DGoMACtTylOuUZVBdC"], ["created_at", "2018-05-17 22:31:46.472590"], ["updated_at", "2018-05-17 22:31:46.472590"], ["name", "Augustus Witting"], ["birth_date", "1975-06-17"], ["address", "10138 Emma Streets"], ["postal_code", "61603"], ["city", "Domingoberg"], ["phone", "(661) 579-8561 x468"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m

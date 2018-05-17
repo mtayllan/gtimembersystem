@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   
   namespace :administrative do
     get 'events/index'
+    get 'projects/index'
+    get 'cash_flow/index'
+    get 'users/index'
   end
   
   devise_for :admins, :skip => [:registrations], controllers: {sessions: 'sign/sessions'}
