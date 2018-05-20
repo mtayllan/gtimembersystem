@@ -10,3 +10,13 @@ Admin.create!(name: "Admin" , email: 'admin@admin.com',
 			  password: "123456", password_confirmation: "123456")
 puts 'Administrador cadastrado com sucesso!'
 
+puts "Cadastrando Eventos"
+
+events= ["ECEJ","ENEJ" ,
+"Destine","Protagonize"]
+
+events.each do  |event|
+	Event.find_or_create_by(name: event)
+end
+
+puts "Eventos cadastrados com sucesso"
