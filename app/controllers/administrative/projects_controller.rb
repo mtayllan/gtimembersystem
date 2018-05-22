@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Administrative::ProjectsController < AdministrativeController
   before_action :set_project, only: [:edit,  :update, :destroy]
   def index
@@ -57,4 +58,5 @@ private
      params.require(:project).permit(:name, :value, :description,  :client ,:start_date,:end_date, :expected_date )
 
   end
+
 end

@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   get 'administrative', to: 'administrative/main#index'
   
   namespace :administrative do
+
   	resources :events, except: [:show]
   	resources :projects, except: [:show]
   	
+
   end
   
   devise_for :admins, :skip => [:registrations], controllers: {sessions: 'sign/sessions'}

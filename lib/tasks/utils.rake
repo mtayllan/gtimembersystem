@@ -1,6 +1,7 @@
 namespace :utils do
   desc "Gera  usuarios fake"
   task generate_user: :environment do
+  	puts 'Gerando usuários fake...'
   	10.times do
 			User.create!(name: Faker::Name.name,
 						 email: Faker::Internet.email, 
@@ -12,6 +13,7 @@ namespace :utils do
 						 postal_code: Faker::Address.postcode, 
 						 phone: Faker::PhoneNumber.phone_number)
 		end
+		puts 'Usuários fake gerados com sucesso!'
   end
 
 end
