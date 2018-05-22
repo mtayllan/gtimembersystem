@@ -1,0 +1,2 @@
+module Administrative::ProjectsHelper
+end

@@ -12711,3 +12711,2421 @@ Processing by Administrative::EventsController#index as HTML
 Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-21 20:44:28 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering /home/lia/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/lia/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [41 times] (7.4ms)
+  Rendered /home/lia/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.9ms)
+  Rendered /home/lia/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 22ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/administrative/project" for 127.0.0.1 at 2018-05-21 21:27:14 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/administrative/project"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-21 21:27:16 -0300
+  
+ActionController::RoutingError (uninitialized constant AdiministrativeController):
+  
+app/controllers/administrative/projects_controller.rb:1:in `<top (required)>'
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-21 21:27:33 -0300
+  
+ActionController::RoutingError (uninitialized constant AdiministrativeController):
+  
+app/controllers/administrative/projects_controller.rb:1:in `<top (required)>'
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-21 21:28:01 -0300
+Processing by Administrative::ProjectsController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2018-05-21 21:28:01 -0300
+Processing by Sign::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/admin_lte_2_login
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/admin_lte_2_login (6.6ms)
+Completed 200 OK in 1145ms (Views: 1125.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2018-05-21 21:28:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2018-05-21 21:28:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2018-05-21 21:28:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2018-05-21 21:28:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2018-05-21 21:28:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2018-05-21 21:28:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/admins/sign_in" for 127.0.0.1 at 2018-05-21 21:28:07 -0300
+Processing by Sign::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1z9q8Eza1flDLK7I8iRxLLTE5FCiLVFmWh/7o9c3IxX9+1AtAAUok1LS1oAvyOCYa9sGYJ1tKXE1uREZr+bEAQ==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "admins"."id" = $4[0m  [["current_sign_in_at", "2018-05-22 00:28:07.788816"], ["sign_in_count", 2], ["updated_at", "2018-05-22 00:28:07.789569"], ["id", 1]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 126ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-21 21:28:07 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (3.1ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 80ms (Views: 74.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-21 21:28:18 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (0.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 3.1ms)
+
+
+  
+SyntaxError (/home/lia/Documents/RAILS- EXERCICIO/Gti_RubyonRails/gtimembersystem/app/views/administrative/projects/new.html.erb:75: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/administrative/projects/new.html.erb:75: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-21 21:29:36 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (11.9ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 45.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/administrative/projects/index" for 127.0.0.1 at 2018-05-21 21:29:58 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/administrative/projects/index"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 14:18:33 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Administrative::ProjectsController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2018-05-22 14:18:34 -0300
+Processing by Sign::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/admin_lte_2_login
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/admin_lte_2_login (8.7ms)
+Completed 200 OK in 271ms (Views: 256.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2018-05-22 14:18:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2018-05-22 14:18:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2018-05-22 14:18:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2018-05-22 14:18:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2018-05-22 14:18:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2018-05-22 14:18:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/admins/sign_in" for 127.0.0.1 at 2018-05-22 14:18:37 -0300
+Processing by Sign::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hCAqOg9BD8DT7jsUnJY5RIlYl8lDpup7dcO/qZlBkOv1M1vDa1QT5STN8AtTB0PPhaOVltXJukqRl6ByZJ+wdQ==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "admins"."id" = $5[0m  [["current_sign_in_at", "2018-05-22 17:18:37.324681"], ["last_sign_in_at", "2018-05-22 00:28:07.788816"], ["sign_in_count", 3], ["updated_at", "2018-05-22 17:18:37.325478"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 126ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 14:18:37 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (3.9ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.9ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.5ms)
+Completed 200 OK in 90ms (Views: 84.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 14:18:40 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (6.4ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 38ms (Views: 30.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 14:19:12 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (8.4ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.6ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 37.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/administrative/projects/index" for 127.0.0.1 at 2018-05-22 14:19:15 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/administrative/projects/index"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/administrative/projects/index" for 127.0.0.1 at 2018-05-22 14:23:36 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/administrative/projects/index"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 14:23:45 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (1.3ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (1.2ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 14:23:47 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (5.1ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/administrative/events" for 127.0.0.1 at 2018-05-22 14:31:16 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Administrative::EventsController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/index.html.erb within layouts/admin_lte_2
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered administrative/events/index.html.erb within layouts/admin_lte_2 (10.8ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 632ms (Views: 601.1ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/administrative/events" for 127.0.0.1 at 2018-05-22 14:31:19 -0300
+Processing by Administrative::EventsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/index.html.erb within layouts/admin_lte_2
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered administrative/events/index.html.erb within layouts/admin_lte_2 (2.2ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/administrative/events" for 127.0.0.1 at 2018-05-22 14:31:20 -0300
+Processing by Administrative::EventsController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/index.html.erb within layouts/admin_lte_2
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered administrative/events/index.html.erb within layouts/admin_lte_2 (2.1ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/administrative/events" for 127.0.0.1 at 2018-05-22 14:31:21 -0300
+Processing by Administrative::EventsController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/index.html.erb within layouts/admin_lte_2
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered administrative/events/index.html.erb within layouts/admin_lte_2 (2.1ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 33ms (Views: 29.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/administrative" for 127.0.0.1 at 2018-05-22 14:31:31 -0300
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/admin_lte_2
+  Rendered administrative/index.html.erb within layouts/admin_lte_2 (0.2ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-22 14:31:34 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-22 14:31:34 -0300
+Processing by Sign::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/admin_lte_2_login
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/admin_lte_2_login (7.8ms)
+Completed 200 OK in 55ms (Views: 32.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2018-05-22 14:31:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2018-05-22 14:31:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2018-05-22 14:31:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2018-05-22 14:31:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2018-05-22 14:31:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2018-05-22 14:31:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/administrative" for 127.0.0.1 at 2018-05-22 14:31:44 -0300
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/admin_lte_2
+  Rendered administrative/index.html.erb within layouts/admin_lte_2 (0.3ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/administrative/events" for 127.0.0.1 at 2018-05-22 14:31:57 -0300
+Processing by Administrative::EventsController#index as HTML
+  [1m[36mAdmin Load (1.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/index.html.erb within layouts/admin_lte_2
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered administrative/events/index.html.erb within layouts/admin_lte_2 (6.7ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.9ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.5ms)
+Completed 200 OK in 84ms (Views: 73.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/administrative/events/3/edit" for 127.0.0.1 at 2018-05-22 14:31:59 -0300
+Processing by Administrative::EventsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering administrative/events/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/events/edit.html.erb within layouts/admin_lte_2 (4.4ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 32.6ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/administrative/events/3" for 127.0.0.1 at 2018-05-22 14:32:01 -0300
+Processing by Administrative::EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jx4yhp4iztNvUoeZ3oFoUxZ6Os0n76aqUhG+wf4IDiEVhPSloWxdqiIponLaIS7BaBvHdy9jB+i7N9tH8bWqHA==", "event"=>{"name"=>"Destine", "date(1i)"=>"2018", "date(2i)"=>"1", "date(3i)"=>"20", "description"=>""}, "commit"=>"Salvar", "id"=>"3"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/events
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/administrative/events" for 127.0.0.1 at 2018-05-22 14:32:01 -0300
+Processing by Administrative::EventsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/index.html.erb within layouts/admin_lte_2
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered administrative/events/index.html.erb within layouts/admin_lte_2 (2.1ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative/events/new" for 127.0.0.1 at 2018-05-22 14:32:03 -0300
+Processing by Administrative::EventsController#new as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/events/new.html.erb within layouts/admin_lte_2 (3.2ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 36ms (Views: 32.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/administrative/events" for 127.0.0.1 at 2018-05-22 14:32:04 -0300
+Processing by Administrative::EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUxzGoUzfrGDEfKCmWinSedwGg52Yopha3/S+RYFqNqD1rU5un3tyM5q12mdyOHbmRHntH7uKyOCWbd/GbgM5w==", "event"=>{"name"=>"", "date(1i)"=>"2018", "date(2i)"=>"5", "date(3i)"=>"22", "description"=>""}, "commit"=>"Salvar"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "events" ("name", "date", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", ""], ["date", "2018-05-22"], ["description", ""], ["created_at", "2018-05-22 17:32:04.860134"], ["updated_at", "2018-05-22 17:32:04.860134"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/events
+Completed 302 Found in 8ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/administrative/events" for 127.0.0.1 at 2018-05-22 14:32:04 -0300
+Processing by Administrative::EventsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/index.html.erb within layouts/admin_lte_2
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered administrative/events/index.html.erb within layouts/admin_lte_2 (2.1ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 14:33:39 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (14.5ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (1.3ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.8ms)
+Completed 200 OK in 118ms (Views: 92.1ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 14:33:40 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (4.7ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 44ms (Views: 29.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 14:34:44 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (6.0ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.6ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 33.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/administrative/projects/index" for 127.0.0.1 at 2018-05-22 14:35:08 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/administrative/projects/index"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/administrative/projects/index" for 127.0.0.1 at 2018-05-22 14:38:50 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/administrative/projects/index"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 14:41:00 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (3.1ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 53ms (Views: 34.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 14:41:02 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (1.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.8ms)
+
+
+  
+SyntaxError (/home/lia/Documents/RAILS- EXERCICIO/Gti_RubyonRails/gtimembersystem/app/views/administrative/projects/new.html.erb:23: syntax error, unexpected keyword_do, expecting keyword_end
+...rl: {controller: "projects"} do |f| @output_buffer.safe_appe...
+...                             ^~
+/home/lia/Documents/RAILS- EXERCICIO/Gti_RubyonRails/gtimembersystem/app/views/administrative/projects/new.html.erb:75: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/administrative/projects/new.html.erb:23: syntax error, unexpected keyword_do, expecting keyword_end
+app/views/administrative/projects/new.html.erb:75: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 14:41:37 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (3.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (2.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 3.3ms)
+
+
+  
+SyntaxError (/home/lia/Documents/RAILS- EXERCICIO/Gti_RubyonRails/gtimembersystem/app/views/administrative/projects/new.html.erb:23: syntax error, unexpected keyword_do, expecting keyword_end
+...reate', :id => @project.id } do |f| @output_buffer.safe_appe...
+...                             ^~
+/home/lia/Documents/RAILS- EXERCICIO/Gti_RubyonRails/gtimembersystem/app/views/administrative/projects/new.html.erb:75: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/administrative/projects/new.html.erb:23: syntax error, unexpected keyword_do, expecting keyword_end
+app/views/administrative/projects/new.html.erb:75: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 14:42:13 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (1.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/lia/Documents/RAILS- EXERCICIO/Gti_RubyonRails/gtimembersystem/app/views/administrative/projects/new.html.erb:23: syntax error, unexpected keyword_do, expecting keyword_end
+...rl => {:action => 'create' } do |f| @output_buffer.safe_appe...
+...                             ^~
+/home/lia/Documents/RAILS- EXERCICIO/Gti_RubyonRails/gtimembersystem/app/views/administrative/projects/new.html.erb:75: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/administrative/projects/new.html.erb:23: syntax error, unexpected keyword_do, expecting keyword_end
+app/views/administrative/projects/new.html.erb:75: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 14:42:52 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (8.5ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.9ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 42.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/administrative/projects" for 127.0.0.1 at 2018-05-22 14:42:55 -0300
+Processing by Administrative::ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9gL5exkkQRAdM1Rt8mmNlnT1U+arP9FFep40GfWq84/EmD9YJmrSaVBIcYb2ycsECpSuXKOzcAeTuFGf+hdXsg==", "project"=>{"name"=>"", "value"=>"", "start_date(1i)"=>"2018", "start_date(2i)"=>"5", "start_date(3i)"=>"22", "expected_date(1i)"=>"2018", "expected_date(2i)"=>"5", "expected_date(3i)"=>"22", "end_date(1i)"=>"2018", "end_date(2i)"=>"5", "end_date(3i)"=>"22", "description"=>"", "client"=>""}, "commit"=>"Salvar"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "client", "start_date", "end_date", "expected_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", ""], ["description", ""], ["client", ""], ["start_date", "2018-05-22"], ["end_date", "2018-05-22"], ["expected_date", "2018-05-22"], ["created_at", "2018-05-22 17:42:55.502532"], ["updated_at", "2018-05-22 17:42:55.502532"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 10ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 14:42:55 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (1.5ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 14:45:11 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (6.0ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 36ms (Views: 32.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 14:45:47 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (3.6ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.5ms)
+Completed 200 OK in 41ms (Views: 36.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 14:45:50 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (7.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (17.8ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.6ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 69ms (Views: 54.5ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 14:45:59 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (8.7ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.6ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 39.7ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/administrative/projects" for 127.0.0.1 at 2018-05-22 14:46:01 -0300
+Processing by Administrative::ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1oz7nvqcRkMUnN17d8A/mW8EXrZAOdn+4Gc3Wp6fDODkFj29xdLVOlnn+JBzYHkLEWWjDEi1eLwJQVLckSKo3Q==", "project"=>{"name"=>"", "value"=>"", "start_date(1i)"=>"2018", "start_date(2i)"=>"5", "start_date(3i)"=>"22", "expected_date(1i)"=>"2018", "expected_date(2i)"=>"5", "expected_date(3i)"=>"22", "end_date(1i)"=>"2018", "end_date(2i)"=>"5", "end_date(3i)"=>"22", "description"=>"", "client"=>""}, "commit"=>"Salvar"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "client", "start_date", "end_date", "expected_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", ""], ["description", ""], ["client", ""], ["start_date", "2018-05-22"], ["end_date", "2018-05-22"], ["expected_date", "2018-05-22"], ["created_at", "2018-05-22 17:46:01.452795"], ["updated_at", "2018-05-22 17:46:01.452795"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 8ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 14:46:01 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (1.5ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/administrative/projects/1" for 127.0.0.1 at 2018-05-22 14:46:08 -0300
+Processing by Administrative::ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bIBjKIkP8ZLG9eq4Zjx7NMDlkljxfMOiBzMqRem9XAFeGqULtkFi64uOz1NinD2mvoRv4vnwYuDuFU/D5gD4PA==", "id"=>"1"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "projects_users" WHERE "projects_users"."project_id" = $1[0m  [["project_id", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 25ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 14:46:08 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (1.5ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 31ms (Views: 28.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/administrative/projects/2/edit" for 127.0.0.1 at 2018-05-22 14:46:11 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (5.3ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 34.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/administrative/projects/2/edit" for 127.0.0.1 at 2018-05-22 14:47:08 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (10.5ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 43.2ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/administrative/projects/2" for 127.0.0.1 at 2018-05-22 14:47:11 -0300
+Processing by Administrative::ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ofyIoxBuDb1sdx7EfV9fLbHpMYX4xvp8vAA476DO6eWTZk6ALyCexCEMOy95/xm/z4jMP/BKWz5VJl1pr3NN2A==", "project"=>{"name"=>"", "value"=>"", "start_date(1i)"=>"2018", "start_date(2i)"=>"5", "start_date(3i)"=>"22", "expected_date(1i)"=>"2018", "expected_date(2i)"=>"5", "expected_date(3i)"=>"22", "end_date(1i)"=>"2018", "end_date(2i)"=>"5", "end_date(3i)"=>"22", "description"=>"", "client"=>""}, "commit"=>"Salvar", "id"=>"2"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 14:47:11 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (1.7ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/administrative/projects/2/edit" for 127.0.0.1 at 2018-05-22 14:47:26 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (7.7ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 38.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/administrative/projects/2/edit" for 127.0.0.1 at 2018-05-22 14:49:03 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (10.5ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.4ms)
+Completed 200 OK in 55ms (Views: 49.9ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/administrative/projects/2" for 127.0.0.1 at 2018-05-22 14:49:05 -0300
+Processing by Administrative::ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hIo5wdScathFSo/5VWKaHpGcXQYeCQCT71RvA7mlTUu2EP/i69L5oQgxqhJRwtyM7/2gvBaFodEGcgqFthjpdg==", "project"=>{"name"=>"", "value"=>"", "start_date(1i)"=>"2018", "start_date(2i)"=>"5", "start_date(3i)"=>"22", "expected_date(1i)"=>"2018", "expected_date(2i)"=>"5", "expected_date(3i)"=>"22", "end_date(1i)"=>"2018", "end_date(2i)"=>"5", "end_date(3i)"=>"22", "description"=>"", "client"=>""}, "commit"=>"Salvar", "id"=>"2"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (2.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 12ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 14:49:05 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (2.8ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/administrative/projects/2/edit" for 127.0.0.1 at 2018-05-22 14:49:09 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (5.6ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative/projects/2/edit" for 127.0.0.1 at 2018-05-22 14:49:24 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (21.4ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (1.1ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.4ms)
+Completed 200 OK in 82ms (Views: 73.3ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/administrative/projects/2" for 127.0.0.1 at 2018-05-22 14:49:29 -0300
+Processing by Administrative::ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N+Jh9QRB1hNGC1dd8Rc8Z0Rm7RrOkoAmFTU4C+HXdQ8FeKfWOw9Fagtwcrb1t3r1OgcQoMYeIWT8E12N7mrRMg==", "project"=>{"name"=>"", "value"=>"loa", "start_date(1i)"=>"2018", "start_date(2i)"=>"5", "start_date(3i)"=>"22", "expected_date(1i)"=>"2018", "expected_date(2i)"=>"5", "expected_date(3i)"=>"22", "end_date(1i)"=>"2018", "end_date(2i)"=>"5", "end_date(3i)"=>"22", "description"=>"", "client"=>""}, "commit"=>"Salvar", "id"=>"2"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "projects" SET "value" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["value", 0.0], ["updated_at", "2018-05-22 17:49:29.193722"], ["id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 10ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 14:49:29 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (1.8ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 29.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/administrative/projects/2/edit" for 127.0.0.1 at 2018-05-22 14:49:35 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (8.7ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.4ms)
+Completed 200 OK in 58ms (Views: 50.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/administrative/projects/2/edit" for 127.0.0.1 at 2018-05-22 14:49:51 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (12.0ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 62ms (Views: 49.8ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/administrative/projects/2" for 127.0.0.1 at 2018-05-22 14:49:55 -0300
+Processing by Administrative::ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3oUWO/VVDMbjdZaBSfMEC2pUFV9l4tU5N4H5/jNmvkHsH9AYyhufv64Os2pNU0KZFDXo5W1udHvep5x4PNsafA==", "project"=>{"name"=>"Lia", "value"=>"0.0", "start_date(1i)"=>"2018", "start_date(2i)"=>"5", "start_date(3i)"=>"22", "expected_date(1i)"=>"2018", "expected_date(2i)"=>"5", "expected_date(3i)"=>"22", "end_date(1i)"=>"2018", "end_date(2i)"=>"5", "end_date(3i)"=>"22", "description"=>"", "client"=>""}, "commit"=>"Salvar", "id"=>"2"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "projects" SET "name" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["name", "Lia"], ["updated_at", "2018-05-22 17:49:55.318968"], ["id", 2]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 21ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 14:49:55 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (2.1ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 14:53:59 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (1.9ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/administrative/projects/2/edit" for 127.0.0.1 at 2018-05-22 14:54:01 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/shared/_form.html.erb (14.7ms)
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (16.1ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.6ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 43.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/administrative/projects/" for 127.0.0.1 at 2018-05-22 14:54:39 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (10.6ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 601ms (Views: 571.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/administrative/projects/2/edit" for 127.0.0.1 at 2018-05-22 14:54:41 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/shared/_form.html.erb (9.9ms)
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (10.9ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 46ms (Views: 38.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/administrative/projects/2/edit" for 127.0.0.1 at 2018-05-22 14:56:49 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/shared/_form.html.erb (6.5ms)
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (7.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Salvar):
+    63:                     <%= f.label :client %>
+    64:                     <%= f.text_field :client, class:"form-control", placeholder:"Ex: Lina"  %>  
+    65:                 </div>
+    66:                <button type="submit" class="btn btn-block btn-success btn-flat"><%= Salvar %></button> 
+    67:             <% end %>
+    68:         </div>
+    69:     </div>
+  
+app/views/administrative/projects/shared/_form.html.erb:66:in `block in _app_views_administrative_projects_shared__form_html_erb__3798100843680048697_70299164294380'
+app/views/administrative/projects/shared/_form.html.erb:23:in `_app_views_administrative_projects_shared__form_html_erb__3798100843680048697_70299164294380'
+app/views/administrative/projects/edit.html.erb:1:in `_app_views_administrative_projects_edit_html_erb__1930375361028666505_70299169507900'
+Started GET "/administrative/projects/2/edit" for 127.0.0.1 at 2018-05-22 15:44:11 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/shared/_form.html.erb (17.4ms)
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (19.9ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (1.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.6ms)
+Completed 200 OK in 112ms (Views: 102.2ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/administrative/projects/2" for 127.0.0.1 at 2018-05-22 15:44:16 -0300
+Processing by Administrative::ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B9HesyUNX4nWQDhgA5jjx6wU00Bu6D33ii8oVRVCQpQ1SxiQGkPM8Js7HYsHOKVV0nUu+mZknLVjCU3TGv/mqQ==", "project"=>{"name"=>"Lia", "value"=>"0.0", "start_date(1i)"=>"2018", "start_date(2i)"=>"5", "start_date(3i)"=>"22", "expected_date(1i)"=>"2018", "expected_date(2i)"=>"5", "expected_date(3i)"=>"22", "end_date(1i)"=>"2018", "end_date(2i)"=>"5", "end_date(3i)"=>"22", "description"=>"", "client"=>""}, "id"=>"2"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:44:16 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (1.4ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 30ms (Views: 25.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/administrative/projects/2/edit" for 127.0.0.1 at 2018-05-22 15:44:37 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/shared/_form.html.erb (4.7ms)
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (5.9ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.6ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.4ms)
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/administrative/projects/2/edit" for 127.0.0.1 at 2018-05-22 15:44:49 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (3.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/shared/_form.html.erb (13.2ms)
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (15.0ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 58.3ms | ActiveRecord: 4.4ms)
+
+
+Started PATCH "/administrative/projects/2" for 127.0.0.1 at 2018-05-22 15:44:51 -0300
+Processing by Administrative::ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WTEpOxS0/5ErYj8FpkVp1BFPzpNTz0+YjFedDXHFCwxrq+8YK/ps6GYZGu6i5S9Gby4zKVtD7tplcfiLfnivMQ==", "project"=>{"name"=>"Lia", "value"=>"0.0", "start_date(1i)"=>"2018", "start_date(2i)"=>"5", "start_date(3i)"=>"22", "expected_date(1i)"=>"2018", "expected_date(2i)"=>"5", "expected_date(3i)"=>"22", "end_date(1i)"=>"2018", "end_date(2i)"=>"5", "end_date(3i)"=>"22", "description"=>"", "client"=>""}, "id"=>"2"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:44:51 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (1.5ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 15:44:53 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/shared/_form.html.erb (5.3ms)
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (6.5ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.4ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 15:45:03 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/shared/_form.html.erb (17.3ms)
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (19.9ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.5ms)
+Completed 200 OK in 90ms (Views: 82.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:45:05 -0300
+Processing by Administrative::ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"79JbIRi3GNYUKuSN75AtqgZ3tSbQC+OSPQJCU/Cun5bdSJ0CJ/mLr1lRwWbrMGs4eBZInNiHQtDUJCfV/xM7qw==", "project"=>{"name"=>"", "value"=>"", "start_date(1i)"=>"2018", "start_date(2i)"=>"5", "start_date(3i)"=>"22", "expected_date(1i)"=>"2018", "expected_date(2i)"=>"5", "expected_date(3i)"=>"22", "end_date(1i)"=>"2018", "end_date(2i)"=>"5", "end_date(3i)"=>"22", "description"=>"", "client"=>""}}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "client", "start_date", "end_date", "expected_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", ""], ["description", ""], ["client", ""], ["start_date", "2018-05-22"], ["end_date", "2018-05-22"], ["expected_date", "2018-05-22"], ["created_at", "2018-05-22 18:45:05.412704"], ["updated_at", "2018-05-22 18:45:05.412704"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 7ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:45:05 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (1.8ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (2.3ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 31ms (Views: 27.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:45:27 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (2.9ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 48.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 15:45:35 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/shared/_form.html.erb (5.2ms)
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (6.4ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.6ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 15:46:07 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/shared/_form.html.erb (8.0ms)
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (10.1ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 53ms (Views: 45.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:46:14 -0300
+Processing by Administrative::ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xVoVaJxnhGYRlVI7SFhd2NtFJI/6Pd5v0a29S0MGusT3wNNLoykXH1zud9BM+BtKpSTZNfKxfy04i9jNTLse+Q==", "project"=>{"name"=>"Lina", "value"=>"10 mil", "start_date(1i)"=>"2018", "start_date(2i)"=>"5", "start_date(3i)"=>"22", "expected_date(1i)"=>"2018", "expected_date(2i)"=>"5", "expected_date(3i)"=>"22", "end_date(1i)"=>"2018", "end_date(2i)"=>"5", "end_date(3i)"=>"22", "description"=>"", "client"=>""}}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "value", "description", "client", "start_date", "end_date", "expected_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Lina"], ["value", 10.0], ["description", ""], ["client", ""], ["start_date", "2018-05-22"], ["end_date", "2018-05-22"], ["expected_date", "2018-05-22"], ["created_at", "2018-05-22 18:46:14.617317"], ["updated_at", "2018-05-22 18:46:14.617317"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 14ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:46:14 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (5.3ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.4ms)
+Completed 200 OK in 65ms (Views: 60.5ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/administrative/projects/2" for 127.0.0.1 at 2018-05-22 15:46:28 -0300
+Processing by Administrative::ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IA5qvx9wv1Cl3wyoYHzLdMD9kAn4BDvV39BepnnXOg8SlKycID4sKeikKUNk3I3mvpxts/CImpc29jsgdmqeMg==", "id"=>"2"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "projects_users" WHERE "projects_users"."project_id" = $1[0m  [["project_id", 2]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 2]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 17ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:46:28 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (2.7ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 32ms (Views: 27.4ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/administrative/projects/4" for 127.0.0.1 at 2018-05-22 15:46:39 -0300
+Processing by Administrative::ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mpkZMNI75Yi4O/98hCTImQ4F4H9ZP2NjcN+WjeGhrIWoA98T7XV28fVA2peAhI4LcGQdxVGzwiGZ+fML7hwIuA==", "id"=>"4"}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[31mDELETE FROM "projects_users" WHERE "projects_users"."project_id" = $1[0m  [["project_id", 4]]
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 4]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 21ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:46:39 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (3.2ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 45.1ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/administrative/projects/3" for 127.0.0.1 at 2018-05-22 15:46:45 -0300
+Processing by Administrative::ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gRidE+q4lzZ8jC32NSOmTS45pQcqfmcZ+gjxK4jWtDqzglsw1fYETzH3CB0xg+DfUFhYvSLyxlsTLpSth2sQBw==", "id"=>"3"}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "projects_users" WHERE "projects_users"."project_id" = $1[0m  [["project_id", 3]]
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 3]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 28ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:46:45 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (1.7ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 33.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 15:46:48 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/shared/_form.html.erb (6.2ms)
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (7.4ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (1.3ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 15:47:15 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/shared/_form.html.erb (7.4ms)
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (8.4ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (1.0ms)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:47:27 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (1.4ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 15:47:29 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/shared/_form.html.erb (6.7ms)
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (7.7ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 15:47:43 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/shared/_form.html.erb (7.5ms)
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (8.6ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (1.1ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (1.1ms)
+Completed 200 OK in 42ms (Views: 38.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:47:45 -0300
+Processing by Administrative::ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vivFUupjB+6XZQCRyFQ2lNkznP/M90PeW5geuZLY6q6MsQNx1S2Ul9oeJXrM9HAGp1JhRcR74pyyvns/nWVOkw==", "project"=>{"name"=>"", "value"=>"", "start_date(1i)"=>"2018", "start_date(2i)"=>"5", "start_date(3i)"=>"22", "expected_date(1i)"=>"2018", "expected_date(2i)"=>"5", "expected_date(3i)"=>"22", "end_date(1i)"=>"2018", "end_date(2i)"=>"5", "end_date(3i)"=>"22", "description"=>"", "client"=>""}}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "client", "start_date", "end_date", "expected_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", ""], ["description", ""], ["client", ""], ["start_date", "2018-05-22"], ["end_date", "2018-05-22"], ["expected_date", "2018-05-22"], ["created_at", "2018-05-22 18:47:45.304997"], ["updated_at", "2018-05-22 18:47:45.304997"]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 10ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:47:45 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (1.5ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative/events" for 127.0.0.1 at 2018-05-22 15:48:07 -0300
+Processing by Administrative::EventsController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/index.html.erb within layouts/admin_lte_2
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered administrative/events/index.html.erb within layouts/admin_lte_2 (16.4ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 41.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/administrative/events/11/edit" for 127.0.0.1 at 2018-05-22 15:48:09 -0300
+Processing by Administrative::EventsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering administrative/events/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/events/edit.html.erb within layouts/admin_lte_2 (3.2ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/administrative/events/11" for 127.0.0.1 at 2018-05-22 15:48:22 -0300
+Processing by Administrative::EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"siMGbzcFI1/ZPOvmASVE7q1x4A/IyF2IL7iytcrnZCqAucBMCEuwJpRHzg0FhQJ80xAdtcBE/MrGntczxVrAFw==", "event"=>{"name"=>"ENEJ", "date(1i)"=>"2018", "date(2i)"=>"5", "date(3i)"=>"22", "description"=>"Encontro Nacional"}, "commit"=>"Salvar", "id"=>"11"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "events" SET "name" = $1, "description" = $2, "updated_at" = $3 WHERE "events"."id" = $4[0m  [["name", "ENEJ"], ["description", "Encontro Nacional"], ["updated_at", "2018-05-22 18:48:22.785250"], ["id", 11]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/events
+Completed 302 Found in 10ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/administrative/events" for 127.0.0.1 at 2018-05-22 15:48:22 -0300
+Processing by Administrative::EventsController#index as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/index.html.erb within layouts/admin_lte_2
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered administrative/events/index.html.erb within layouts/admin_lte_2 (2.3ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 45.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/administrative/events/new" for 127.0.0.1 at 2018-05-22 15:48:26 -0300
+Processing by Administrative::EventsController#new as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/events/new.html.erb within layouts/admin_lte_2 (4.0ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/administrative/events?method=post" for 127.0.0.1 at 2018-05-22 15:48:39 -0300
+Processing by Administrative::EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gp/7rOU5n/LUSbMpu783eR7INy+E9+GF34/S6dxaiEywBT2P2ncMi5kylsK/H3HrYKnKlYx7QMc2qbdv0+cscQ==", "event"=>{"name"=>"ECEJ", "date(1i)"=>"2018", "date(2i)"=>"5", "date(3i)"=>"22", "description"=>"NOVO"}, "commit"=>"Salvar", "method"=>"post"}
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (5.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "date", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ECEJ"], ["date", "2018-05-22"], ["description", "NOVO"], ["created_at", "2018-05-22 18:48:39.372121"], ["updated_at", "2018-05-22 18:48:39.372121"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/events
+Completed 302 Found in 18ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/administrative/events" for 127.0.0.1 at 2018-05-22 15:48:39 -0300
+Processing by Administrative::EventsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/events/index.html.erb within layouts/admin_lte_2
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered administrative/events/index.html.erb within layouts/admin_lte_2 (2.0ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:48:52 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (3.7ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/administrative/projects/5/edit" for 127.0.0.1 at 2018-05-22 15:48:54 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/shared/_form.html.erb (5.2ms)
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (5.9ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 38ms (Views: 33.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative/projects/5/edit" for 127.0.0.1 at 2018-05-22 15:50:40 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (8.4ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 47ms (Views: 39.9ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/administrative/projects/5" for 127.0.0.1 at 2018-05-22 15:50:50 -0300
+Processing by Administrative::ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dbE1X7bCHI+e1Q8GvqgckwgWzHviibJv4jZrw68y94hHK/N8iYyP9tOuKu26CFoBdncxweoFEy0LEA5FoI9TtQ==", "project"=>{"name"=>"Hey", "value"=>"baby", "start_date(1i)"=>"2018", "start_date(2i)"=>"5", "start_date(3i)"=>"22", "expected_date(1i)"=>"2018", "expected_date(2i)"=>"5", "expected_date(3i)"=>"22", "end_date(1i)"=>"2018", "end_date(2i)"=>"5", "end_date(3i)"=>"22", "description"=>"", "client"=>""}, "commit"=>"Salvar", "id"=>"5"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "projects" SET "name" = $1, "value" = $2, "updated_at" = $3 WHERE "projects"."id" = $4[0m  [["name", "Hey"], ["value", 0.0], ["updated_at", "2018-05-22 18:50:50.493796"], ["id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:50:50 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (1.5ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 15:50:52 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (14.6ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.4ms)
+Completed 200 OK in 60ms (Views: 54.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/administrative/projects/new" for 127.0.0.1 at 2018-05-22 15:51:35 -0300
+Processing by Administrative::ProjectsController#new as HTML
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/new.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/new.html.erb within layouts/admin_lte_2 (21.7ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.6ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 84ms (Views: 74.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:51:44 -0300
+Processing by Administrative::ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0J7A8M2uckTQyUIDcATW2UpzZw0cCgMmbCI4fNAFz9LiBAbT8uDhPZ2yZ+h0pJBLNBKatxSGomSFBF3637hr7w==", "project"=>{"name"=>"hey", "value"=>"bay", "start_date(1i)"=>"2018", "start_date(2i)"=>"5", "start_date(3i)"=>"22", "expected_date(1i)"=>"2018", "expected_date(2i)"=>"5", "expected_date(3i)"=>"22", "end_date(1i)"=>"2018", "end_date(2i)"=>"5", "end_date(3i)"=>"22", "description"=>"", "client"=>""}, "commit"=>"Salvar"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "projects" ("name", "value", "description", "client", "start_date", "end_date", "expected_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "hey"], ["value", 0.0], ["description", ""], ["client", ""], ["start_date", "2018-05-22"], ["end_date", "2018-05-22"], ["expected_date", "2018-05-22"], ["created_at", "2018-05-22 18:51:44.066669"], ["updated_at", "2018-05-22 18:51:44.066669"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 12ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:51:44 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (2.4ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.6ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.9ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/administrative/projects/6/edit" for 127.0.0.1 at 2018-05-22 15:51:46 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (11.3ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.5ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.8ms)
+Completed 200 OK in 57ms (Views: 50.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/administrative/projects/6/edit" for 127.0.0.1 at 2018-05-22 15:54:02 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (8.1ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.6ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 50ms (Views: 41.9ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/administrative/projects/6" for 127.0.0.1 at 2018-05-22 15:54:09 -0300
+Processing by Administrative::ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LKOmEtXRMDiWhkBeCmV9yVPiGRgWf9zpqVcwlC31rr4eOWAx6p+jQdv9ZbUOxTtbLYPkoh7zfatAcVUSIkgKgw==", "project"=>{"name"=>"hey", "value"=>"0.0", "start_date(1i)"=>"2018", "start_date(2i)"=>"5", "start_date(3i)"=>"22", "expected_date(1i)"=>"2018", "expected_date(2i)"=>"5", "expected_date(3i)"=>"22", "end_date(1i)"=>"2018", "end_date(2i)"=>"5", "end_date(3i)"=>"22", "description"=>"bay", "client"=>""}, "commit"=>"Salvar", "id"=>"6"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "projects" SET "description" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["description", "bay"], ["updated_at", "2018-05-22 18:54:09.229896"], ["id", 6]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 21ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:54:09 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (5.2ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 65.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/administrative/projects/5/edit" for 127.0.0.1 at 2018-05-22 15:54:11 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (5.9ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/administrative/projects/5/edit" for 127.0.0.1 at 2018-05-22 15:54:57 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (21.3ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.5ms)
+Completed 200 OK in 85ms (Views: 73.4ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/administrative/projects/5" for 127.0.0.1 at 2018-05-22 15:54:59 -0300
+Processing by Administrative::ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HwUIHlPaAKssw5AdSwDisJY5kLYErvyVnKW67aSKTr8tn849bJST0mG4tfZPoKQi6FhtDAwiXdd1g99rqzfqgg==", "project"=>{"name"=>"Hey", "value"=>"0.0", "start_date(1i)"=>"2018", "start_date(2i)"=>"5", "start_date(3i)"=>"22", "expected_date(1i)"=>"2018", "expected_date(2i)"=>"5", "expected_date(3i)"=>"22", "end_date(1i)"=>"2018", "end_date(2i)"=>"5", "end_date(3i)"=>"22", "description"=>"", "client"=>""}, "commit"=>"Salvar", "id"=>"5"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/administrative/projects
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:54:59 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (1.9ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (4.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 35.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:55:49 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (2.2ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.6ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrative/projects/5/edit" for 127.0.0.1 at 2018-05-22 15:55:52 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (1.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/lia/Documents/RAILS- EXERCICIO/Gti_RubyonRails/gtimembersystem/app/views/administrative/projects/edit.html.erb:24: syntax error, unexpected '=', expecting =>
+...r @project,  :url => {:action = 'update' } do |f| @output_bu...
+...                              ^
+/home/lia/Documents/RAILS- EXERCICIO/Gti_RubyonRails/gtimembersystem/app/views/administrative/projects/edit.html.erb:24: syntax error, unexpected '}', expecting keyword_end
+...  :url => {:action = 'update' } do |f| @output_buffer.safe_a...
+...                              ^
+/home/lia/Documents/RAILS- EXERCICIO/Gti_RubyonRails/gtimembersystem/app/views/administrative/projects/edit.html.erb:76: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/administrative/projects/edit.html.erb:24: syntax error, unexpected '=', expecting =>
+app/views/administrative/projects/edit.html.erb:24: syntax error, unexpected '}', expecting keyword_end
+app/views/administrative/projects/edit.html.erb:76: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/administrative/projects/5/edit" for 127.0.0.1 at 2018-05-22 15:56:33 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (8.7ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (Missing block):
+    21:     <!-- /.panel-heading -->
+    22:     <div class="panel-body">
+    23:         <div class="col-lg-6">
+    24:            <%= f form_for @project, url: {action: "create"} do |f| %>
+    25:                 <div class="form-group">
+    26:                     <%= f.label :name %>
+    27:                     <%= f.text_field :name, class:"form-control", placeholder:"Ex: Lina"  %>  
+  
+app/views/administrative/projects/edit.html.erb:24:in `_app_views_administrative_projects_edit_html_erb__1930375361028666505_70299180960280'
+Started GET "/administrative/projects/5/edit" for 127.0.0.1 at 2018-05-22 15:56:44 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (23.5ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (3.0ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.5ms)
+Completed 200 OK in 122ms (Views: 114.6ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:56:46 -0300
+  
+ActionController::RoutingError (No route matches [PATCH] "/administrative/projects"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started PATCH "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:57:18 -0300
+  
+ActionController::RoutingError (No route matches [PATCH] "/administrative/projects"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/administrative/projects" for 127.0.0.1 at 2018-05-22 15:57:20 -0300
+Processing by Administrative::ProjectsController#index as HTML
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/projects/index.html.erb within layouts/admin_lte_2
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered administrative/projects/index.html.erb within layouts/admin_lte_2 (7.7ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (1.4ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.7ms)
+Completed 200 OK in 107ms (Views: 98.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/administrative/projects/5/edit" for 127.0.0.1 at 2018-05-22 15:57:23 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (258.6ms)
+Completed 500 Internal Server Error in 273ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `administrative' for #<#<Class:0x0000558007ff0c80>:0x00007fdf9adaa210>
+Did you mean?  administrative_url):
+    21:     <!-- /.panel-heading -->
+    22:     <div class="panel-body">
+    23:         <div class="col-lg-6">
+    24:            <%= form_for [administrative,@project], url: {action: "create"} do |f| %>
+    25:                 <div class="form-group">
+    26:                     <%= f.label :name %>
+    27:                     <%= f.text_field :name, class:"form-control", placeholder:"Ex: Lina"  %>  
+  
+app/views/administrative/projects/edit.html.erb:24:in `_app_views_administrative_projects_edit_html_erb__1930375361028666505_70299176228260'
+Started GET "/administrative/projects/5/edit" for 127.0.0.1 at 2018-05-22 15:57:55 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (331.1ms)
+Completed 500 Internal Server Error in 338ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admnistrative' for #<#<Class:0x0000558007ff0c80>:0x00007fdf9b670368>
+Did you mean?  administrative_url):
+    21:     <!-- /.panel-heading -->
+    22:     <div class="panel-body">
+    23:         <div class="col-lg-6">
+    24:            <%= form_for [admnistrative,@project], url: {action: "create"} do |f| %>
+    25:                 <div class="form-group">
+    26:                     <%= f.label :name %>
+    27:                     <%= f.text_field :name, class:"form-control", placeholder:"Ex: Lina"  %>  
+  
+app/views/administrative/projects/edit.html.erb:24:in `_app_views_administrative_projects_edit_html_erb__1930375361028666505_70299180828320'
+Started GET "/administrative/projects/5/edit" for 127.0.0.1 at 2018-05-22 15:58:23 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (4.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (239.1ms)
+Completed 500 Internal Server Error in 256ms (ActiveRecord: 5.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `administrative' for #<#<Class:0x0000558007ff0c80>:0x00007fdf9bda6600>
+Did you mean?  administrative_url):
+    21:     <!-- /.panel-heading -->
+    22:     <div class="panel-body">
+    23:         <div class="col-lg-6">
+    24:            <%= form_for [administrative,@project], url: {action: "create"} do |f| %>
+    25:                 <div class="form-group">
+    26:                     <%= f.label :name %>
+    27:                     <%= f.text_field :name, class:"form-control", placeholder:"Ex: Lina"  %>  
+  
+app/views/administrative/projects/edit.html.erb:24:in `_app_views_administrative_projects_edit_html_erb__1930375361028666505_70299184609180'
+Started GET "/administrative/projects/5/edit" for 127.0.0.1 at 2018-05-22 15:58:49 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (289.4ms)
+Completed 500 Internal Server Error in 293ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `administrative' for #<#<Class:0x0000558007ff0c80>:0x00007fdf98c54f48>
+Did you mean?  administrative_url):
+    21:     <!-- /.panel-heading -->
+    22:     <div class="panel-body">
+    23:         <div class="col-lg-6">
+    24:            <%= form_for [administrative,@project] do |f| %>
+    25:                 <div class="form-group">
+    26:                     <%= f.label :name %>
+    27:                     <%= f.text_field :name, class:"form-control", placeholder:"Ex: Lina"  %>  
+  
+app/views/administrative/projects/edit.html.erb:24:in `_app_views_administrative_projects_edit_html_erb__1930375361028666505_70299158847600'
+Started GET "/administrative/projects/5/edit" for 127.0.0.1 at 2018-05-22 15:59:14 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (1.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/lia/Documents/RAILS- EXERCICIO/Gti_RubyonRails/gtimembersystem/app/views/administrative/projects/edit.html.erb:24: syntax error, unexpected '=', expecting =>
+...r @project,  :url => {:action = 'update' } do |f| @output_bu...
+...                              ^
+/home/lia/Documents/RAILS- EXERCICIO/Gti_RubyonRails/gtimembersystem/app/views/administrative/projects/edit.html.erb:24: syntax error, unexpected '}', expecting keyword_end
+...  :url => {:action = 'update' } do |f| @output_buffer.safe_a...
+...                              ^
+/home/lia/Documents/RAILS- EXERCICIO/Gti_RubyonRails/gtimembersystem/app/views/administrative/projects/edit.html.erb:76: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/administrative/projects/edit.html.erb:24: syntax error, unexpected '=', expecting =>
+app/views/administrative/projects/edit.html.erb:24: syntax error, unexpected '}', expecting keyword_end
+app/views/administrative/projects/edit.html.erb:76: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/administrative/projects/5/edit" for 127.0.0.1 at 2018-05-22 15:59:39 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (7.2ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (0.6ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 44.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/administrative/projects/5/edit" for 127.0.0.1 at 2018-05-22 15:59:56 -0300
+Processing by Administrative::ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering administrative/projects/edit.html.erb within layouts/admin_lte_2
+  Rendered administrative/projects/edit.html.erb within layouts/admin_lte_2 (7.4ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (1.0ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (0.5ms)
+Completed 200 OK in 42ms (Views: 37.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-22 17:01:53 -0300
+Processing by Rails::InfoController#routes as HTML
+  Rendering /home/lia/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/lia/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [40 times] (7.6ms)
+  Rendered /home/lia/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/lia/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+

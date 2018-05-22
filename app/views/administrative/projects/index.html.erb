@@ -1,0 +1,54 @@
+<<div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Projetos</h3>
+
+              <div class="box-tools">
+                <div class="input-group input-group-sm" style="width: 150px;">
+                  <input name="table_search" class="form-control pull-right" placeholder="Search" type="text">
+
+                  <div class="input-group-btn">
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!— /.box-header —>
+            <div class="box-body table-responsive no-padding">
+              <table class="table table-hover">
+                <tbody><tr>
+                  <th>Nome</th>
+                  <th>Valor</th>
+                  <th>Data de Início</th>
+                  <th>Data de Prevista</th>
+                  <th>Data de Fim</th>
+                  <th>Descrição</th>
+                  <th><%= link_to new_administrative_project_path, type:"button", class:"btn btn-success pull-right" do %>
+                  <i class="fa fa-plus"></i>
+                  <%end%></th>
+                </tr>
+                <% @projects.each do |project| %>
+                <tr>
+                  <td><%= project.name %></td>
+                  <td><%= project.value %></td>
+                  <td><%= project.start_date %></td>
+                  <td><%= project.expected_date %></td>
+                  <td><%= project.end_date%></td>
+                  <td><%= project.description%></td>
+           
+                   <td>
+                    <%= link_to edit_administrative_project_path(project),type:"button", class:"btn btn-warning btn-flat" do %>
+                     <i class="fa fa-edit"></i>
+                     <%end%>
+                    
+                    <%= link_to administrative_project_path(project), method: :delete, data: { confirm: 'Tem certeza?' }, type:"button", class:"btn btn-danger btn-flat" do %>
+                     <i class="fa fa-remove"></i>
+                   <%end%>
+              
+                </tr>
+                <%end%>
+              </tbody></table>
+            </div>
+            <!— /.box-body —>
+          </div>
+          <!— /.box —>
