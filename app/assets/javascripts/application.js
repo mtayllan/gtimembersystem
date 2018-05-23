@@ -18,5 +18,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require jquery.slimscroll
+//= require pace
 //= require app
 //= require_tree .
+

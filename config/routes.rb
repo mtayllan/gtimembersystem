@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   
- 
-  
+  get 'administrative/index'
+
   get 'administrative', to: 'administrative/main#index'
   
   namespace :administrative do
-    get 'events/index'
+    resources :transfers, except: [:show]
+    resources :events, except: [:show]
     get 'projects/index'
-    get 'cash_flow/index'
     get 'users/index'
   end
   

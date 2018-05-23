@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CashFlowTest < ActiveSupport::TestCase
+class TransferTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

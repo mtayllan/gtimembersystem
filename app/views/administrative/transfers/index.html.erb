@@ -1,0 +1,55 @@
+  <div class="box box-primary">
+  <div class="box-header with-border">
+    <h3 class="box-title">Últimas Transferências</h3>
+    
+    <div class="box-tools pull-right">
+      <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+      </button>
+      <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+    </div>
+  </div>
+  <!-- /.box-header -->
+  <div class="box-body" style="">
+    <table class="table table-hover">
+      <tbody><tr>
+        <th>ID</th>
+        <th>Descrição</th>
+        <th>Tipo</th>
+        <th>Valor</th>
+        <th>Data</th>
+        <th></th>
+      </tr>
+      <% @transferences.each do |transfer| %>
+      <tr>
+        <td><%= transfer.id %></td>
+        <td><%= transfer.description %></td>
+        <% if transfer.category == 'in' %>
+          <td><span class="label bg-teal-active color-palette">Entrada</span></td>
+        <% else %>
+          <td><span class="label bg-orange-active color-palette ">Saída</span></td>
+        <% end %>
+        <td><%= humanized_money_with_symbol transfer.price %></td>
+        <td><%= transfer.created_at %></td>
+        <td>
+          <div class="btn-group-vertical">
+            <%= link_to edit_administrative_transfer_path(transfer), class: "btn btn-xs  bg-navy" do %>
+              <i class="fa fa-edit"></i>
+            <% end %>
+            <%= link_to administrative_transfer_path(transfer), method: :delete, class: "btn btn-xs btn-danger" do %>
+              <i class="fa fa-trash"></i>
+            <% end %>
+          </div>
+        </td>
+        
+      </tr>
+    <% end %>
+    </tbody>
+    </table>
+    <%= paginate @transferences %>
+    <div class="pull-right"><%= link_to new_administrative_transfer_path, class: "btn btn-success" do %>
+        Nova <i class="fa fa-plus"></i>
+    <% end %></div>
+  </div>
+  
+</div>  
+

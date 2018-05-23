@@ -23,8 +23,18 @@ gem 'devise'
 #instalando jquery
 gem 'jquery-rails'
 
-gem 'rails-assets-glyphicons', source: 'https://rails-assets.org'
-
+# Help ActiveRecord::Enum feature to work fine with I18n and simple_form. 
+gem 'enum_help'
+source 'https://rails-assets.org' do
+  # Bootstrap
+  gem 'rails-assets-bootstrap', '3.3.7'
+  # NotifyJS
+  gem 'rails-assets-notifyjs'
+  # BootboxJS
+  gem 'rails-assets-bootbox'
+  # Icons
+  gem 'rails-assets-glyphicons'
+end
 
 # https://github.com/nicolas-besnard/adminlte2-rails
 gem 'adminlte2-rails'
@@ -41,6 +51,17 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+
+#Integration of RubyMoney - Money with Rails
+gem 'money-rails', '~>1'
+# jQuery UI 
+gem 'jquery-ui-rails'
+# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
+gem 'kaminari'
+# Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff
+gem 'rails-i18n'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
