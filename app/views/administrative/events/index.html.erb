@@ -5,10 +5,10 @@
               <div class="box-tools">
                 <div class="input-group input-group-sm" style="width: 150px;">
                   <input name="table_search" class="form-control pull-right" placeholder="Search" type="text">
-                  <i class="fa fa-plus"></i>
 
                   <div class="input-group-btn">
                     <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+
                   </div>
                 </div>
               </div>
@@ -21,6 +21,9 @@
                   <th>Name</th>
                   <th>Date</th>
                   <th>Description</th>
+                  <th><%= link_to new_administrative_event_path, type:"button", class:"btn btn-success pull-right" do %>
+                  <i class="fa fa-plus"></i>
+                  <%end%></th>
                 </tr>
                 <% @events.each do |event| %>
                 <tr>
@@ -30,10 +33,13 @@
                   <td><%= event.description%></td>
            
                    <td>
-                     <button type="button" class="btn btn-success btn-flat"><i class="fa fa-edit"></i></button>
-                     
-                     <button type="button" class="btn btn-danger btn-flat"><i class="fa fa-remove"></i></button>
-                   </td>
+                    <%= link_to edit_administrative_event_path(event),type:"button", class:"btn btn-warning btn-flat" do %>
+                     <i class="fa fa-edit"></i>
+                     <%end%>
+                    
+                    <%= link_to administrative_event_path(event), method: :delete, data: { confirm: 'Are you sure?' }, type:"button", class:"btn btn-danger btn-flat" do %>
+                     <i class="fa fa-remove"></i>
+                   <%end%>
               
                 </tr>
                 <%end%>
