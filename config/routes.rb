@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :transfers, except: [:show]
     resources :events, except: [:show]
   	resources :projects, except: [:show]
+  	resources :users
   end
   
   devise_for :admins, :skip => [:registrations], controllers: {sessions: 'sign/sessions'}
