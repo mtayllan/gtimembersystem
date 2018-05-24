@@ -1,4 +1,4 @@
-<!-- Left side column. contains the logo and sidebar -->
+  <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
 
   <!-- sidebar: style can be found in sidebar.less -->
@@ -10,33 +10,29 @@
         <img src="/assets/user2-160x160.jpg" class="img-circle" alt="User Image" />
       </div>
       <div class="pull-left info">
-        <p><%= Admin.name %></p>
+        <p><%= User.name %></p>
         <!-- Status -->
         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
       </div>
     </div>
 
-    <!-- Sidebar Menu -->
+<!-- Sidebar Menu -->
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">CADASTROS</li>
       <li>
-          <%= link_to administrative_events_path do %>
+          <%= link_to home_events_index_path do %>
             <i class="fa fa-location-arrow"></i><span>Eventos</span>
           <% end %>
       </li>
       <li>
-        <%= link_to administrative_projects_path do %>
+        <%= link_to home_projects_index_path do %>
           <i class="fa fa-archive"></i><span>Projetos</span>
         <% end %>
       </li>
-      <li>
-        <%= link_to administrative_users_index_path do %>
-          <i class="fa fa-users"></i><span>Usuários</span>
-        <% end %>
-      </li>
+  
       <li class="header">OUTROS</li>
       <li>
-        <%= link_to administrative_cash_flow_index_path do %>
+        <%= link_to home_cash_flow_index_path do %>
           <i class="fa fa-money"></i><span>Fluxo de Caixa</span>
         <% end %>
       </li> 
@@ -46,11 +42,3 @@
 </aside>
 
 
-
-      
-      
-
-
-
-      
-      

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class Administrative::ProjectsController < AdministrativeController
   before_action :set_project, only: [:edit,  :update, :destroy]
   def index

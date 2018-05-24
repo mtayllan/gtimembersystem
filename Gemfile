@@ -22,6 +22,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 #instalando jquery
 gem 'jquery-rails'
+#Classier solution for file uploads for Rails, Sinatra and other Ruby web frameworks 
+gem 'carrierwave', '~> 1.0'
 
 gem 'rails-assets-glyphicons', source: 'https://rails-assets.org'
 

@@ -10,6 +10,10 @@ Admin.create!(name: "Admin" , email: 'admin@admin.com',
 			  password: "123456", password_confirmation: "123456")
 puts 'Administrador cadastrado com sucesso!'
 
+puts  'Cadastrando  User Principal'
+User.create!(name: "user" , email: 'user@user.com',
+			  password: "123456", password_confirmation: "123456")
+puts 'User cadastrado com sucesso!'
 puts "Cadastrando Eventos"
 
 events= ["ECEJ","ENEJ" ,
