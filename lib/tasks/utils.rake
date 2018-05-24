@@ -16,7 +16,8 @@ namespace :utils do
   desc "Gera  usuarios fake"
   task generate_user: :environment do
   	puts 'Gerando usuários fake...'
-  	10.times do
+  	50.times do
+  	  
 			User.create!(name: Faker::Name.name,
 						 email: Faker::Internet.email, 
 						 password: "123456", 
@@ -24,8 +25,11 @@ namespace :utils do
 						 birth_date: Faker::Date.birthday(0,100),
 						 address: Faker::Address.street_address,
 						 city: Faker::Address.city, 
-						 postal_code: Faker::Address.postcode, 
-						 phone: Faker::PhoneNumber.phone_number)
+						 postal_code: Faker::Address.postcode,
+						 gender: ['Masculino', 'Feminino'].sample,
+						 role: Faker::Job.title,
+						 phone: Faker::PhoneNumber.phone_number,
+						 photo: File.new(Rails.root.join('public', 'images', 'profiles', "#{Random.rand(9)}.jpg"), 'r'))
 		end
 		puts 'Usuários fake gerados com sucesso!'
   end

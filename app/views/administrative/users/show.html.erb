@@ -1,0 +1,119 @@
+<div class="box box-widget widget-user-2">
+  <!-- Add the bg color to the header using any of the bg-* classes -->
+  <div class="widget-user-header bg-aqua-active">
+    <div class="widget-user-image">
+      <% if @user.photo? %>
+          <%= image_tag(@user.photo.profile.url, :class => "img-circle") %>
+        <% else %>
+          <img src="/images/gti_user_pic.png" alt="User Image" />
+        <% end %>
+    </div>
+    <!-- /.widget-user-image -->
+    <h3 class="widget-user-username"> <%= @user.name %></h3>
+    <h5 class="widget-user-desc"><%= @user.role %></h5>
+  </div>
+  <div class="box-footer no-padding">
+    <ul class="nav nav-stacked">
+      <li>
+        <div class="box box-info box-solid profile-box-list">
+            <div class="box-header with-border">
+              <h3 class="box-title">Informações</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="row">
+                <div class="col-md-4">
+                    <strong><i class="fa fa-envelope margin-r-5"></i> Email</strong>
+                    <p class="text-muted">
+                      <%= @user.email %>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <strong><i class="fa fa-birthday-cake margin-r-5"></i> Aniversário </strong>
+                    <p class="text-muted">
+                      <%= ( @user.birth_date + (Time.new.year - @user.birth_date.year).years ).strftime("%d/%m/%Y") %>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <strong><i class="fa fa-phone margin-r-5"></i> Contato</strong>
+                    <p class="text-muted">
+                      <%= @user.phone %>
+                    </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-4">
+                    <strong><i class="fa fa-map-marker margin-r-5"></i> Endereço</strong>
+                    <p class="text-muted">
+                      <%= @user.address %> <br>CEP: <%= @user.postal_code %>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <strong><i class="fa fa-institution margin-r-5"></i> Cidade</strong>
+                    <p class="text-muted">
+                      <%= @user.city %>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <strong><i class="fa fa-female margin-r-5"></i><i class="fa fa-male margin-r-5"></i> Gênero</strong>
+                    <p class="text-muted">
+                      <%= @user.gender %>
+                    </p>
+                </div>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </li>
+      <li>
+        <div class="box box-default collapsed-box profile-box-list">
+            <div class="box-header with-border">
+              <h3 class="box-title">Projetos</h3><span class="badge bg-blue profile-badge-list"><%= @user.contributions.count %></span>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body" style="">
+              <ul class="nav nav-stacked">
+                <li><a href="#">Projeto 1</a></li>
+                <li><a href="#">Projeto 2</a></li>
+                <li><a href="#">Projeto 3</a></li>
+                <li><a href="#">Projeto 4</a></li>
+              </ul>
+            </div>
+            <!-- /.box-body -->
+          </div>
+        
+      </li>
+      <li>
+        <div class="box box-default collapsed-box profile-box-list">
+            <div class="box-header with-border">
+              <h3 class="box-title">Eventos</h3><span class="badge bg-yellow profile-badge-list"><%= @user.participations.count %></span>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body" style="">
+              <ul class="nav nav-stacked">
+                <li><a href="#">Evento 1</a></li>
+                <li><a href="#">Evento 2</a></li>
+              </ul>
+            </div>
+            <!-- /.box-body -->
+          </div>
+        
+      </li>
+    </ul>
+  </div>
+</div>
