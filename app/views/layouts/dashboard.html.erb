@@ -16,16 +16,15 @@
   <%= csrf_meta_tags %>
 </head>
 
-<body class="skin-blue sidebar-mini fixed <%= params[:controller].parameterize %> <%= action_name %>">
+<body class="skin-purple sidebar-mini fixed <%= params[:controller].parameterize %> <%= action_name %>">
   <div class="wrapper">
 
-    <%= render partial: 'layouts/administrative_shared/admin_lte_2_header' %>
+    <%= render partial: 'layouts/shared/admin_lte_2_header' %>
 
-    <%= render partial: 'layouts/administrative_shared/admin_lte_2_sidebar' %>
+    <%= render partial: 'layouts/shared/admin_lte_2_sidebar' %>
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-
       <!-- Main content -->
       <section class="content">
         <% if notice %>
@@ -46,12 +45,8 @@
         <%= yield %>
       </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
-    
-    
-    <!-- CONTEUDO AQUI -->
 
-
-    <!-- Main Footer -->
+   <!-- Main Footer -->
     <footer class="main-footer">
       <!-- To the right -->
       <div class="pull-right hidden-xs">
@@ -62,9 +57,8 @@
     </footer>
 
   </div><!-- ./wrapper -->
-  
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'administrative', 'data-turbolinks-track' => true %>
-  
+  <%= javascript_include_tag 'dashboard/profile', 'data-turbolinks-track' => true %>
 </body>
 </html>

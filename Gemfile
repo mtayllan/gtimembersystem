@@ -52,6 +52,11 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Classier solution for file uploads for Rails, Sinatra and other Ruby web frameworks 
+gem 'carrierwave', '~> 1.0'
+
+# Mini_magick
+gem "mini_magick"
 
 #Integration of RubyMoney - Money with Rails
 gem 'money-rails', '~>1'

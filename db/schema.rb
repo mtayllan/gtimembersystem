@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 20180523161737) do
   create_table "transfers", force: :cascade do |t|
     t.text "description"
     t.integer "category"
-    t.integer "price_cents"
+    t.integer "price_cents", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

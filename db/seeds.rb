@@ -10,6 +10,13 @@ Admin.create!(name: "Admin" , email: 'admin@admin.com',
 			  password: "123456", password_confirmation: "123456")
 puts 'Administrador cadastrado com sucesso!'
 
+puts "Cadastrando Usuario Padrão"
+
+User.create!(name: "Default" , email: 'u@u.com',
+			  password: "123456", password_confirmation: "123456")
+
+puts "Usuário Padrão Cadastrado com sucesso!"
+
 puts "Cadastrando Eventos"
 
 events= ["ECEJ","ENEJ" ,
@@ -20,3 +27,4 @@ events.each do  |event|
 end
 
 puts "Eventos cadastrados com sucesso"
+

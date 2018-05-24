@@ -1,0 +1,112 @@
+<% if @user.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <ul>
+        <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+    </ul>
+
+    </div>
+<% end %>
+<%= form_for( @user, url: dashboard_profile_path(@user), :html => { :multipart => true }) do |f|  %>
+  <h2>Editando Perfil</h1>
+  <div class="row">
+    <div class="col-md-3">
+      <!-- Profile Image -->
+      <div class="box box-primary">
+        <div class="box-body box-profile">
+          <%= image_tag(@user.photo.thumb.url, :class => "profile-user-img img-responsive img-circle", 
+          :style => "margin: 0 auto; width: 100px; padding: 3px;  border: 3px solid #d2d6de;") if @user.photo? %>
+          <h3 class="profile-username text-center"><%= @user.name %></h3>
+          <p class="text-muted text-center"><%= @user.role %></p>
+          <ul class="list-group list-group-unbordered">
+            <li class="list-group-item">
+              <b>Projetos</b> <a class="pull-right"><%= @user.contributions.count %></a>
+            </li>
+            <li class="list-group-item">
+              <b>Eventos</b> <a class="pull-right"><%= @user.participations.count %></a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <div class="col-md-9">
+      <div class="box box-info">
+        <div class="box-header with-border">
+          <h3 class="box-title">Informações</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <div class="form-horizontal">
+          <div class="box-body">
+            <div class="form-group">
+              <%= f.label :name, class:"col-sm-2 control-label"%>
+              <div class="col-sm-10">
+                <%= f.text_field :name, class: "form-control", placeholder: "Nome" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <%= f.label :birth_date, class:"col-sm-2 control-label"%>
+              <div class="col-sm-10">
+                <%= f.text_field :birth_date, class: "form-control datepicker", value: (l(@user.birth_date) unless @user.birth_date.blank?) %>
+              </div>
+            </div>
+            <div class="form-group">
+              <%= f.label :address, class:"col-sm-2 control-label"%>
+              <div class="col-sm-10">
+                <%= f.text_field :address, class: "form-control", placeholder: "Endereço:" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <%= f.label :postal_code, class:"col-sm-2 control-label"%>
+              <div class="col-sm-10">
+                <%= f.text_field :postal_code, class: "form-control", placeholder: "CEP" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <%= f.label :city, class:"col-sm-2 control-label"%>
+              <div class="col-sm-10">
+                <%= f.text_field :city, class: "form-control", placeholder: "Cidade" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <%= f.label :gender, class:"col-sm-2 control-label"%>
+              <div class="col-sm-10">
+                <%= f.text_field :gender, class: "form-control", placeholder: "Gênero" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <%= f.label :phone, class:"col-sm-2 control-label"%>
+              <div class="col-sm-10">
+                <%= f.text_field :phone, class: "form-control", placeholder: "Telefone" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <%= f.label :role, class:"col-sm-2 control-label"%>
+              <div class="col-sm-10">
+                <%= f.text_field :role, class: "form-control", placeholder: "Cargo" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <%= f.label :photo, class:"col-sm-2 control-label"%>
+              <div class="col-sm-10">
+                <%= image_tag(@user.photo.thumb.url, :class => "img-responsive") if @user.photo? %>
+                <%= f.file_field :photo, value: "#{@user.photo_identifier}" %>
+              </div>
+            </div>
+          </div>
+          <!-- /.box-body -->
+          <div class="box-footer">
+            <%= submit_tag "Salvar", class: "btn btn-default" %>
+          </div>
+          <!-- /.box-footer -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% end %>
+
