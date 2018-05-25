@@ -22,14 +22,14 @@
         </td>
         <td><%= user.name %></td>
         <td><%= user.role %></td>
-        <td><div class="btn-group-vertical">
-            <%= link_to administrative_user_path(user), class: "btn btn-xs btn-info" do %>
+        <td><div class="btn-group-vertical pull-right">
+            <%= link_to administrative_user_path(user), class: "btn btn-sm btn-info" do %>
               <i class="fa fa-eye"></i>
             <% end %>
-            <%= link_to edit_administrative_user_path(user), class: "btn btn-xs bg-orange" do %>
+            <%= link_to edit_administrative_user_path(user), class: "btn btn-sm btn-warning" do %>
               <i class="fa fa-edit"></i>
             <% end %>
-            <%= link_to administrative_user_path(user), method: :delete, class: "btn btn-xs btn-danger" do %>
+            <%= link_to administrative_user_path(user), method: :delete, class: "btn btn-sm btn-danger" do %>
               <i class="fa fa-trash"></i>
             <% end %>
           </div></td>
@@ -37,6 +37,7 @@
     <% end %>
     </tbody>
     </table>
+    <hr>
     <%= paginate @users %>
     <div class="pull-right"><%= link_to new_administrative_user_path, class: "btn btn-success" do %>
         Novo <i class="fa fa-plus"></i>
