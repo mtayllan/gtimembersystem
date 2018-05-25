@@ -23,7 +23,7 @@ gem 'devise'
 #instalando jquery
 gem 'jquery-rails'
 #Classier solution for file uploads for Rails, Sinatra and other Ruby web frameworks 
-gem 'carrierwave', '~> 1.0'
+
 
 # Help ActiveRecord::Enum feature to work fine with I18n and simple_form. 
 gem 'enum_help'
