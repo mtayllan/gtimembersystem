@@ -19234,3 +19234,1099 @@ Processing by Home::ProjectsController#index as HTML
 Completed 200 OK in 598ms (Views: 569.7ms | ActiveRecord: 5.6ms)
 
 
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (117.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "gtimembersystem_development"[0m
+  [1m[35m (112.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "gtimembersystem_test"[0m
+  [1m[35m (23.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1342058643005049270)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20180508180447)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180508180447"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateAdmins (20180508180451)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_email" ON "admins"  ("email")[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_reset_password_token" ON "admins"  ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180508180451"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddInfoToUser (20180515193147)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "birth_date" date[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "address" character varying[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "users" ADD "postal_code" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "city" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "gender" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "phone" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "photo" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "role" character varying[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193147"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProjects (20180515193351)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.2ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "name" character varying, "value" float, "description" text, "client" character varying, "start_date" date, "end_date" date, "expected_date" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193351"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEvents (20180515193420)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" character varying, "date" date, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193420"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToAdmin (20180515193453)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "admins" ADD "name" character varying[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515193453"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateParticipations (20180517221557)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "participations" ("id" bigserial primary key, "event_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE  INDEX  "index_participations_on_event_id" ON "participations"  ("event_id")[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX  "index_participations_on_user_id" ON "participations"  ("user_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517221557"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateContributions (20180517221611)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "contributions" ("id" bigserial primary key, "project_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE  INDEX  "index_contributions_on_project_id" ON "contributions"  ("project_id")[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE  INDEX  "index_contributions_on_user_id" ON "contributions"  ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180517221611"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTransfers (20180523161737)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "transfers" ("id" bigserial primary key, "description" text, "category" integer, "price_cents" integer DEFAULT 0, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180523161737"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCountsToRelations (20180525005353)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.2ms)[0m  [1m[35mALTER TABLE "events" ADD "participations_count" integer DEFAULT 0[0m
+  [1m[35m (16.0ms)[0m  [1m[35mALTER TABLE "users" ADD "participations_count" integer DEFAULT 0[0m
+  [1m[35m (11.1ms)[0m  [1m[35mALTER TABLE "projects" ADD "contributions_count" integer DEFAULT 0[0m
+  [1m[35m (15.8ms)[0m  [1m[35mALTER TABLE "users" ADD "contributions_count" integer DEFAULT 0[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180525005353"]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-25 01:15:35.602785"], ["updated_at", "2018-05-25 01:15:35.602785"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1342058643005049270)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "admin@admin.com"], ["encrypted_password", "$2a$11$fSn8iwPzBCyE7MEcyfQ4HOzQhELdfFk5CsNrBU3EQy9Tt2oqd3l4K"], ["created_at", "2018-05-25 01:15:39.670244"], ["updated_at", "2018-05-25 01:15:39.670244"], ["name", "Admin"]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "u@u.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "u@u.com"], ["encrypted_password", "$2a$11$7PwX1tpjDxcrM9VmwSjHRuDK8pKCjfF9GhePfcG5zihNDvuKck/Ze"], ["created_at", "2018-05-25 01:15:39.838088"], ["updated_at", "2018-05-25 01:15:39.838088"], ["name", "Default"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."name" = $1 LIMIT $2[0m  [["name", "ECEJ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "events" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "ECEJ"], ["created_at", "2018-05-25 01:15:39.858685"], ["updated_at", "2018-05-25 01:15:39.858685"]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."name" = $1 LIMIT $2[0m  [["name", "ENEJ"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "events" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "ENEJ"], ["created_at", "2018-05-25 01:15:39.867248"], ["updated_at", "2018-05-25 01:15:39.867248"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."name" = $1 LIMIT $2[0m  [["name", "Destine"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Destine"], ["created_at", "2018-05-25 01:15:39.873164"], ["updated_at", "2018-05-25 01:15:39.873164"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."name" = $1 LIMIT $2[0m  [["name", "Protagonize"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "events" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Protagonize"], ["created_at", "2018-05-25 01:15:39.878331"], ["updated_at", "2018-05-25 01:15:39.878331"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "edgar_walker@mannjenkins.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "edgar_walker@mannjenkins.co"], ["encrypted_password", "$2a$11$UOMHtrxQMqyocII2jMsioOPnu5EX0/AuIWvX02FTKLkO/SqaYT8d2"], ["created_at", "2018-05-25 01:15:45.205648"], ["updated_at", "2018-05-25 01:15:45.205648"], ["name", "Ana Beatriz da Madureira"], ["birth_date", "1980-07-29"], ["address", "58925 Marginal Carlos Leiria"], ["postal_code", "75387-434"], ["city", "Sirineu do Sul"], ["gender", "Feminino"], ["phone", "(28) 91990-7066"], ["photo", "1.jpg"], ["role", "Global Advertising Representative"]]
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ben@moore.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "ben@moore.com"], ["encrypted_password", "$2a$11$b51J0wycfDdk52m9LHsI5eBoNpiHHjKzadqidbW0YJVC.xcbOxU5."], ["created_at", "2018-05-25 01:15:45.635457"], ["updated_at", "2018-05-25 01:15:45.635457"], ["name", "Pedro Henrique Antena"], ["birth_date", "1940-03-08"], ["address", "7546 Ponte Marcelo Lopes"], ["postal_code", "23590-871"], ["city", "Bittencourt do Descoberto"], ["gender", "Feminino"], ["phone", "(45) 3862-6011"], ["photo", "4.jpg"], ["role", "National Legal Supervisor"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "marty@johns.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "marty@johns.net"], ["encrypted_password", "$2a$11$8XYmVELiobPlv350DuID.eXeWCgvi4MlNeVavYokGwosAc5HhIev."], ["created_at", "2018-05-25 01:15:46.171923"], ["updated_at", "2018-05-25 01:15:46.171923"], ["name", "Fernanda Barata"], ["birth_date", "1961-11-20"], ["address", "s/n Rodovia Benjamin"], ["postal_code", "59300-424"], ["city", "Nova Bento do Descoberto"], ["gender", "Feminino"], ["phone", "(69) 0594-9365"], ["photo", "0.jpg"], ["role", "Manufacturing Orchestrator"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "taurean_schumm@kutch.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "taurean_schumm@kutch.co"], ["encrypted_password", "$2a$11$cdk6M03Rjwwx3xep1eosQusYqa/vbOgDl25MGlOakxYS/tfjwgBDa"], ["created_at", "2018-05-25 01:15:46.643474"], ["updated_at", "2018-05-25 01:15:46.643474"], ["name", "Davi Luiz Carvalheira"], ["birth_date", "2002-01-11"], ["address", "3254 Ponte Carla Castelo"], ["postal_code", "69198-234"], ["city", "Município de Maria Helena"], ["gender", "Masculino"], ["phone", "(69) 33146-1099"], ["photo", "0.jpg"], ["role", "Regional Executive"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yvette@ernserwillms.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "yvette@ernserwillms.info"], ["encrypted_password", "$2a$11$OzmcvBJC4LKzYSYrRvV/textnYnWE/dtaGvi6rI51gFmGv3Ufv.fC"], ["created_at", "2018-05-25 01:15:47.183980"], ["updated_at", "2018-05-25 01:15:47.183980"], ["name", "Louise Barata"], ["birth_date", "1928-10-10"], ["address", "457 Ponte Mathias"], ["postal_code", "85797-814"], ["city", "Silveira do Sul"], ["gender", "Feminino"], ["phone", "+55 (92) 4695-2748"], ["photo", "0.jpg"], ["role", "Internal Assistant"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vesta.deckow@damorekohler.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "vesta.deckow@damorekohler.net"], ["encrypted_password", "$2a$11$8UkgHn6hWVNxvBE5mOPpBe/1i7HrbXSzWNgEP8dRuSvCritpMWNqe"], ["created_at", "2018-05-25 01:15:47.624221"], ["updated_at", "2018-05-25 01:15:47.624221"], ["name", "Deneval Resende"], ["birth_date", "2013-12-08"], ["address", "34211 Travessa Ana Sophia"], ["postal_code", "10898-085"], ["city", "Município de Danilo do Descoberto"], ["gender", "Masculino"], ["phone", "(57) 6693-5208"], ["photo", "7.jpg"], ["role", "Banking Supervisor"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "micah@rogahnkohler.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "micah@rogahnkohler.com"], ["encrypted_password", "$2a$11$MZAWPOk8U/33te7gS7wEKea4wCB1bIoR3p2BIMd2GRXCQo9c7QLVG"], ["created_at", "2018-05-25 01:15:48.055317"], ["updated_at", "2018-05-25 01:15:48.055317"], ["name", "Maria Laura Brites"], ["birth_date", "1933-02-19"], ["address", "20859 Alameda João Miguel"], ["postal_code", "77025-041"], ["city", "Velha Augusto de Nossa Senhora"], ["gender", "Masculino"], ["phone", "(86) 47261-3063"], ["photo", "4.jpg"], ["role", "Customer Producer"]]
+  [1m[35m (84.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "phoebe@millscole.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "phoebe@millscole.org"], ["encrypted_password", "$2a$11$p.FMpeMeMjlCV/HruVoTLO88bmxLYFwtj3wfpRyBCR7qi1grpEe1u"], ["created_at", "2018-05-25 01:15:48.583008"], ["updated_at", "2018-05-25 01:15:48.583008"], ["name", "Leonardo Nascimento"], ["birth_date", "1974-03-06"], ["address", "8704 Viela Bento Simões"], ["postal_code", "23111-206"], ["city", "Nova Giulia do Descoberto"], ["gender", "Masculino"], ["phone", "(81) 6661-5034"], ["photo", "0.jpg"], ["role", "Dynamic Hospitality Director"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "providenci_berge@jonesromaguera.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "providenci_berge@jonesromaguera.biz"], ["encrypted_password", "$2a$11$tpNsXLpOnAOS99lTn07hRevs.FZfISftbOkk72HhwaPYgJAX9VHaK"], ["created_at", "2018-05-25 01:15:49.019810"], ["updated_at", "2018-05-25 01:15:49.019810"], ["name", "Giovanna da Luz Jr."], ["birth_date", "1956-12-11"], ["address", "s/n Avenida Joaquim"], ["postal_code", "49061-031"], ["city", "Município de Miguel do Sul"], ["gender", "Masculino"], ["phone", "(24) 3790-1713"], ["photo", "5.jpg"], ["role", "Administration Facilitator"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dewayne@bartellmckenzie.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "dewayne@bartellmckenzie.io"], ["encrypted_password", "$2a$11$0DOF/7lSl1gkri1oBBrmtObHIQPVwCADa2.jMT5p09KRMw9Y2/JG."], ["created_at", "2018-05-25 01:15:49.565784"], ["updated_at", "2018-05-25 01:15:49.565784"], ["name", "Dra. Arthur Gabriel Quaresma"], ["birth_date", "1945-12-30"], ["address", "70155 Ponte Fabiano"], ["postal_code", "48667-750"], ["city", "Aragão do Descoberto"], ["gender", "Masculino"], ["phone", "(43) 71749-3300"], ["photo", "1.jpg"], ["role", "Legal Engineer"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "casimer@denesikcollier.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "casimer@denesikcollier.net"], ["encrypted_password", "$2a$11$S8pOQvlpuEd6tOtsVoXbGubcQCeBlyJrHRZDpBoit3GzYvsRbAa5O"], ["created_at", "2018-05-25 01:15:50.027697"], ["updated_at", "2018-05-25 01:15:50.027697"], ["name", "Sra. Giovanna Leiria"], ["birth_date", "1942-05-21"], ["address", "3224 Rodovia Pérola"], ["postal_code", "65338-946"], ["city", "Dantas de Nossa Senhora"], ["gender", "Masculino"], ["phone", "(21) 52425-5948"], ["photo", "7.jpg"], ["role", "Internal Engineer"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yeenia.okon@dooley.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "yeenia.okon@dooley.com"], ["encrypted_password", "$2a$11$SYX669rMUVda378JQ85CO.EoeisSt0Yi3ycESJKXtqNYaATOvxvFy"], ["created_at", "2018-05-25 01:15:50.582782"], ["updated_at", "2018-05-25 01:15:50.582782"], ["name", "Davi Lucas Antena"], ["birth_date", "1979-02-07"], ["address", "s/n Travessa Maria Cecília Barreto"], ["postal_code", "32385-693"], ["city", "Fabrício do Descoberto"], ["gender", "Masculino"], ["phone", "+55 (54) 8766-1226"], ["photo", "3.jpg"], ["role", "Product Education Executive"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "morton_moriette@yundtpollich.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "morton_moriette@yundtpollich.org"], ["encrypted_password", "$2a$11$sveKk1TLRLO/iCvm2qohtuEH67iAt7YCxFDXpi3lT7QWU1OM8aeWO"], ["created_at", "2018-05-25 01:15:51.025274"], ["updated_at", "2018-05-25 01:15:51.025274"], ["name", "Augusto Ferreira Neto"], ["birth_date", "1931-07-15"], ["address", "23778 Avenida Rafael"], ["postal_code", "84238-354"], ["city", "Nova Pedro Henrique do Descoberto"], ["gender", "Masculino"], ["phone", "(37) 73595-6631"], ["photo", "5.jpg"], ["role", "Dynamic Community-Services Analyst"]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ania@nicolaspacocha.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "ania@nicolaspacocha.net"], ["encrypted_password", "$2a$11$EuE8YrX4DiLgoYsj/du18Oiqv.O0Y6/UshLOSqgXWILZf.N2O93qK"], ["created_at", "2018-05-25 01:15:51.426839"], ["updated_at", "2018-05-25 01:15:51.426839"], ["name", "Júlio da Luz"], ["birth_date", "1932-04-09"], ["address", "s/n Ponte Carlos Eduardo"], ["postal_code", "36286-549"], ["city", "Otávio do Descoberto"], ["gender", "Feminino"], ["phone", "(22) 51291-3202"], ["photo", "7.jpg"], ["role", "Education Designer"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "saul@zieme.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "saul@zieme.net"], ["encrypted_password", "$2a$11$V4xTWe1TB/e6SftVS2dexORN/EHA9hWvB3Ks60V7hoYk6IuGGrJPS"], ["created_at", "2018-05-25 01:15:51.951041"], ["updated_at", "2018-05-25 01:15:51.951041"], ["name", "Dr. João Pedro Carreira"], ["birth_date", "1999-08-06"], ["address", "76325 Avenida Vinícius Garcês"], ["postal_code", "75985-189"], ["city", "Quaresma de Nossa Senhora"], ["gender", "Masculino"], ["phone", "(53) 4096-5147"], ["photo", "4.jpg"], ["role", "Construction Coordinator"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "reba.johns@koaltenwerth.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "reba.johns@koaltenwerth.net"], ["encrypted_password", "$2a$11$MxauVtFHKCA6rdfHqGajJ.wkQSf9PIxvtbc2rvNJbha/debvSUaAG"], ["created_at", "2018-05-25 01:15:52.351356"], ["updated_at", "2018-05-25 01:15:52.351356"], ["name", "Félix Videira"], ["birth_date", "1997-05-26"], ["address", "678 Avenida Vitor Hugo Paes"], ["postal_code", "45815-485"], ["city", "Gabriel do Sul"], ["gender", "Masculino"], ["phone", "(87) 3006-2052"], ["photo", "5.jpg"], ["role", "National Officer"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lue_friesen@hermistonbernhard.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "lue_friesen@hermistonbernhard.name"], ["encrypted_password", "$2a$11$gMvSxxvd0G8Krv7FwVg5KuiPZ1SifKLPC.Jl1wGyzmY0l/OJrIJRO"], ["created_at", "2018-05-25 01:15:52.759932"], ["updated_at", "2018-05-25 01:15:52.759932"], ["name", "Alícia Garcez"], ["birth_date", "1962-10-04"], ["address", "s/n Avenida Sophia Bonfim"], ["postal_code", "16635-741"], ["city", "Nova Benjamin"], ["gender", "Masculino"], ["phone", "(61) 3453-1233"], ["photo", "5.jpg"], ["role", "Product Administration Agent"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nyah@stamm.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "nyah@stamm.name"], ["encrypted_password", "$2a$11$pDDc0OSf1y1JHUWdMiO0V.tcTu5JYhj4rFSl.h97XA6E/A99duM1y"], ["created_at", "2018-05-25 01:15:53.170701"], ["updated_at", "2018-05-25 01:15:53.170701"], ["name", "Luiz Miguel da Rocha Neto"], ["birth_date", "1949-09-19"], ["address", "s/n Rua Luiz da Fronteira"], ["postal_code", "23518-672"], ["city", "Grande Lorenzo de Nossa Senhora"], ["gender", "Masculino"], ["phone", "(69) 7562-8253"], ["photo", "7.jpg"], ["role", "Government Manager"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "clinton_oconnell@olson.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "clinton_oconnell@olson.io"], ["encrypted_password", "$2a$11$lRQx2ElMw.CaXwN96S02NOvOyjodZTOnYQi.JCnS5n9N4amgmYnHu"], ["created_at", "2018-05-25 01:15:53.629662"], ["updated_at", "2018-05-25 01:15:53.629662"], ["name", "Laura Araújo"], ["birth_date", "1927-05-03"], ["address", "98721 Rodovia Enzo Miguel Rios"], ["postal_code", "51653-275"], ["city", "Município de Antônio do Norte"], ["gender", "Masculino"], ["phone", "(33) 0173-5485"], ["photo", "4.jpg"], ["role", "District Advertising Producer"]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kayla_williamson@romaguera.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "kayla_williamson@romaguera.net"], ["encrypted_password", "$2a$11$BkcHYoIa2jL0uaWekbnJeuU8ZiNluRzEMxXilm9ky0feaCC4GuOMa"], ["created_at", "2018-05-25 01:15:54.027325"], ["updated_at", "2018-05-25 01:15:54.027325"], ["name", "Arthur Gabriel Dias"], ["birth_date", "1968-04-30"], ["address", "97315 Rodovia Silas Roriz"], ["postal_code", "62474-121"], ["city", "Fernanda do Descoberto"], ["gender", "Feminino"], ["phone", "(39) 71536-9148"], ["photo", "7.jpg"], ["role", "Investor Retail Manager"]]
+  [1m[35m (10.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "isabell_mcclure@fahey.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "isabell_mcclure@fahey.biz"], ["encrypted_password", "$2a$11$FzBQpzG4ab9X4URDOuH4LeijW1mb6LoaXmfM8iLZZliRdS9zn7UXK"], ["created_at", "2018-05-25 01:15:54.563700"], ["updated_at", "2018-05-25 01:15:54.563700"], ["name", "Isabel Espinheira"], ["birth_date", "1998-07-09"], ["address", "366 Rua Lucca Barreto"], ["postal_code", "44928-438"], ["city", "Gomes do Norte"], ["gender", "Feminino"], ["phone", "(48) 8063-0048"], ["photo", "4.jpg"], ["role", "Healthcare Planner"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ewald@padberg.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "ewald@padberg.io"], ["encrypted_password", "$2a$11$zK/CIRaqUsfqEjW7WjBKIOrGm9HeHdlvNuwBjD.w6IZRtBc9DSseO"], ["created_at", "2018-05-25 01:15:54.963682"], ["updated_at", "2018-05-25 01:15:54.963682"], ["name", "Aline Porto"], ["birth_date", "1985-08-10"], ["address", "8069 Ponte Luana"], ["postal_code", "28721-121"], ["city", "de Borba do Sul"], ["gender", "Feminino"], ["phone", "+55 (25) 7008-2555"], ["photo", "5.jpg"], ["role", "Construction Technician"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "arnaldo_bergstrom@rodriguezswift.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "arnaldo_bergstrom@rodriguezswift.info"], ["encrypted_password", "$2a$11$HejAldfuFR5WzKd2sSHGDez4kVb9JXdemmkEgBEXKW5l2uuHn9oTi"], ["created_at", "2018-05-25 01:15:55.369630"], ["updated_at", "2018-05-25 01:15:55.369630"], ["name", "Pedro Henrique Peixoto"], ["birth_date", "2008-04-09"], ["address", "s/n Avenida Tertuliano"], ["postal_code", "76019-167"], ["city", "Davi do Sul"], ["gender", "Feminino"], ["phone", "(17) 20646-3030"], ["photo", "6.jpg"], ["role", "IT Engineer"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "johnpaul_mills@stiedemann.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "johnpaul_mills@stiedemann.info"], ["encrypted_password", "$2a$11$5Uwqt0XOgch8OZ3XusJSAOqXgNvHQMuwKyR489K4EeM5sPk3brCI6"], ["created_at", "2018-05-25 01:15:55.800497"], ["updated_at", "2018-05-25 01:15:55.800497"], ["name", "Marcia Rebouças"], ["birth_date", "1936-07-19"], ["address", "5956 Rodovia Natália"], ["postal_code", "77515-324"], ["city", "Roseira do Descoberto"], ["gender", "Feminino"], ["phone", "+55 (39) 0353-7126"], ["photo", "7.jpg"], ["role", "Healthcare Orchestrator"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "camren@wehner.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "camren@wehner.info"], ["encrypted_password", "$2a$11$MqexomNBeYbOf24QVUkwbOx6Oo4twe8tw8/UknkGf5nZSe8gxMMvW"], ["created_at", "2018-05-25 01:15:56.235978"], ["updated_at", "2018-05-25 01:15:56.235978"], ["name", "Silas Cardoso"], ["birth_date", "1931-10-24"], ["address", "s/n Viela Guilherme"], ["postal_code", "71816-847"], ["city", "Vila Aurora"], ["gender", "Masculino"], ["phone", "(79) 6792-4308"], ["photo", "4.jpg"], ["role", "Chief Real-Estate Engineer"]]
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "verla_breitenberg@stokes.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "verla_breitenberg@stokes.net"], ["encrypted_password", "$2a$11$RxVixks5xeS2ZuPjvAKOD.2NH5lNKXFRM24pmRuTCYsMnlTdeVGNy"], ["created_at", "2018-05-25 01:15:56.621848"], ["updated_at", "2018-05-25 01:15:56.621848"], ["name", "Djalma Ribeira"], ["birth_date", "2014-01-17"], ["address", "9600 Alameda Luana Carreira"], ["postal_code", "50858-618"], ["city", "Campos do Norte"], ["gender", "Feminino"], ["phone", "+55 (65) 9799-1881"], ["photo", "5.jpg"], ["role", "Product Analyst"]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tamia_kaulke@wunschflatley.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "tamia_kaulke@wunschflatley.biz"], ["encrypted_password", "$2a$11$A2BX3Gqgoz/stQPRlacEZ.BmKOxxSid7XVdnKiEwz/XVdefF0i3KK"], ["created_at", "2018-05-25 01:15:57.045205"], ["updated_at", "2018-05-25 01:15:57.045205"], ["name", "Emanuel Marques"], ["birth_date", "2006-01-17"], ["address", "s/n Travessa Tertuliano"], ["postal_code", "96097-062"], ["city", "Nogueira do Norte"], ["gender", "Masculino"], ["phone", "(78) 4097-9508"], ["photo", "7.jpg"], ["role", "District Advertising Administrator"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "xzavier_berge@strosincrona.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "xzavier_berge@strosincrona.io"], ["encrypted_password", "$2a$11$OkO2assW/1DAGfb4IwxhSeQOVpHL4xFi1p1rvcmLu/EfbsL9Pmk4K"], ["created_at", "2018-05-25 01:15:57.583059"], ["updated_at", "2018-05-25 01:15:57.583059"], ["name", "Salvador Taveira"], ["birth_date", "1945-04-20"], ["address", "7823 Viela Adriana"], ["postal_code", "39941-211"], ["city", "Grande Sara"], ["gender", "Feminino"], ["phone", "(62) 94144-1912"], ["photo", "0.jpg"], ["role", "Global Agent"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aryanna.damore@jacobizieme.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "aryanna.damore@jacobizieme.org"], ["encrypted_password", "$2a$11$8DZSixRSbf9AzwyJhhNGA.NRCLXsbLCRP3Z6yPrGP7vH3xVIpX3wC"], ["created_at", "2018-05-25 01:15:58.034336"], ["updated_at", "2018-05-25 01:15:58.034336"], ["name", "Gabriela Domingues"], ["birth_date", "1932-12-29"], ["address", "s/n Ponte Nicolas"], ["postal_code", "89308-980"], ["city", "Velha Allana do Sul"], ["gender", "Masculino"], ["phone", "(10) 9811-4944"], ["photo", "4.jpg"], ["role", "Lead Construction Supervisor"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "raphael_gislason@corwinokeefe.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "raphael_gislason@corwinokeefe.co"], ["encrypted_password", "$2a$11$7Nc2at3owYVLprDtWGyZ9eIIwPwFSXtnOo7YKfL2Dav54c2FyQZi."], ["created_at", "2018-05-25 01:15:58.423499"], ["updated_at", "2018-05-25 01:15:58.423499"], ["name", "Francisco Carreira"], ["birth_date", "1965-11-23"], ["address", "100 Avenida Alessandro Simão"], ["postal_code", "87853-062"], ["city", "Nataniel do Descoberto"], ["gender", "Feminino"], ["phone", "+55 (35) 7331-1112"], ["photo", "5.jpg"], ["role", "Healthcare Technician"]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "laurine@champlinrowe.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "laurine@champlinrowe.name"], ["encrypted_password", "$2a$11$xfprlAyo0g8Yk/61xNjskOg/uo1U4QjKiFYiZf7I1P58/GpbvU1zG"], ["created_at", "2018-05-25 01:15:58.876829"], ["updated_at", "2018-05-25 01:15:58.876829"], ["name", "Dr. Lorraine Soeira"], ["birth_date", "1947-02-02"], ["address", "79718 Viela Davi Lucca"], ["postal_code", "49793-400"], ["city", "Velha Ana Laura do Descoberto"], ["gender", "Masculino"], ["phone", "(59) 10928-5451"], ["photo", "8.jpg"], ["role", "Marketing Associate"]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bobby.ondricka@marksbernhard.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "bobby.ondricka@marksbernhard.co"], ["encrypted_password", "$2a$11$0h1GHI5eEYPobqoBHN0kaeYLMAC8lM4cz8nXiPABQB3xB.vVKdn8e"], ["created_at", "2018-05-25 01:15:59.362359"], ["updated_at", "2018-05-25 01:15:59.362359"], ["name", "Dr. Núbia Raia"], ["birth_date", "1957-01-09"], ["address", "7230 Avenida Lorenzo da Fronteira"], ["postal_code", "14275-703"], ["city", "Pereira do Norte"], ["gender", "Masculino"], ["phone", "+55 (87) 4660-9775"], ["photo", "6.jpg"], ["role", "Mining Strategist"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "abagail_kaulke@wintheiser.co"], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "abagail_kaulke@wintheiser.co"], ["encrypted_password", "$2a$11$XlfI/7/UyC5RLEEa5TvdheqImMcC5zIyQzQ2ZL7GJGvPLzB4KYIOu"], ["created_at", "2018-05-25 01:15:59.831032"], ["updated_at", "2018-05-25 01:15:59.831032"], ["name", "Maya Henriques"], ["birth_date", "1979-04-12"], ["address", "95344 Marginal Davi Lucas"], ["postal_code", "43467-030"], ["city", "Benjamin de Nossa Senhora"], ["gender", "Masculino"], ["phone", "+55 (90) 2118-2822"], ["photo", "2.jpg"], ["role", "Advertising Strategist"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "walton@torphydouglas.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "walton@torphydouglas.name"], ["encrypted_password", "$2a$11$zZK9MWsQ3Zy4Ca9PVz4.5ePOrYfggEG/u8.dcQdr75rikG6Qr12IG"], ["created_at", "2018-05-25 01:16:00.362448"], ["updated_at", "2018-05-25 01:16:00.362448"], ["name", "Maria Helena Conceição"], ["birth_date", "1976-11-20"], ["address", "1010 Marginal Frederico Tavares"], ["postal_code", "69143-724"], ["city", "Louzada de Nossa Senhora"], ["gender", "Masculino"], ["phone", "+55 (62) 3973-9328"], ["photo", "0.jpg"], ["role", "Internal Accounting Liaison"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brain@handweber.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "brain@handweber.io"], ["encrypted_password", "$2a$11$Lx8G0t.49YE7TADYP9iwKu6XN0VY3ch8/euDjsMnXWF3jouy0k8WK"], ["created_at", "2018-05-25 01:16:00.800815"], ["updated_at", "2018-05-25 01:16:00.800815"], ["name", "Luiz Henrique Porto"], ["birth_date", "2007-06-07"], ["address", "40006 Marginal Maria Júlia Vasques"], ["postal_code", "21137-226"], ["city", "Vila Lara do Sul"], ["gender", "Masculino"], ["phone", "(65) 40112-7420"], ["photo", "7.jpg"], ["role", "Global Real-Estate Producer"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "astrid@hansen.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "astrid@hansen.net"], ["encrypted_password", "$2a$11$El/9FOxUwr/LdLfSxi7TX.vO.yflED9LgPXnchAkruTWc/xuL8VGK"], ["created_at", "2018-05-25 01:16:01.234637"], ["updated_at", "2018-05-25 01:16:01.234637"], ["name", "Dr. Natália Costa"], ["birth_date", "1944-07-09"], ["address", "811 Ponte Maria Isis Roseira"], ["postal_code", "86127-303"], ["city", "Vieira do Descoberto"], ["gender", "Masculino"], ["phone", "+55 (23) 2953-8677"], ["photo", "7.jpg"], ["role", "Lead Marketing Facilitator"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "oran@ornmayert.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "oran@ornmayert.info"], ["encrypted_password", "$2a$11$vLpu9I41NGJrZUKgfPBimepXRKZjfR0BT7pUVOuTrBmdzg2xueIBC"], ["created_at", "2018-05-25 01:16:01.624994"], ["updated_at", "2018-05-25 01:16:01.624994"], ["name", "Djalma da Fronteira"], ["birth_date", "1946-08-12"], ["address", "55093 Rua Maria Clara Paes"], ["postal_code", "67547-962"], ["city", "Vila Larissa do Sul"], ["gender", "Masculino"], ["phone", "+55 (12) 2254-0314"], ["photo", "5.jpg"], ["role", "Central Hospitality Producer"]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "arno.grady@farrell.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "arno.grady@farrell.org"], ["encrypted_password", "$2a$11$9N1SZYX8VhXNOdK/iLvLY.KsEiHJBPVPGC6D4OXwrbH4ONuzIORVG"], ["created_at", "2018-05-25 01:16:02.156563"], ["updated_at", "2018-05-25 01:16:02.156563"], ["name", "Lavínia Veloso"], ["birth_date", "1942-10-12"], ["address", "s/n Marginal Tertuliano"], ["postal_code", "18861-804"], ["city", "Grande Maria Flor"], ["gender", "Masculino"], ["phone", "(40) 4996-9708"], ["photo", "8.jpg"], ["role", "Mining Architect"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "celestino_heathcote@keebler.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "celestino_heathcote@keebler.name"], ["encrypted_password", "$2a$11$29SYMqvTAdWyQEW0Vx/CJeWVToveUv93g0Vr278m.gteVDdzu1Jvm"], ["created_at", "2018-05-25 01:16:02.466115"], ["updated_at", "2018-05-25 01:16:02.466115"], ["name", "Antônio Mangueira"], ["birth_date", "2007-08-11"], ["address", "s/n Rodovia Luana Almada"], ["postal_code", "51065-064"], ["city", "João Miguel do Sul"], ["gender", "Feminino"], ["phone", "+55 (89) 6145-2979"], ["photo", "6.jpg"], ["role", "International Manager"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (91.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeramie@swiftwilderman.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "jeramie@swiftwilderman.com"], ["encrypted_password", "$2a$11$rEGEKQjZ3brRNzVGjZdlMOeK4mmTTDqG6uUPzQgY0YDvlPWiv0Npa"], ["created_at", "2018-05-25 01:16:02.947540"], ["updated_at", "2018-05-25 01:16:02.947540"], ["name", "Morgana Marques"], ["birth_date", "1931-03-21"], ["address", "5482 Avenida Maria Alice"], ["postal_code", "80409-797"], ["city", "da Mata do Descoberto"], ["gender", "Feminino"], ["phone", "(44) 1160-8201"], ["photo", "5.jpg"], ["role", "Investor Designer"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "alexandria@strackeheathcote.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "alexandria@strackeheathcote.info"], ["encrypted_password", "$2a$11$PVhtxg28cFbA1cmO.tMC3.fvHyKo9BLAPa1TQXH9mC8TSpucFSNt."], ["created_at", "2018-05-25 01:16:03.369126"], ["updated_at", "2018-05-25 01:16:03.369126"], ["name", "Sr. Marcos Jesus"], ["birth_date", "1973-02-19"], ["address", "13636 Ponte João Vitor Figueira"], ["postal_code", "20209-759"], ["city", "Danilo do Norte"], ["gender", "Feminino"], ["phone", "(66) 33974-5210"], ["photo", "2.jpg"], ["role", "Regional Healthcare Facilitator"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mikel_bashirian@okuneva.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "mikel_bashirian@okuneva.info"], ["encrypted_password", "$2a$11$h506Ea6RkJoJa0TjD0jbkOrQ6ZgqCN9pWcQ2Ogh19Z5SiHs3pLLIe"], ["created_at", "2018-05-25 01:16:03.971743"], ["updated_at", "2018-05-25 01:16:03.971743"], ["name", "Antônio Almeida"], ["birth_date", "1990-12-17"], ["address", "96710 Viela Kauê Carneiro"], ["postal_code", "84240-686"], ["city", "Clara do Sul"], ["gender", "Feminino"], ["phone", "+55 (32) 0266-1778"], ["photo", "3.jpg"], ["role", "Technology Specialist"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "retta@carter.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "retta@carter.name"], ["encrypted_password", "$2a$11$IhpZV72m0m6m.q1qnstMJOKqUb91OscunaDKt8f3i9X6K3e9kZnq2"], ["created_at", "2018-05-25 01:16:04.369961"], ["updated_at", "2018-05-25 01:16:04.369961"], ["name", "Fernando Bentes Neto"], ["birth_date", "1970-12-21"], ["address", "5418 Viela Maria Laura"], ["postal_code", "12174-797"], ["city", "Município de Pedro Miguel"], ["gender", "Masculino"], ["phone", "(77) 4690-4531"], ["photo", "5.jpg"], ["role", "Investor Farming Administrator"]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "stephania@bayer.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "stephania@bayer.org"], ["encrypted_password", "$2a$11$1klv6Yb4e/8gPgWBlukXA./VpHerT0Dnvfna85c0rH7Vd3IVLJ9sW"], ["created_at", "2018-05-25 01:16:04.808390"], ["updated_at", "2018-05-25 01:16:04.808390"], ["name", "Thiago Garcez Filho"], ["birth_date", "1956-07-06"], ["address", "81105 Viela Aurora"], ["postal_code", "84094-809"], ["city", "Meire do Descoberto"], ["gender", "Feminino"], ["phone", "(12) 7775-7062"], ["photo", "2.jpg"], ["role", "Advertising Liaison"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (109.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ashley_conn@kohlermarquardt.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "ashley_conn@kohlermarquardt.info"], ["encrypted_password", "$2a$11$CXU3ozrRs14NbsGvm/Ibjeqb85.MRC7Yam1mPZevliW7uot4Ztk1S"], ["created_at", "2018-05-25 01:16:05.347782"], ["updated_at", "2018-05-25 01:16:05.347782"], ["name", "Maria Eduarda Galego"], ["birth_date", "1930-06-12"], ["address", "5628 Ponte Ana Lívia"], ["postal_code", "20456-640"], ["city", "Velha Matheus do Norte"], ["gender", "Masculino"], ["phone", "(54) 20576-0404"], ["photo", "0.jpg"], ["role", "Advertising Administrator"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "newell@padbergvandervort.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "newell@padbergvandervort.biz"], ["encrypted_password", "$2a$11$7kB2mG0vKmTESTyIhUdaPOK1RggGgQYzqjj7y1Sct0M2FWQMz2rra"], ["created_at", "2018-05-25 01:16:05.780630"], ["updated_at", "2018-05-25 01:16:05.780630"], ["name", "Gustavo Corte"], ["birth_date", "1937-05-06"], ["address", "8183 Alameda Isabela Caldas"], ["postal_code", "87489-235"], ["city", "Moreira do Sul"], ["gender", "Feminino"], ["phone", "(12) 2146-0877"], ["photo", "1.jpg"], ["role", "Chief Community-Services Producer"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brionna@bernhardcain.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "brionna@bernhardcain.biz"], ["encrypted_password", "$2a$11$fPp/cELMc9NSvm4.93jkX.taUKdVAuyj5rWG.yIl8aaAhiPP4Zb76"], ["created_at", "2018-05-25 01:16:06.230767"], ["updated_at", "2018-05-25 01:16:06.230767"], ["name", "Sr. Eloah de Quadros"], ["birth_date", "1925-08-23"], ["address", "42079 Travessa Frederico"], ["postal_code", "10507-961"], ["city", "Velha Ana Beatriz"], ["gender", "Masculino"], ["phone", "(65) 1704-8244"], ["photo", "0.jpg"], ["role", "Sales Assistant"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "paxton_swift@leuschke.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "paxton_swift@leuschke.co"], ["encrypted_password", "$2a$11$WoywreGniuG/utFVRePTJexTnINJHEQDmcOIAGrcOhXEWmpS0JWlW"], ["created_at", "2018-05-25 01:16:06.763414"], ["updated_at", "2018-05-25 01:16:06.763414"], ["name", "Feliciano Arantes"], ["birth_date", "1920-09-21"], ["address", "11929 Ponte Tertuliano Vieira"], ["postal_code", "82834-215"], ["city", "Brites do Sul"], ["gender", "Masculino"], ["phone", "+55 (42) 0953-6561"], ["photo", "8.jpg"], ["role", "Forward Construction Orchestrator"]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ernesto@okunevanicolas.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "ernesto@okunevanicolas.name"], ["encrypted_password", "$2a$11$HFOX9e6vO86bnsJFWs4Vv.neKFtfETwPTQYXpW1lOQrFFbZcj8OhW"], ["created_at", "2018-05-25 01:16:07.177247"], ["updated_at", "2018-05-25 01:16:07.177247"], ["name", "Maria Caseira"], ["birth_date", "1995-06-17"], ["address", "677 Alameda Vicente"], ["postal_code", "82703-233"], ["city", "Município de Henrique"], ["gender", "Masculino"], ["phone", "(86) 6017-8820"], ["photo", "7.jpg"], ["role", "International Retail Manager"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bernita_lakin@schinnerschiller.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "birth_date", "address", "postal_code", "city", "gender", "phone", "photo", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "bernita_lakin@schinnerschiller.net"], ["encrypted_password", "$2a$11$tFdXUzIHKSJLujpRX42euOoc.PY.eX1/BjsehQn0iGQwVlo1su1Wy"], ["created_at", "2018-05-25 01:16:07.611802"], ["updated_at", "2018-05-25 01:16:07.611802"], ["name", "Sra. Nathan Galvão"], ["birth_date", "2007-04-16"], ["address", "8174 Alameda Gabriela"], ["postal_code", "76034-287"], ["city", "Nicolas do Descoberto"], ["gender", "Feminino"], ["phone", "(15) 56281-8547"], ["photo", "7.jpg"], ["role", "Retail Officer"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Similique non quos dolores rerum. Reiciendis ut qui enim dicta deserunt. Ratione eos adipisci."], ["category", 0], ["price_cents", 103100], ["created_at", "2018-05-25 01:16:12.892372"], ["updated_at", "2018-05-25 01:16:12.892372"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Doloremque odit voluptatem laborum hic. Aut molestiae ex exercitationem placeat ducimus sequi. Labore aut in est officia eum. Non consequatur dolor voluptas nam quis in et."], ["category", 0], ["price_cents", 886900], ["created_at", "2018-05-25 01:16:12.926809"], ["updated_at", "2018-05-25 01:16:12.926809"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Officiis id sapiente sed id quia minima. Iusto animi nam sit."], ["category", 0], ["price_cents", 508800], ["created_at", "2018-05-25 01:16:12.933340"], ["updated_at", "2018-05-25 01:16:12.933340"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Hic exercitationem eos saepe totam consequatur facilis. Impedit porro voluptates vitae. Corporis illum laborum ipsa sed quo. Id temporibus laudantium sunt."], ["category", 0], ["price_cents", 518000], ["created_at", "2018-05-25 01:16:12.939452"], ["updated_at", "2018-05-25 01:16:12.939452"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Aut quo amet sed optio cumque est ducimus. Amet est eum perferendis."], ["category", 1], ["price_cents", 820700], ["created_at", "2018-05-25 01:16:12.946088"], ["updated_at", "2018-05-25 01:16:12.946088"]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Dolore eos inventore vitae et fugit labore. Fugiat facilis deserunt amet consequatur nulla eveniet."], ["category", 1], ["price_cents", 333700], ["created_at", "2018-05-25 01:16:12.955247"], ["updated_at", "2018-05-25 01:16:12.955247"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Incidunt et aut accusamus expedita sed vel. Et voluptatem sed nihil dolores ea qui. Voluptatum tempora soluta."], ["category", 1], ["price_cents", 407900], ["created_at", "2018-05-25 01:16:12.962315"], ["updated_at", "2018-05-25 01:16:12.962315"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Neque cum ea. Non deleniti minus sequi aliquid ex perspiciatis. Ut omnis repellat ipsam eos sequi labore rerum."], ["category", 1], ["price_cents", 868000], ["created_at", "2018-05-25 01:16:12.967837"], ["updated_at", "2018-05-25 01:16:12.967837"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Facere occaecati nihil repellat inventore modi atque facilis. Rerum qui doloremque vero dolorem labore sequi et. Corporis possimus reiciendis quia sint velit dolorum."], ["category", 1], ["price_cents", 58800], ["created_at", "2018-05-25 01:16:12.973330"], ["updated_at", "2018-05-25 01:16:12.973330"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Minus assumenda eum optio velit quo possimus ut. Quisquam quis rem magni et dolorum odit. Dolor sint aspernatur."], ["category", 0], ["price_cents", 837300], ["created_at", "2018-05-25 01:16:12.979619"], ["updated_at", "2018-05-25 01:16:12.979619"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Aut minus aut totam et veniam consequatur. Modi nisi numquam quis temporibus ab."], ["category", 0], ["price_cents", 182200], ["created_at", "2018-05-25 01:16:12.985312"], ["updated_at", "2018-05-25 01:16:12.985312"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Fugiat repellendus quam praesentium. Aut ea aut error modi labore id. Excepturi perferendis accusantium maiores voluptatem eos aperiam. Exercitationem corrupti sed tenetur et sed voluptatem sunt."], ["category", 1], ["price_cents", 781300], ["created_at", "2018-05-25 01:16:12.991375"], ["updated_at", "2018-05-25 01:16:12.991375"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Voluptates consectetur cupiditate saepe quis aut nihil totam. Perspiciatis exercitationem maiores animi quo nobis."], ["category", 1], ["price_cents", 896600], ["created_at", "2018-05-25 01:16:12.997423"], ["updated_at", "2018-05-25 01:16:12.997423"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Culpa sequi dicta fugit. Hic at ab. Vero eum sequi architecto voluptate blanditiis eos."], ["category", 1], ["price_cents", 328200], ["created_at", "2018-05-25 01:16:13.007540"], ["updated_at", "2018-05-25 01:16:13.007540"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Doloremque cum et consequatur sapiente tenetur aut quia. Similique eius ducimus consequatur ut. Occaecati dolores dolorem aut libero ad non delectus."], ["category", 1], ["price_cents", 44400], ["created_at", "2018-05-25 01:16:13.013304"], ["updated_at", "2018-05-25 01:16:13.013304"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Ad quaerat enim alias ut quis. At rem voluptate. Beatae earum est."], ["category", 0], ["price_cents", 653400], ["created_at", "2018-05-25 01:16:13.019044"], ["updated_at", "2018-05-25 01:16:13.019044"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Nesciunt rerum est quisquam modi voluptas. Ipsam ipsa aliquam omnis sapiente. Voluptatem libero molestiae qui. Omnis illum et."], ["category", 1], ["price_cents", 820300], ["created_at", "2018-05-25 01:16:13.026336"], ["updated_at", "2018-05-25 01:16:13.026336"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Aliquid aspernatur suscipit aliquam sit. Distinctio quae et nesciunt laudantium ad commodi explicabo."], ["category", 0], ["price_cents", 866300], ["created_at", "2018-05-25 01:16:13.033488"], ["updated_at", "2018-05-25 01:16:13.033488"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Fuga laboriosam nobis. Dolores quia eveniet iure ipsa. Doloribus dolores quis voluptatum quod. Sunt sequi eveniet cumque."], ["category", 1], ["price_cents", 366200], ["created_at", "2018-05-25 01:16:13.039833"], ["updated_at", "2018-05-25 01:16:13.039833"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Cupiditate quae quas autem. Sed vel unde nobis."], ["category", 1], ["price_cents", 541300], ["created_at", "2018-05-25 01:16:13.045727"], ["updated_at", "2018-05-25 01:16:13.045727"]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Debitis tempore consequatur voluptatem aliquam quibusdam. Exercitationem et qui odio. Quia odit amet numquam eius fuga. Dolorum ullam consequatur mollitia quo qui quis."], ["category", 1], ["price_cents", 814700], ["created_at", "2018-05-25 01:16:13.056861"], ["updated_at", "2018-05-25 01:16:13.056861"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Neque magnam soluta. Praesentium quis sint porro. Et quia maiores corporis consequatur ea ab. Ut omnis quod ea."], ["category", 0], ["price_cents", 214400], ["created_at", "2018-05-25 01:16:13.063226"], ["updated_at", "2018-05-25 01:16:13.063226"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Dolorem sed dolorum qui. Maiores et est est. Similique quidem nobis."], ["category", 1], ["price_cents", 688100], ["created_at", "2018-05-25 01:16:13.069030"], ["updated_at", "2018-05-25 01:16:13.069030"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "In assumenda optio asperiores sunt laudantium facilis. Et atque rerum. Animi aut vitae voluptate."], ["category", 1], ["price_cents", 534500], ["created_at", "2018-05-25 01:16:13.074708"], ["updated_at", "2018-05-25 01:16:13.074708"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Nisi accusamus soluta vel quam iure animi delectus. Numquam laudantium nobis. Et qui nobis odio deserunt ut ut voluptatem. Voluptates est eius iure reiciendis quis quisquam voluptatibus."], ["category", 1], ["price_cents", 86300], ["created_at", "2018-05-25 01:16:13.080395"], ["updated_at", "2018-05-25 01:16:13.080395"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Corporis enim beatae expedita pariatur sint. Id et consequuntur magnam. Aliquam molestiae dolores et architecto voluptates et est."], ["category", 1], ["price_cents", 253800], ["created_at", "2018-05-25 01:16:13.085901"], ["updated_at", "2018-05-25 01:16:13.085901"]]
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Consequatur omnis nam ut animi. Vero rerum consequatur repudiandae sequi. Totam quia et quo qui ratione ipsa. Quo aut sed natus magnam qui corporis."], ["category", 1], ["price_cents", 145100], ["created_at", "2018-05-25 01:16:13.107627"], ["updated_at", "2018-05-25 01:16:13.107627"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Pariatur voluptatem dolorum veniam nobis quos corrupti in. Hic temporibus ea porro."], ["category", 1], ["price_cents", 254600], ["created_at", "2018-05-25 01:16:13.115261"], ["updated_at", "2018-05-25 01:16:13.115261"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Magni sit voluptatem maiores beatae aut. Non commodi aut. Maiores asperiores tenetur autem molestiae. Velit aliquam nisi error ea rerum beatae sapiente."], ["category", 0], ["price_cents", 797200], ["created_at", "2018-05-25 01:16:13.123095"], ["updated_at", "2018-05-25 01:16:13.123095"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Vel nesciunt quia officiis minima. Ullam quas eligendi quisquam consequatur aut. Cumque ex corrupti vitae nam beatae accusantium."], ["category", 0], ["price_cents", 646100], ["created_at", "2018-05-25 01:16:13.130022"], ["updated_at", "2018-05-25 01:16:13.130022"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Asperiores nulla dolorum facere qui sit. Beatae perspiciatis est voluptatem delectus sed."], ["category", 0], ["price_cents", 700400], ["created_at", "2018-05-25 01:16:13.136742"], ["updated_at", "2018-05-25 01:16:13.136742"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Qui a dolor explicabo molestias iusto velit quod. Rerum eos ipsum dolore recusandae. Sint adipisci nam rerum."], ["category", 1], ["price_cents", 964900], ["created_at", "2018-05-25 01:16:13.142437"], ["updated_at", "2018-05-25 01:16:13.142437"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Qui numquam sequi. Vel eligendi libero voluptatum qui qui eaque rerum."], ["category", 1], ["price_cents", 813600], ["created_at", "2018-05-25 01:16:13.147853"], ["updated_at", "2018-05-25 01:16:13.147853"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Molestias quia voluptas at ut id aliquid. In quo eos qui possimus eos veniam id. Repellendus repudiandae dicta suscipit consequatur similique. Voluptatem possimus illum numquam tenetur assumenda officiis."], ["category", 0], ["price_cents", 549100], ["created_at", "2018-05-25 01:16:13.154216"], ["updated_at", "2018-05-25 01:16:13.154216"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Nobis adipisci vel qui. Est enim est id nobis qui."], ["category", 0], ["price_cents", 735400], ["created_at", "2018-05-25 01:16:13.160274"], ["updated_at", "2018-05-25 01:16:13.160274"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Praesentium ab ratione. Tenetur voluptas aut quis eveniet."], ["category", 1], ["price_cents", 986800], ["created_at", "2018-05-25 01:16:13.165860"], ["updated_at", "2018-05-25 01:16:13.165860"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Ut ut possimus corporis molestias dicta quae. Temporibus quae quas."], ["category", 1], ["price_cents", 963800], ["created_at", "2018-05-25 01:16:13.171689"], ["updated_at", "2018-05-25 01:16:13.171689"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Vero explicabo repellat molestiae id. Animi minus natus ea. Qui tenetur praesentium nisi animi optio placeat rerum."], ["category", 0], ["price_cents", 505800], ["created_at", "2018-05-25 01:16:13.177229"], ["updated_at", "2018-05-25 01:16:13.177229"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Voluptatum repellendus aut occaecati laboriosam. Maiores aut est. Non velit est dolor architecto aut odio veritatis."], ["category", 0], ["price_cents", 876600], ["created_at", "2018-05-25 01:16:13.182649"], ["updated_at", "2018-05-25 01:16:13.182649"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Eligendi sit ullam ut in sed. Earum deserunt quae eos asperiores veritatis atque. Aut corporis fugit voluptatem autem possimus. Quo dolorem sit reprehenderit odit iure quos."], ["category", 0], ["price_cents", 73300], ["created_at", "2018-05-25 01:16:13.188261"], ["updated_at", "2018-05-25 01:16:13.188261"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Eos enim quidem sunt cupiditate alias. Voluptas ipsum voluptates quibusdam ex. Est quia omnis autem. Modi dignissimos ut saepe."], ["category", 1], ["price_cents", 199800], ["created_at", "2018-05-25 01:16:13.194992"], ["updated_at", "2018-05-25 01:16:13.194992"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Eos et est non. Et id repellat. Optio harum reiciendis sapiente impedit aut. Enim numquam et."], ["category", 1], ["price_cents", 512600], ["created_at", "2018-05-25 01:16:13.200831"], ["updated_at", "2018-05-25 01:16:13.200831"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Eum molestiae quisquam quae ex perferendis similique. Dolorem sed molestiae ut quia. Id est fugiat unde ut rerum qui velit. Aut possimus quos eos et in voluptas error."], ["category", 0], ["price_cents", 993000], ["created_at", "2018-05-25 01:16:13.206650"], ["updated_at", "2018-05-25 01:16:13.206650"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Consequatur dolores sunt. Hic est in. Consequatur fugit nihil."], ["category", 0], ["price_cents", 879500], ["created_at", "2018-05-25 01:16:13.212914"], ["updated_at", "2018-05-25 01:16:13.212914"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Ut ut excepturi quo. Eligendi saepe rerum. Dolorum ea placeat vel quo."], ["category", 1], ["price_cents", 559200], ["created_at", "2018-05-25 01:16:13.220044"], ["updated_at", "2018-05-25 01:16:13.220044"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Ipsa reiciendis eum dolor earum. Voluptatem reiciendis iusto sed labore."], ["category", 1], ["price_cents", 120500], ["created_at", "2018-05-25 01:16:13.227236"], ["updated_at", "2018-05-25 01:16:13.227236"]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Laudantium molestias non error neque ut incidunt nesciunt. Eaque sunt tenetur repellendus commodi fugit id tempore. Voluptas ut possimus. Ut praesentium voluptatem est."], ["category", 1], ["price_cents", 715300], ["created_at", "2018-05-25 01:16:13.234370"], ["updated_at", "2018-05-25 01:16:13.234370"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Tenetur nesciunt id qui sunt. Corrupti eligendi praesentium a mollitia. Amet omnis porro quisquam. Sequi ut saepe consectetur dicta possimus est."], ["category", 1], ["price_cents", 690000], ["created_at", "2018-05-25 01:16:13.240752"], ["updated_at", "2018-05-25 01:16:13.240752"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Rem maiores veniam aliquam libero. Sequi eligendi praesentium tempore odio inventore. Porro nihil ut qui nulla non enim. Voluptatem in exercitationem aut voluptas."], ["category", 0], ["price_cents", 211400], ["created_at", "2018-05-25 01:16:13.246605"], ["updated_at", "2018-05-25 01:16:13.246605"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transfers" ("description", "category", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["description", "Et sed eos minima beatae repellat enim. Ut et molestias ut similique tenetur dolores id. Doloribus facere repellendus voluptatem sit. Dolorem illo iusto voluptates."], ["category", 1], ["price_cents", 113200], ["created_at", "2018-05-25 01:16:13.252175"], ["updated_at", "2018-05-25 01:16:13.252175"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 177.159.30.73 at 2018-05-25 01:29:10 +0000
+Cannot render console from 177.159.30.73! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DashboardController#index as HTML
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 177.159.30.73 at 2018-05-25 01:29:11 +0000
+Cannot render console from 177.159.30.73! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Sign::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/admin_lte_2_login
+  Rendered devise/sessions/new.html.erb within layouts/admin_lte_2_login (14.5ms)
+Completed 200 OK in 3307ms (Views: 3268.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 177.159.30.73 at 2018-05-25 01:29:16 +0000
+Cannot render console from 177.159.30.73! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 177.159.30.73 at 2018-05-25 01:29:16 +0000
+Cannot render console from 177.159.30.73! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 177.159.30.73 at 2018-05-25 01:29:16 +0000
+Cannot render console from 177.159.30.73! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/users/sign_in" for 177.159.30.73 at 2018-05-25 01:29:28 +0000
+Cannot render console from 177.159.30.73! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Sign::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wKyJrBb8Z+DcZPK3ZPG5GqDmTr8DfnRvKpfz8KbN3+a70ULHEnhYfk86Sy9zfeg8vXGKVfMI7tAEad9T6xAsUA==", "user"=>{"email"=>"u@u.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "u@u.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "current_sign_in_ip" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["current_sign_in_at", "2018-05-25 01:29:28.808577"], ["last_sign_in_at", "2018-05-25 01:29:28.808577"], ["current_sign_in_ip", "177.159.30.73/32"], ["last_sign_in_ip", "177.159.30.73/32"], ["sign_in_count", 1], ["updated_at", "2018-05-25 01:29:28.810534"], ["id", 1]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://gtimembersystem2-mtayllan.c9users.io/
+Completed 302 Found in 180ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/" for 177.159.30.73 at 2018-05-25 01:29:29 +0000
+Cannot render console from 177.159.30.73! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/dashboard
+  Rendered dashboard/index.html.erb within layouts/dashboard (3.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4: <div class="box-body box-profile">
+    5:               <img class="profile-user-img img-responsive img-circle" src="../../dist/img/user4-128x128.jpg" alt="User profile picture">
+    6: 
+    7:               <h3 class="profile-username text-center"><%= @user.name %></h3>
+    8: 
+    9:               <p class="text-muted text-center"><%= @user.role %></p>
+   10: 
+  
+app/views/dashboard/index.html.erb:7:in `_app_views_dashboard_index_html_erb__1671600434640015220_70323610724880'
+Started GET "/" for 177.159.30.73 at 2018-05-25 01:35:15 +0000
+Cannot render console from 177.159.30.73! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/dashboard
+  Rendered dashboard/index.html.erb within layouts/dashboard (0.6ms)
+  Rendered layouts/shared/_admin_lte_2_header.html.erb (1.3ms)
+  Rendered layouts/shared/_admin_lte_2_sidebar.html.erb (515.7ms)
+Completed 500 Internal Server Error in 827ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `administrative_users_path' for #<#<Class:0x007feafbac4b88>:0x007feadcca7f50>
+Did you mean?  administrative_user_path
+               administrative_path
+               administrative_user_url
+               administrative_transfers_path
+               administrative_url
+               administrative_projects_path
+               administrative_transfer_path
+               administrative_project_path
+               administrative_events_path
+               administrative_event_path):
+    36:         <% end %>
+    37:       </li>
+    38:       <li>
+    39:         <%= link_to administrative_users_path do %>
+    40:           <i class="fa fa-users"></i><span>Membros</span>
+    41:         <% end %>
+    42:       </li>
+  
+app/views/layouts/shared/_admin_lte_2_sidebar.html.erb:39:in `_app_views_layouts_shared__admin_lte___sidebar_html_erb___1882861355071528625_70323354782480'
+app/views/layouts/dashboard.html.erb:24:in `_app_views_layouts_dashboard_html_erb___1296827589126969564_70323351661500'
+Started GET "/" for 200.19.186.128 at 2018-05-25 14:01:19 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DashboardController#index as HTML
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 200.19.186.128 at 2018-05-25 14:01:21 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Sign::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/admin_lte_2_login
+  Rendered devise/sessions/new.html.erb within layouts/admin_lte_2_login (16.1ms)
+Completed 200 OK in 892ms (Views: 854.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 200.19.186.128 at 2018-05-25 14:01:27 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 200.19.186.128 at 2018-05-25 14:01:28 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 200.19.186.128 at 2018-05-25 14:01:28 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 200.19.186.128 at 2018-05-25 14:01:29 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 200.19.186.128 at 2018-05-25 14:01:29 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 200.19.186.128 at 2018-05-25 14:01:29 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/administrative" for 200.19.186.128 at 2018-05-25 14:01:40 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 200.19.186.128 at 2018-05-25 14:01:40 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Sign::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/admin_lte_2_login
+  Rendered devise/sessions/new.html.erb within layouts/admin_lte_2_login (3.0ms)
+Completed 200 OK in 275ms (Views: 256.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 200.19.186.128 at 2018-05-25 14:01:41 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 200.19.186.128 at 2018-05-25 14:01:41 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 200.19.186.128 at 2018-05-25 14:01:41 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 200.19.186.128 at 2018-05-25 14:01:42 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 200.19.186.128 at 2018-05-25 14:01:42 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 200.19.186.128 at 2018-05-25 14:01:42 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/admins/sign_in" for 200.19.186.128 at 2018-05-25 14:02:09 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Sign::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CrY5CjZO3FIxewkmICcfOcAUfBhE8Eoc6JwzbyGrGsBIY7AIYCW82pwfTSjWoNA47by5IxjwTbcO1PPv4Y/rxg==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "current_sign_in_ip" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "admins"."id" = $7[0m  [["current_sign_in_at", "2018-05-25 14:02:09.860947"], ["last_sign_in_at", "2018-05-25 14:02:09.860947"], ["current_sign_in_ip", "200.19.186.128/32"], ["last_sign_in_ip", "200.19.186.128/32"], ["sign_in_count", 1], ["updated_at", "2018-05-25 14:02:09.862869"], ["id", 1]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://gtimembersystem2-mtayllan.c9users.io/administrative
+Completed 302 Found in 186ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/administrative" for 200.19.186.128 at 2018-05-25 14:02:10 +0000
+Cannot render console from 200.19.186.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Administrative::MainController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrative/index.html.erb within layouts/administrative
+  Rendered administrative/index.html.erb within layouts/administrative (0.5ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_header.html.erb (1.0ms)
+  Rendered layouts/administrative_shared/_admin_lte_2_sidebar.html.erb (506.7ms)
+Completed 500 Internal Server Error in 676ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `administrative_users_path' for #<#<Class:0x007f5521cbc078>:0x007f551c3e1c00>
+Did you mean?  administrative_user_path
+               administrative_path
+               administrative_user_url
+               administrative_transfers_path
+               administrative_url
+               administrative_projects_path
+               administrative_transfer_path
+               administrative_project_path
+               administrative_events_path
+               administrative_event_path):
+    32:         <% end %>
+    33:       </li>
+    34:       <li>
+    35:         <%= link_to administrative_users_path do %>
+    36:           <i class="fa fa-users"></i><span>Usuários</span>
+    37:         <% end %>
+    38:       </li>
+  
+app/views/layouts/administrative_shared/_admin_lte_2_sidebar.html.erb:35:in `_app_views_layouts_administrative_shared__admin_lte___sidebar_html_erb__3783063022110932993_70001798756260'
+app/views/layouts/administrative.html.erb:24:in `_app_views_layouts_administrative_html_erb___4133308576785714572_70001761282020'

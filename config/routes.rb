@@ -16,8 +16,7 @@ Rails.application.routes.draw do
 
   end
    namespace :home do
-
-    esources :transfers, only: [:show]
+    resources :transfers, only: [:show]
     resources :events, only: [:show]
     resources :projects, only: [:show]
     resources :users
