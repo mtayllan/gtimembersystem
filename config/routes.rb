@@ -1,30 +1,28 @@
 Rails.application.routes.draw do
   
 
-  get 'administrative', to: 'administrative/main#index'
-  get 'dashboard', to: 'dashboard/main#index'
+  get 'administrative', to: 'administrative#index'
+  get 'dashboard', to: 'dashboard#index'
   
-  namespace :dashboard do
-    resources :profile, only: [:edit, :update]
-  end
-  
+
   namespace :administrative do
     resources :transfers, except: [:show]
     resources :events, except: [:show]
-  	resources :projects, except: [:show]
-  	resources :users, only: [:show]
-
-  end
-   namespace :home do
-
-    esources :transfers, only: [:show]
-    resources :events, only: [:show]
-    resources :projects, only: [:show]
+    resources :projects, except: [:show]
     resources :users
 
   end
+
+   namespace :dashboard do
+
+    get 'transfers/index'
+    get 'events/index'
+    get 'projects/index'
+    resources :profile, only: [:edit, :update]
+
+  end
   
-  devise_for :admins, :skip => [:registrations], controllers: {sessions: 'sign/sessions'}
+  devise_for :admins , controllers: {sessions: 'sign/sessions'}
   devise_for :users,  controllers: {sessions: 'sign/sessions', registrations: 'sign/registrations' }
   
   root 'dashboard#index'
