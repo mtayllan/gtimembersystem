@@ -25,8 +25,18 @@ gem 'jquery-rails'
 #Classier solution for file uploads for Rails, Sinatra and other Ruby web frameworks 
 gem 'carrierwave', '~> 1.0'
 
-gem 'rails-assets-glyphicons', source: 'https://rails-assets.org'
-
+# Help ActiveRecord::Enum feature to work fine with I18n and simple_form. 
+gem 'enum_help'
+source 'https://rails-assets.org' do
+  # Bootstrap
+  gem 'rails-assets-bootstrap', '3.3.7'
+  # NotifyJS
+  gem 'rails-assets-notifyjs'
+  # BootboxJS
+  gem 'rails-assets-bootbox'
+  # Icons
+  gem 'rails-assets-glyphicons'
+end
 
 # https://github.com/nicolas-besnard/adminlte2-rails
 gem 'adminlte2-rails'
@@ -44,6 +54,22 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Classier solution for file uploads for Rails, Sinatra and other Ruby web frameworks 
+gem 'carrierwave', '~> 1.0'
+
+# Mini_magick
+gem "mini_magick"
+
+#Integration of RubyMoney - Money with Rails
+gem 'money-rails', '~>1'
+# jQuery UI 
+gem 'jquery-ui-rails'
+# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
+gem 'kaminari'
+# Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff
+gem 'rails-i18n'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -51,8 +77,10 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
 
-  gem'faker'
 end
+
+
+gem 'faker'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.

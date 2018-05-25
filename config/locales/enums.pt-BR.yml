@@ -1,0 +1,6 @@
+'pt-BR':
+  enums:
+    transfer:
+      category:
+        out: Saída
+        in: Entrada

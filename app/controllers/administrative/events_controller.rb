@@ -11,12 +11,10 @@ class Administrative::EventsController < AdministrativeController
   def edit 
   end 
 
-   def create 
+  def create 
     @event = Event.new(params_event)
-    
-   if @event.save
-      redirect_to administrative_events_path, notice: 
-      "O evento #{@event.name} foi criado com sucesso"
+    if @event.save
+      redirect_to administrative_events_path, notice: "O evento #{@event.name} foi criado com sucesso"
     else
       render :new
     end
@@ -32,13 +30,10 @@ class Administrative::EventsController < AdministrativeController
   end
 
   def destroy 
-
-     if @event.present?
+    if @event.present?
      # @event.users.clear #remove all associations
-     @event.destroy
-     
-      redirect_to administrative_events_path, notice: 
-       "O evento #{@event.name} foi destruída com sucesso"
+      @event.destroy
+      redirect_to administrative_events_path, notice: "O evento #{@event.name} foi destruída com sucesso"
     else
       render :index
     end

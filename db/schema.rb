@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180517221611) do
+ActiveRecord::Schema.define(version: 20180523161737) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,14 +31,6 @@ ActiveRecord::Schema.define(version: 20180517221611) do
     t.string "name"
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
-  end
-
-  create_table "cash_flows", force: :cascade do |t|
-    t.string "description"
-    t.boolean "type"
-    t.float "value"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "contributions", force: :cascade do |t|
@@ -75,6 +67,14 @@ ActiveRecord::Schema.define(version: 20180517221611) do
     t.date "start_date"
     t.date "end_date"
     t.date "expected_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "transfers", force: :cascade do |t|
+    t.text "description"
+    t.integer "category"
+    t.integer "price_cents", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

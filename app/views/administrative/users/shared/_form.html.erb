@@ -1,0 +1,114 @@
+<h1 class="page-header">Usuário</h1>
+
+<% if @user.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <ul>
+        <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+    </ul>
+
+    </div>
+<% end %>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <%= action_message %>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="col-lg-6">
+            <%= form_for([:administrative, @user], :html => { :multipart => true }) do |f| %>
+              <div class="form-group">
+                <%= f.label :name %>
+                <div class="input-group">
+                  <span class="input-group-addon">@</span>
+                  <%= f.text_field :name, class: "form-control", placeholder: "Nome" %>
+                </div>
+              </div>
+              <div class="form-group">
+                <%= f.label :email %>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                  <%= f.email_field :email, class: "form-control", placeholder: "Email" %>
+                </div>
+              </div>
+              <div class="form-group">
+                <%= f.label :password %>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa  fa-lock"></i></span>
+                  <%= f.password_field :password, class: "form-control", placeholder: "Senha" %>
+                </div>
+              </div>
+              <div class="form-group">
+                <%= f.label :password_confirmation %>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa  fa-lock"></i></span>
+                  <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Senha" %>
+                </div>
+              </div>
+              <div class="form-group">
+                <%= f.label :birth_date %>
+                <div class="input-group date">
+                  <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                  <%= f.text_field :birth_date, class: "form-control datepicker", value: (l(@user.birth_date) unless @user.birth_date.blank?) %>
+                </div>
+                <!-- /.input group -->
+              </div>
+              <div class="form-group">
+                <%= f.label :address %>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa  fa-road"></i></span>
+                  <%= f.text_field :address, class: "form-control", placeholder: "Endereço:" %>
+                </div>
+              </div>
+              <div class="form-group">
+                <%= f.label :postal_code %>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                   <%= f.text_field :postal_code, class: "form-control", placeholder: "CEP" %>
+                </div>
+              </div>
+              <div class="form-group">
+                <%= f.label :city %>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-institution"></i></span>
+                   <%= f.text_field :city, class: "form-control", placeholder: "Cidade" %>
+                </div>
+              </div>
+              <div class="form-group">
+                <%= f.label :gender %>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-genderless"></i></span>
+                   <%= f.text_field :gender, class: "form-control", placeholder: "Gênero" %>
+                </div>
+              </div>
+              <div class="form-group">
+                <%= f.label :phone %>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                   <%= f.text_field :phone, class: "form-control", placeholder: "Telefone" %>
+                </div>
+              </div>
+              <div class="form-group">
+                <%= f.label :role %>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
+                   <%= f.text_field :role, class: "form-control", placeholder: "Cargo" %>
+                </div>
+              </div>
+              <div class="form-group">
+                  <%= f.label :photo %>
+                  <%= image_tag(@user.photo.thumb.url, :class => "img-responsive") if @user.photo? %>
+                  <%= f.file_field :photo, value: "#{@user.photo_identifier}" %>
+              </div>
+              <%= submit_tag "Enviar", class: "btn btn-default" %>
+            <% end %>
+        </div>
+    </div>
+    <!-- /.panel-body -->
+</div>
+

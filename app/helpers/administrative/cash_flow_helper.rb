@@ -1,2 +1,0 @@
-module Administrative::CashFlowHelper
-end

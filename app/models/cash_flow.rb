@@ -1,2 +1,0 @@
-class CashFlow < ApplicationRecord
-end
