@@ -26,22 +26,22 @@
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">INFORMAÇÕES</li>
       <li>
-          <%= link_to administrative_events_path do %>
+          <%= link_to dashboard_events_index_path do %>
             <i class="fa fa-location-arrow"></i><span>Eventos</span>
           <% end %>
       </li>
       <li>
-        <%= link_to administrative_projects_path do %>
+        <%= link_to dashboard_projects_index_path do %>
           <i class="fa fa-archive"></i><span>Projetos</span>
         <% end %>
       </li>
       <li>
-        <%= link_to administrative_users_path do %>
+        <%#= link_to administrative_users_path do %>
           <i class="fa fa-users"></i><span>Membros</span>
-        <% end %>
+        <%# end %>
       </li>
       <li>
-        <%= link_to administrative_transfers_path do %>
+        <%= link_to  dashboard_transfers_index_path do %>
           <i class="fa fa-money"></i><span>Fluxo de Caixa</span>
         <% end %>
       </li> 
@@ -55,7 +55,6 @@
   </section>
   <!-- /.sidebar -->
 </aside>
-
 
 
       
