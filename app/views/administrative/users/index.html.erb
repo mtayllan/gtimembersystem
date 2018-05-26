@@ -22,7 +22,9 @@
         </td>
         <td><%= user.name %></td>
         <td><%= user.role %></td>
-        <td><div class="btn-group-vertical">
+
+        <td><div class="btn-group-vertical pull-right">
+
             <%= link_to administrative_user_path(user), class: "btn btn-sm btn-info" do %>
               <i class="fa fa-eye"></i>
             <% end %>

@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  
 
   namespace :dashboard do
     get 'users/index'
@@ -8,7 +7,6 @@ Rails.application.routes.draw do
   get 'administrative', to: 'administrative#index'
   get 'dashboard', to: 'dashboard#index'
   
-
   namespace :administrative do
     resources :transfers, except: [:show]
     resources :events, except: [:show]
@@ -16,7 +14,6 @@ Rails.application.routes.draw do
     resources :users
 
   end
-
    namespace :dashboard do
 
     get 'transfers/index'
