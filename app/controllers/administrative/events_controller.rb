@@ -1,5 +1,6 @@
 class Administrative::EventsController < AdministrativeController
   before_action :set_event, only: [:edit,  :update, :destroy]
+  
   def index
     @events = Event.all
   end
@@ -7,6 +8,10 @@ class Administrative::EventsController < AdministrativeController
   def new 
     @event = Event.new
   end 
+  
+  def show 
+    @event = Event.find(params[:id])
+  end
 
   def edit 
   end 

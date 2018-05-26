@@ -17,15 +17,3 @@ User.create!(name: "Default" , email: 'u@u.com',
 
 puts "Usuário Padrão Cadastrado com sucesso!"
 
-
-puts "Cadastrando Eventos"
-
-events= ["ECEJ","ENEJ" ,
-"Destine","Protagonize"]
-
-events.each do  |event|
-	Event.find_or_create_by(name: event)
-end
-
-puts "Eventos cadastrados com sucesso"
-

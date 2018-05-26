@@ -5,12 +5,13 @@ Rails.application.routes.draw do
   
   namespace :administrative do
     resources :transfers, except: [:show]
-    resources :events, except: [:show]
+    resources :events
     resources :projects, except: [:show]
     resources :users
 
   end
-   namespace :dashboard do
+  
+  namespace :dashboard do
 
     get 'transfers/index'
     get 'events/index'
