@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>AdminPage | Log in</title>
+  <title>AdminLTE 2 | Log in</title>
   <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -18,10 +18,9 @@
 <body class="login-page">
 <div class="login-box">
   <div class="login-logo">
-    <h2 style= "color: #3C8CBD"><b>Administrador </b> <br> GTi Members System</h2>
+    <h2 style= "color: #625BA9"><b>Usuário </b> <br> GTi Members System</h2>
   </div><!-- /.login-logo -->
-  <div class="login-box-body", style="border: solid #3C8CBD" >
-  
+  <div class="login-box-body" style="border: solid #625BA9">
     <p class="login-box-msg">Autentique-se para visualizar o sistema.</p>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-group has-feedback">
@@ -46,7 +45,6 @@
         </div><!-- /.col -->
       </div>
     <% end %>
-  </div>
   </div><!-- /.login-box-body -->
   <% flash.each do |key, value| %>
     <div class="alert alert-warning alert-dismissable">

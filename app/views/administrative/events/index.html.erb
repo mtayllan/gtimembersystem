@@ -1,5 +1,5 @@
-<div class="box">
-            <div class="box-header">
+<div class="box box-primary">
+            <div class="box-header  with-border">
               <h3 class="box-title">Eventos</h3>
 
               <div class="box-tools">
@@ -14,36 +14,41 @@
               </div>
             </div>
             <!— /.box-header —>
-            <div class="box-body table-responsive no-padding">
+            <div class="box-body ">
               <table class="table table-hover">
                 <tbody><tr>
-                  <th>ID</th>
+                  
                   <th>Name</th>
                   <th>Date</th>
                   <th>Description</th>
-                  <th><%= link_to new_administrative_event_path, type:"button", class:"btn btn-success pull-right" do %>
-                  <i class="fa fa-plus"></i>
-                  <%end%></th>
                 </tr>
                 <% @events.each do |event| %>
                 <tr>
-                  <td><%=event.id %></td>  
+                  
                   <td><%= event.name %></td>
                   <td><%= event.date%></td>
                   <td><%= event.description%></td>
            
-                   <td>
-                    <%= link_to edit_administrative_event_path(event),type:"button", class:"btn btn-warning btn-flat" do %>
-                     <i class="fa fa-edit"></i>
-                     <%end%>
-                    
-                    <%= link_to administrative_event_path(event), method: :delete, data: { confirm: 'Are you sure?' }, type:"button", class:"btn btn-danger btn-flat" do %>
-                     <i class="fa fa-remove"></i>
-                   <%end%>
-              
+                  <td>
+                    <div class="btn-group-vertical">
+
+                      <%= link_to edit_administrative_event_path(event), class: "btn btn-sm btn-warning" do %>
+                        <i class="fa fa-edit"></i>
+                      <% end %>
+                      <%= link_to administrative_event_path(event), method: :delete, data: { confirm: 'Tem certeza?' }, class: "btn btn-sm btn-danger" do %>
+                        <i class="fa fa-trash"></i>
+                      <% end %>
+                    </div>
+                  </td>
                 </tr>
                 <%end%>
-              </tbody></table>
+                </tbody>
+              </table>
+              <hr>
+     <%= paginate @events %>
+    <div class="pull-right" style="margin-right: 40px"><%= link_to new_administrative_event_path, class: "btn btn-success" do %>
+        Novo <i class="fa fa-plus"></i>
+    <% end %></div>
             </div>
             <!— /.box-body —>
           </div>

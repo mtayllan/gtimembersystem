@@ -1,7 +1,17 @@
 # frozen_string_literal: true
 
 class Sign::SessionsController < Devise::SessionsController
-  layout 'admin_lte_2_login'
+
+  layout :layout_by_resource
+  
+  def layout_by_resource
+    if devise_controller? && resource_name == :admin
+      "admin_lte_2_login"
+    elsif devise_controller? && resource_name == :user
+      "user_lte_2_login"
+    end
+  end
+    
   # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in
