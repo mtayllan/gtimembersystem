@@ -37,7 +37,11 @@
                 <div class="col-md-4">
                     <strong><i class="fa fa-birthday-cake margin-r-5"></i> Aniversário </strong>
                     <p class="text-muted">
+                      <% if @user.birth_date? %>
                       <%= ( @user.birth_date + (Time.new.year - @user.birth_date.year).years ).strftime("%d/%m/%Y") %>
+                      <% else %>
+                      -
+                      <%end %>
                     </p>
                 </div>
                 <div class="col-md-4">

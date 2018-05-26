@@ -12,62 +12,89 @@
     </div>
 <% end %>
 
-
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h1>Editando projeto</h1>
+        <h3>Editando Projeto</h3>
     </div>
-
     <!-- /.panel-heading -->
     <div class="panel-body">
         <div class="col-lg-6">
-           <%= form_for [:administrative, @project],  :url => {:action => 'update' } do |f| %>
+
+          <%= form_for @project, url: {action: "update"} do |f| %>
+
                 <div class="form-group">
                     <%= f.label :name %>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                     <%= f.text_field :name, class:"form-control", placeholder:"Ex: Lina"  %>  
+                </div>
+                </div>
+                   <div class="form-group">
+                  <%= f.label :value %>
+                    <div class="input-group">
+                      <div class="input-group-addon">R$</div>
+                        <%= f.text_field :value, class: "form-control", placeholder: "Título", value:"0,00", name:"project[value]", id:"project_value", type:"text" %>
+                  </div>
+                </div>
+                 <div class="form-group">
+                    <%= f.label :client %>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                    <%= f.text_field :client, class:"form-control", placeholder:"Ex: Lina"  %>  
                 </div>
 
                 <div class="form-group">
-                    <%= f.label :value %>
-                    <%= f.text_field :value, class:"form-control", placeholder:"Ex: Lina"  %>  
-                </div>
-                
+                    <%= f.label :start_date %>
                 <div class="input-group date">
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
-                    <%= f.label :start_date %>
-                    <%= f.date_select :start_date, class:"form-control pull-right", id:"datepicker", type:"text", placeholder:"Ex: 12/05/2018" %>  
                   </div>
+                    <%= f.text_field :start_date, class:"form-control datepicker ",value: (l(@project.start_date) unless @project.start_date.blank?), placeholder:"Ex: 12/05/2018" %>  
                 </div>
-
-                  <div class="input-group date">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
+                </div>
+                  <div class="form-group">
                     <%= f.label :expected_date %>
-                    <%= f.date_select :expected_date, class:"form-control pull-right", id:"datepicker", type:"text", placeholder:"Ex: 12/05/2018" %>  
-                  </div>
-                </div>
-                 <div class="input-group date">
+                <div class="input-group date">
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
-                    <%= f.label :end_date %>
-                    <%= f.date_select :end_date, class:"form-control pull-right", id:"datepicker", type:"text", placeholder:"Ex: 12/05/2018" %>  
                   </div>
+                    <%= f.text_field :expected_date, class:"form-control datepicker ",value: (l(@project.expected_date) unless @project.expected_date.blank?), placeholder:"Ex: 20/07/2018" %>  
+                </div>
+                </div>
+                  <div class="form-group">
+                    <%= f.label :end_date %>
+                <div class="input-group date">
+                  <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                    <%= f.text_field :end_date, class:"form-control datepicker ",value: (l(@project.end_date) unless @project.end_date.blank?), placeholder:"Ex: 29/07/2018" %>  
                 </div>
                 </div>
                    <div class="form-group">
                     <%= f.label :description %>
-                    <%= f.text_field :description,class:"form-control", rows:"3", placeholder:"Ex: Encontro Cearense de Empresas Juniores" %> 
+                    <%= f.text_area :description,class:"form-control", rows:"3", placeholder:"Ex: Site com um estilo de blog" %> 
                     </div>
-
-                <div class="form-group">
-                    <%= f.label :client %>
-                    <%= f.text_field :client, class:"form-control", placeholder:"Ex: Lina"  %>  
-                </div>
                <%= f.submit  "Salvar", :class => "btn btn-block btn-success btn-flat" %> 
             <% end %>
         </div>
     </div>
     <!-- /.panel-body -->
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

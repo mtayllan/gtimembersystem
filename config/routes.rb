@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  namespace :dashboard do
+    get 'users/index'
+  end
+
   get 'administrative', to: 'administrative#index'
   get 'dashboard', to: 'dashboard#index'
   
@@ -16,6 +20,7 @@ Rails.application.routes.draw do
     get 'transfers/index'
     get 'events/index'
     get 'projects/index'
+    get 'users/index'
     resources :profile, only: [:edit, :update]
 
   end

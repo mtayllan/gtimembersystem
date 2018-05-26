@@ -12,7 +12,6 @@
   <div class="box-body" style="">
     <table class="table table-hover">
       <tbody><tr>
-        <th>ID</th>
         <th>Descrição</th>
         <th>Tipo</th>
         <th>Valor</th>
@@ -21,7 +20,7 @@
       </tr>
       <% @transferences.each do |transfer| %>
       <tr>
-        <td><%= transfer.id %></td>
+      
         <td><%= transfer.description %></td>
         <% if transfer.category == 'in' %>
           <td><span class="label bg-teal-active color-palette">Entrada</span></td>
@@ -47,7 +46,7 @@
     </table>
     <%= paginate @transferences %>
     <div class="pull-right"><%= link_to new_administrative_transfer_path, class: "btn btn-success" do %>
-        Nova <i class="fa fa-plus"></i>
+        Novo <i class="fa fa-plus"></i>
     <% end %></div>
   </div>
   

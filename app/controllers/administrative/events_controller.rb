@@ -2,7 +2,7 @@ class Administrative::EventsController < AdministrativeController
   before_action :set_event, only: [:edit,  :update, :destroy]
   
   def index
-    @events = Event.all
+     @events = Event.order(:name).page(params[:page]).per(10)
   end
   
   def new 
