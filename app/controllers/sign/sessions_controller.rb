@@ -5,10 +5,9 @@ class Sign::SessionsController < Devise::SessionsController
   
   def layout_by_resource
     if devise_controller? && resource_name == :admin
-
-      "admin_lte_2_login"
+      "login_admin"
     elsif devise_controller? && resource_name == :user
-      "user_lte_2_login"
+      "login_user"
     end
   end
     

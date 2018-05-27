@@ -2,7 +2,7 @@ class Administrative::EventsController < AdministrativeController
   before_action :set_event, only: [:edit,  :update, :destroy]
   
   def index
-     @events = Event.order(:name).page(params[:page]).per(10)
+    @events = Event.order(:name).page(params[:page]).per(10)
   end
   
   def new 
@@ -11,6 +11,13 @@ class Administrative::EventsController < AdministrativeController
   
   def show 
     @event = Event.find(params[:id])
+    @event_users = @event.users
+    
+    query = ''
+    if(params[:q])
+      query = params[:q]
+    end
+    @users = User.search(query, params[:page])
   end
 
   def edit 
@@ -43,6 +50,17 @@ class Administrative::EventsController < AdministrativeController
       render :index
     end
   end
+  
+  def create_participation
+    event = Event.find(params[:id])
+    user = User.find(params[:user_id])
+    event.participations.create!(user: user)
+    if event.save
+      redirect_to administrative_event_path(event.id), notice: "Membro adicionado com sucesso!"
+    else
+      render :show
+    end
+  end
 
 
 
@@ -55,6 +73,5 @@ private
 
   def params_event
      params.require(:event).permit(:name, :date, :description)
-
   end
 end

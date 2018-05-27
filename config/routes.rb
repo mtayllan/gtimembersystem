@@ -12,17 +12,16 @@ Rails.application.routes.draw do
     resources :events
     resources :projects, except: [:show]
     resources :users
-
+    get 'search', to: 'search#users'
+    post 'events/:id/user_id=:user_id', to: 'events#create_participation'
   end
   
   namespace :dashboard do
-
     get 'transfers/index'
     get 'events/index'
     get 'projects/index'
     get 'users/index'
     resources :profile, only: [:edit, :update]
-
   end
   
   devise_for :admins , controllers: {sessions: 'sign/sessions'}

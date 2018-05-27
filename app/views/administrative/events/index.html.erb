@@ -31,7 +31,9 @@
            
                   <td>
                     <div class="btn-group-vertical">
-
+                      <%= link_to administrative_event_path(event), class: "btn btn-sm btn-info" do %>
+                        <i class="fa fa-eye"></i>
+                      <% end %>
                       <%= link_to edit_administrative_event_path(event), class: "btn btn-sm btn-warning" do %>
                         <i class="fa fa-edit"></i>
                       <% end %>
