@@ -1,4 +1,4 @@
-<h1 class="page-header">CashFlow</h1>
+<h1 class="page-header">Transferência</h1>
 
 <% if @transfer.errors.any? %>
     <div class="alert alert-danger alert-dismissable">
@@ -33,11 +33,20 @@
                         <% end %>
                     </div>
                 <div class="form-group">
+                  <%= f.label :date %>
+                  <div class="input-group date">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                    <%= f.text_field :date, autocomplete: false, class:"form-control datepicker ",value: (l(@transfer.date) unless @transfer.date.blank?), placeholder:"Ex: 12/05/2018" %>  
+                  </div>
+                </div>
+                <div class="form-group">
                   <%= f.label :price %>
                     <div class="input-group">
                       <div class="input-group-addon"><%= @transfer.price.currency.symbol %></div>
                         <%= f.text_field :price, class: "form-control", placeholder: "Título" %>
-                  </div>
+                    </div>
                 </div>
                 <%= submit_tag "Salvar", class: "btn btn-block btn-success btn-flat" %> 
             <% end %>

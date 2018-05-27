@@ -1,7 +1,8 @@
 class Administrative::ProjectsController < AdministrativeController
   before_action :set_project, only: [:edit,  :update, :destroy]
+  
   def index
-     @projects = Project.order(:name).page(params[:page]).per(10)
+     @projects = Project.order(:name).page(params[:page]).per(5)
   end
   
   def new 
@@ -49,7 +50,7 @@ private
   end
 
   def params_project
-     params.require(:project).permit(:name, :value,  :start_date, :description,  :client, :end_date,:expected_date)
+     params.require(:project).permit(:name, :price,  :start_date, :description,  :client, :end_date, :expected_date)
 
   end
 end

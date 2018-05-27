@@ -12,7 +12,8 @@ Rails.application.routes.draw do
     resources :events
     resources :projects, except: [:show]
     resources :users
-    get 'search', to: 'search#users'
+    get 'search/users', to: 'search#users'
+    get 'search/events', to: 'search#events'
     post 'events/:id/user_id=:user_id', to: 'events#create_participation'
   end
   

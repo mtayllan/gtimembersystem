@@ -28,7 +28,11 @@
           <td><span class="label bg-orange-active color-palette ">Saída</span></td>
         <% end %>
         <td><%= humanized_money_with_symbol transfer.price %></td>
-        <td><%= transfer.created_at %></td>
+        <td>
+          <% if transfer.date? %> 
+            <%= transfer.date.strftime("%d/%m/%Y") %>
+          <% end %>
+          </td>
         <td>
           <div class="btn-group-vertical">
             <%= link_to edit_administrative_transfer_path(transfer), class: "btn btn-sm btn-warning" do %>

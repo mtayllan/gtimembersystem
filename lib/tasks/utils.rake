@@ -10,6 +10,7 @@ namespace :utils do
     puts %x(rake utils:generate_users)
     puts %x(rake utils:generate_transfers)
     puts %x(rake utils:generate_events)
+    puts %x(rake utils:generate_projects)
     puts "Setup completado com sucesso!"
   end
 	
@@ -18,7 +19,6 @@ namespace :utils do
   task generate_users: :environment do
   	puts 'Gerando usuários fake...'
   	20.times do
-  	  
 			User.create!(name: Faker::Name.name,
 						 email: Faker::Internet.email, 
 						 password: "123456", 
@@ -41,7 +41,8 @@ namespace :utils do
   	10.times do
 			Transfer.create!(description: Faker::Lorem.paragraph(2),
 											 price: Random.rand(10000).to_s,
-											 category: [0,1].sample)
+											 category: [0,1].sample,
+											 date: Faker::Date.between(Date.today, 1.year.from_now))
 		end
 		puts 'Transferencias fake gerados com sucesso!'
   end
@@ -59,6 +60,25 @@ namespace :utils do
 			end
 		end
 		puts 'Eventos fake gerados com sucesso!'
+  end
+  
+  desc "Gera Projetos Fake"
+  task generate_projects: :environment do
+  	puts 'Gerando Projetos fake...'
+  	10.times do
+  		p = Project.create!(name: Faker::FunnyName.name,
+  												price: Random.rand(10000).to_s,
+  												description: Faker::Lorem.paragraph(2),
+  												client: Faker::Name.name,
+  												start_date: Faker::Date.between(Date.today, 1.year.from_now),
+  												expected_date: Faker::Date.between(Date.today, 1.year.from_now),
+  												end_date: Faker::Date.between(Date.today, 1.year.from_now) )
+			[5,6].sample.times do |i|
+				u = User.find(i+1) 
+				p.contributions.create!(user: u)
+			end
+		end
+		puts 'Projetos fake gerados com sucesso!'
   end
 
 end

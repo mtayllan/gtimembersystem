@@ -2,7 +2,7 @@ class Administrative::TransfersController < AdministrativeController
   before_action :set_transfer, only: [:edit, :update, :destroy]
 
   def index
-    @transferences = Transfer.order(created_at: :desc).page(params[:page]).per(5)
+    @transferences = Transfer.order(date: :desc).page(params[:page]).per(5)
   end 
 
   def new
@@ -46,7 +46,7 @@ class Administrative::TransfersController < AdministrativeController
     end
 
     def params_transfer
-        params.require(:transfer).permit(:description, :price, :category)
+        params.require(:transfer).permit(:description, :price, :category, :date)
     end
   
 end
