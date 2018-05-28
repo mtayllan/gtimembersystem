@@ -7789,3 +7789,1133 @@ Processing by Administrative::TransfersController#index as HTML
 Completed 200 OK in 397ms (Views: 390.4ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/" for 177.207.14.204 at 2018-05-28 02:14:11 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DashboardController#index as HTML
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 177.207.14.204 at 2018-05-28 02:14:13 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Sign::SessionsController#new as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/login_user
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/login_user (21.8ms)
+Completed 200 OK in 1044ms (Views: 1002.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/fonts/glyphicons-halflings-regular.woff2" for 177.207.14.204 at 2018-05-28 02:14:17 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff2"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.woff" for 177.207.14.204 at 2018-05-28 02:14:18 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.woff"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/glyphicons-halflings-regular.ttf" for 177.207.14.204 at 2018-05-28 02:14:18 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/glyphicons-halflings-regular.ttf"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/users/sign_in" for 177.207.14.204 at 2018-05-28 02:14:22 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Sign::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DxkGXn+d1nBZYxXAK4oV48EEN+/hfdAxQ4F36Je0E3+Rz6DqN3HnDY+xfq1eiw80P7n5HBQkw9o9AwkelYYkbQ==", "user"=>{"email"=>"u@u.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "u@u.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "current_sign_in_ip" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["current_sign_in_at", "2018-05-28 02:14:22.243356"], ["last_sign_in_at", "2018-05-28 02:14:22.243356"], ["current_sign_in_ip", "177.207.14.204/32"], ["last_sign_in_ip", "177.207.14.204/32"], ["sign_in_count", 1], ["updated_at", "2018-05-28 02:14:22.245273"], ["id", 1]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://gtimembersystem2-mtayllan.c9users.io/
+Completed 302 Found in 176ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 177.207.14.204 at 2018-05-28 02:14:22 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/dashboard
+  Rendered dashboard/index.html.erb within layouts/dashboard (0.4ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.3ms)
+Completed 200 OK in 373ms (Views: 368.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/events/index" for 177.207.14.204 at 2018-05-28 02:14:24 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::EventsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/events/index.html.erb within layouts/dashboard
+  [1m[36mEvent Load (3.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "events"[0m
+  Rendered dashboard/events/index.html.erb within layouts/dashboard (104.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.4ms)
+Completed 200 OK in 395ms (Views: 378.7ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/dashboard/projects/index" for 177.207.14.204 at 2018-05-28 02:14:28 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/projects/index.html.erb within layouts/dashboard
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered dashboard/projects/index.html.erb within layouts/dashboard (26.9ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 3.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `value' for #<Project:0x007f829e47b558>
+Did you mean?  validate):
+    29:                 <% @projects.each do |project| %>
+    30: 
+    31:                   <td><%= project.name %></td>
+    32:                   <td><%= project.value %></td>
+    33:                   <td><%= project.client %></td>
+    34:                   <td><%= project.start_date %></td>
+    35:                   <td><%= project.expected_date %></td>
+  
+app/views/dashboard/projects/index.html.erb:32:in `block in _app_views_dashboard_projects_index_html_erb___4344755152647207021_70099489642200'
+app/views/dashboard/projects/index.html.erb:29:in `_app_views_dashboard_projects_index_html_erb___4344755152647207021_70099489642200'
+Started GET "/dashboard/events/index" for 177.207.14.204 at 2018-05-28 02:14:32 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::EventsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/events/index.html.erb within layouts/dashboard
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "events"[0m
+  Rendered dashboard/events/index.html.erb within layouts/dashboard (4.5ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.4ms)
+Completed 200 OK in 276ms (Views: 269.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rails/info/routes" for 177.207.14.204 at 2018-05-28 02:15:43 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [74 times] (20.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 177.207.14.204 at 2018-05-28 02:16:34 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [74 times] (25.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=proj" for 177.207.14.204 at 2018-05-28 02:16:37 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"proj"}
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=pro" for 177.207.14.204 at 2018-05-28 02:16:38 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"pro"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=proje" for 177.207.14.204 at 2018-05-28 02:16:39 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"proje"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=project" for 177.207.14.204 at 2018-05-28 02:16:40 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"project"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 177.207.14.204 at 2018-05-28 02:17:33 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/dashboard
+  Rendered dashboard/index.html.erb within layouts/dashboard (0.5ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1061.6ms)
+Completed 500 Internal Server Error in 1191ms (ActiveRecord: 3.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `dashboard_projects_index_path' for #<#<Class:0x007f829f178d00>:0x007f829f122bf8>
+Did you mean?  dashboard_projects_path
+               dashboard_project_path
+               dashboard_events_index_path
+               dashboard_projects_url
+               dashboard_users_index_path
+               dashboard_profile_path
+               dashboard_project_url
+               dashboard_transfers_index_path):
+    31:           <% end %>
+    32:       </li>
+    33:       <li>
+    34:         <%= link_to dashboard_projects_index_path do %>
+    35:           <i class="fa fa-archive"></i><span>Projetos</span>
+    36:         <% end %>
+    37:       </li>
+  
+app/views/layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb:34:in `_app_views_layouts_dashboard_shared__dashboard_lte___sidebar_html_erb__4564047112350847399_70099489539360'
+app/views/layouts/dashboard.html.erb:24:in `_app_views_layouts_dashboard_html_erb__826013157463556973_70099495616640'
+Started GET "/rails/info/routes?path=project" for 177.207.14.204 at 2018-05-28 02:17:47 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"project"}
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 177.207.14.204 at 2018-05-28 02:17:49 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [75 times] (29.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 52ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=project" for 177.207.14.204 at 2018-05-28 02:17:51 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"project"}
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=project" for 177.207.14.204 at 2018-05-28 02:17:52 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"project"}
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 177.207.14.204 at 2018-05-28 02:18:19 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/index.html.erb within layouts/dashboard
+  Rendered dashboard/index.html.erb within layouts/dashboard (0.4ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.4ms)
+Completed 200 OK in 421ms (Views: 416.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard/projects" for 177.207.14.204 at 2018-05-28 02:18:23 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/projects/index.html.erb within layouts/dashboard
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered dashboard/projects/index.html.erb within layouts/dashboard (168.5ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.2ms)
+Completed 200 OK in 476ms (Views: 460.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:18:32 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Dashboard::ProjectsController):
+  
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/dashboard/projects" for 177.207.14.204 at 2018-05-28 02:18:34 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/projects/index.html.erb within layouts/dashboard
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered dashboard/projects/index.html.erb within layouts/dashboard (6.4ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.4ms)
+Completed 200 OK in 274ms (Views: 268.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dashboard/projects" for 177.207.14.204 at 2018-05-28 02:20:26 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/projects/index.html.erb within layouts/dashboard
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered dashboard/projects/index.html.erb within layouts/dashboard (6.5ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.3ms)
+Completed 200 OK in 399ms (Views: 393.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:20:29 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  Rendered shared/show/_project.html.erb (0.3ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (1.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.2ms)
+Completed 200 OK in 312ms (Views: 308.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:24:51 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  Rendered shared/show/_project.html.erb (2.9ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (4.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <div class="box box-info">
+    2:   <div class="box-header">
+    3:     <i class="fa fa-location-arrow"></i>
+    4:     <h3 class="box-title"><%= @project.name %></h3>
+    5:     <!-- tools box -->
+    6:     <div class="pull-right box-tools">
+    7:       <% if @project.date? %>
+  
+app/views/shared/show/_project.html.erb:4:in `_app_views_shared_show__project_html_erb__3767436790888932663_70099302163080'
+app/views/dashboard/projects/show.html.erb:1:in `_app_views_dashboard_projects_show_html_erb___1341683024194463384_70099442794180'
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:30:07 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  Rendered shared/show/_project.html.erb (6.7ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (7.8ms)
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 7.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `date?' for #<Project:0x007f829887be88>):
+    4:     <h3 class="box-title"><%= @project.name %></h3>
+    5:     <!-- tools box -->
+    6:     <div class="pull-right box-tools">
+    7:       <% if @project.date? %>
+    8:         <span>Data: <%= @project.date.strftime("%d/%m/%Y") %></span>
+    9:       <% end %>
+   10:     </div>
+  
+app/views/shared/show/_project.html.erb:7:in `_app_views_shared_show__project_html_erb__3767436790888932663_70099496548800'
+app/views/dashboard/projects/show.html.erb:1:in `_app_views_dashboard_projects_show_html_erb___1341683024194463384_70099445912600'
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:30:34 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (28.5ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (29.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.3ms)
+Completed 200 OK in 306ms (Views: 297.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:40:07 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (6.8ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (8.2ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.9ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.4ms)
+Completed 200 OK in 335ms (Views: 328.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:40:16 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (6.4ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (7.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.4ms)
+Completed 200 OK in 292ms (Views: 285.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:49:26 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1 LIMIT $2[0m  [["project_id", 5], ["LIMIT", 11]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1 LIMIT $2[0m  [["project_id", 5], ["LIMIT", 11]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1 LIMIT $2[0m  [["project_id", 5], ["LIMIT", 11]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1 LIMIT $2[0m  [["project_id", 5], ["LIMIT", 11]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1 LIMIT $2[0m  [["project_id", 5], ["LIMIT", 11]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1 LIMIT $2[0m  [["project_id", 5], ["LIMIT", 11]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1 LIMIT $2[0m  [["project_id", 5], ["LIMIT", 11]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1 LIMIT $2[0m  [["project_id", 5], ["LIMIT", 11]]
+  Rendered shared/show/_project.html.erb (1010.2ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (1036.3ms)
+Completed 500 Internal Server Error in 1084ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `project' for #<#<Class:0x007f8299251f70>:0x007f829f0ee380>
+Did you mean?  @project):
+    10:         <div class="description-block border-right">
+    11:           <h5 class="description-header"><i class="text-green fa fa-calendar"></i> Data de Início</h5>
+    12:           <% if @project.start_date? %>
+    13:             <span class="description-text"><%= project.start_date.strftime("%d/%m/%Y") %></span>
+    14:           <% end %>
+    15:         </div>
+    16:         <!-- /.description-block -->
+  
+app/views/shared/show/_project.html.erb:13:in `_app_views_shared_show__project_html_erb__3767436790888932663_70099495497840'
+app/views/dashboard/projects/show.html.erb:1:in `_app_views_dashboard_projects_show_html_erb___1341683024194463384_70099495516540'
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:49:49 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (15.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (22.0ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (27.4ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (5.6ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.7ms)
+Completed 200 OK in 587ms (Views: 507.4ms | ActiveRecord: 23.9ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:51:48 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (25.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (16.6ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (28.9ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (5.1ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.5ms)
+Completed 200 OK in 468ms (Views: 400.0ms | ActiveRecord: 28.8ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:52:07 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (7.1ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (8.3ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.3ms)
+Completed 200 OK in 424ms (Views: 399.5ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:52:17 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (6.4ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (7.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.3ms)
+Completed 200 OK in 399ms (Views: 394.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:53:48 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (14.1ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (15.4ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.8ms)
+Completed 200 OK in 327ms (Views: 321.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:53:56 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (7.0ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (8.3ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.3ms)
+Completed 200 OK in 365ms (Views: 359.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:54:36 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (6.5ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (7.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.5ms)
+Completed 200 OK in 314ms (Views: 307.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:54:47 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (6.8ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (8.0ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.3ms)
+Completed 200 OK in 304ms (Views: 298.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:54:58 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (12.4ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (170.0ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.8ms)
+Completed 200 OK in 514ms (Views: 481.2ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:58:50 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (11.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (13.8ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (20.5ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.9ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.4ms)
+Completed 200 OK in 434ms (Views: 362.7ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 02:59:14 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (39.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (7.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (39.5ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (51.0ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (9.4ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (3.6ms)
+Completed 200 OK in 662ms (Views: 531.5ms | ActiveRecord: 57.8ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 03:01:01 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (11.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (18.0ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (28.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (6.2ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.8ms)
+Completed 200 OK in 474ms (Views: 391.7ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 03:01:33 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (79.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (15.6ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (25.1ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (8.6ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.6ms)
+Completed 200 OK in 520ms (Views: 382.3ms | ActiveRecord: 84.1ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 03:05:13 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (87.0ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (91.0ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.4ms)
+Completed 200 OK in 417ms (Views: 384.2ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 03:05:27 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (7.5ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (8.9ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.3ms)
+Completed 200 OK in 288ms (Views: 282.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/rails/info/routes" for 177.207.14.204 at 2018-05-28 03:08:09 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [75 times] (29.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 46ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=user" for 177.207.14.204 at 2018-05-28 03:08:12 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"user"}
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 177.207.14.204 at 2018-05-28 03:08:56 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [75 times] (20.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 38ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=user" for 177.207.14.204 at 2018-05-28 03:09:01 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"user"}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 177.207.14.204 at 2018-05-28 03:09:56 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [76 times] (33.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-5.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=user" for 177.207.14.204 at 2018-05-28 03:09:59 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"user"}
+Completed 200 OK in 12ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=project" for 177.207.14.204 at 2018-05-28 03:10:47 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"project"}
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=us" for 177.207.14.204 at 2018-05-28 03:11:01 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"us"}
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=user" for 177.207.14.204 at 2018-05-28 03:11:02 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"user"}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dashboard/projects" for 177.207.14.204 at 2018-05-28 03:11:31 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/projects/index.html.erb within layouts/dashboard
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 7], ["OFFSET", 0]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered dashboard/projects/index.html.erb within layouts/dashboard (74.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (4.9ms)
+Completed 200 OK in 1098ms (Views: 845.8ms | ActiveRecord: 43.1ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 03:11:33 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  Rendered shared/show/_project.html.erb (5.1ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (6.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/app/views/shared/show/_project.html.erb:88: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/ubuntu/workspace/app/views/shared/show/_project.html.erb:90: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/shared/show/_project.html.erb:88: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/shared/show/_project.html.erb:90: syntax error, unexpected end-of-input, expecting keyword_end
+app/views/dashboard/projects/show.html.erb:1:in `_app_views_dashboard_projects_show_html_erb___1341683024194463384_70099489532320'
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 03:12:43 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (32.6ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (34.0ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.4ms)
+Completed 200 OK in 329ms (Views: 321.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 03:13:06 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (8.6ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (10.1ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (1.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.4ms)
+Completed 200 OK in 512ms (Views: 505.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dashboard/users/2" for 177.207.14.204 at 2018-05-28 03:13:11 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Dashboard::UsersController):
+  
+actionpack (5.1.6) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 03:13:17 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (9.1ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (10.9ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.3ms)
+Completed 200 OK in 352ms (Views: 345.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/dashboard/projects/5" for 177.207.14.204 at 2018-05-28 03:14:49 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dashboard/projects/show.html.erb within layouts/dashboard
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "contributions" ON "users"."id" = "contributions"."user_id" WHERE "contributions"."project_id" = $1[0m  [["project_id", 5]]
+  Rendered shared/show/_project.html.erb (13.1ms)
+  Rendered dashboard/projects/show.html.erb within layouts/dashboard (14.3ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.3ms)
+Completed 200 OK in 372ms (Views: 308.0ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/dashboard/users/2" for 177.207.14.204 at 2018-05-28 03:14:52 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dashboard/users/show.html.erb within layouts/dashboard
+  Rendered shared/show/_user.html.erb (3.3ms)
+  Rendered dashboard/users/show.html.erb within layouts/dashboard (4.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.9ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.5ms)
+Completed 200 OK in 450ms (Views: 444.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dashboard/events/index" for 177.207.14.204 at 2018-05-28 03:15:20 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::EventsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/events/index.html.erb within layouts/dashboard
+  [1m[36mEvent Load (2.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "events"[0m
+  Rendered dashboard/events/index.html.erb within layouts/dashboard (132.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.9ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.4ms)
+Completed 200 OK in 431ms (Views: 412.7ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/dashboard/projects" for 177.207.14.204 at 2018-05-28 03:15:22 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/projects/index.html.erb within layouts/dashboard
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 7], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered dashboard/projects/index.html.erb within layouts/dashboard (13.3ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.2ms)
+Completed 200 OK in 294ms (Views: 288.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/dashboard/users/index" for 177.207.14.204 at 2018-05-28 03:15:27 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/users/index.html.erb within layouts/dashboard
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendered dashboard/users/index.html.erb within layouts/dashboard (17.9ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.3ms)
+Completed 200 OK in 363ms (Views: 355.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/dashboard/projects" for 177.207.14.204 at 2018-05-28 03:15:32 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProjectsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/projects/index.html.erb within layouts/dashboard
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 7], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered dashboard/projects/index.html.erb within layouts/dashboard (12.0ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (1.5ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (3.4ms)
+Completed 200 OK in 445ms (Views: 439.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/dashboard/events/index" for 177.207.14.204 at 2018-05-28 03:15:35 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::EventsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/events/index.html.erb within layouts/dashboard
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "events"[0m
+  Rendered dashboard/events/index.html.erb within layouts/dashboard (4.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.9ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (3.4ms)
+Completed 200 OK in 304ms (Views: 297.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/dashboard/transfers/index" for 177.207.14.204 at 2018-05-28 03:15:39 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::TransfersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/transfers/index.html.erb within layouts/dashboard
+  [1m[36mTransfer Load (9.3ms)[0m  [1m[34mSELECT  "transfers".* FROM "transfers" ORDER BY "transfers"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "transfers"[0m
+  Rendered dashboard/transfers/index.html.erb within layouts/dashboard (44.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.4ms)
+Completed 200 OK in 331ms (Views: 308.1ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/dashboard/transfers/index?page=2" for 177.207.14.204 at 2018-05-28 03:15:42 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::TransfersController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/transfers/index.html.erb within layouts/dashboard
+  [1m[36mTransfer Load (0.4ms)[0m  [1m[34mSELECT  "transfers".* FROM "transfers" ORDER BY "transfers"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "transfers"[0m
+  Rendered dashboard/transfers/index.html.erb within layouts/dashboard (13.5ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.4ms)
+Completed 200 OK in 413ms (Views: 408.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dashboard/transfers/index" for 177.207.14.204 at 2018-05-28 03:15:46 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::TransfersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/transfers/index.html.erb within layouts/dashboard
+  [1m[36mTransfer Load (0.5ms)[0m  [1m[34mSELECT  "transfers".* FROM "transfers" ORDER BY "transfers"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "transfers"[0m
+  Rendered dashboard/transfers/index.html.erb within layouts/dashboard (12.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.7ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.2ms)
+Completed 200 OK in 367ms (Views: 361.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/dashboard/profile/1/edit" for 177.207.14.204 at 2018-05-28 03:15:47 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::ProfileController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/profile/edit.html.erb within layouts/dashboard
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "contributions" WHERE "contributions"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "participations" WHERE "participations"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered dashboard/profile/edit.html.erb within layouts/dashboard (93.0ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.3ms)
+Completed 200 OK in 383ms (Views: 366.8ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/dashboard/events/index" for 177.207.14.204 at 2018-05-28 03:16:02 +0000
+Cannot render console from 177.207.14.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Dashboard::EventsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/events/index.html.erb within layouts/dashboard
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "events"[0m
+  Rendered dashboard/events/index.html.erb within layouts/dashboard (6.1ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_header.html.erb (0.8ms)
+  Rendered layouts/dashboard_shared/_dashboard_lte_2_sidebar.html.erb (1.3ms)
+Completed 200 OK in 402ms (Views: 396.8ms | ActiveRecord: 1.2ms)
+
+

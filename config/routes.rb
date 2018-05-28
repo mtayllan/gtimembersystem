@@ -20,8 +20,8 @@ Rails.application.routes.draw do
   namespace :dashboard do
     get 'transfers/index'
     get 'events/index'
-    get 'projects/index'
-    get 'users/index'
+    resources :projects, only: [:index, :show]
+    resources :users, only: [:index, :show]
     resources :profile, only: [:edit, :update]
   end
   

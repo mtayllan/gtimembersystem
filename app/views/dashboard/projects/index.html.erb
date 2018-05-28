@@ -19,29 +19,37 @@
                 <tbody>
                   <tr>
                   <th>Nome</th>
-                  <th>Valor</th>
                   <th>Cliente</th>
                   <th>Data de Início</th>
-                  <th>Data de Prevista</th>
-                  <th>Data de Fim</th>
                   <th>Descrição</th>
+                  <th></th>
                 </tr>
                 <% @projects.each do |project| %>
 
                   <td><%= project.name %></td>
-                  <td><%= project.value %></td>
                   <td><%= project.client %></td>
-                  <td><%= project.start_date %></td>
-                  <td><%= project.expected_date %></td>
-                  <td><%= project.end_date%></td>
+                  <td>
+                    <% if project.start_date? %> 
+                      <%= project.start_date.strftime("%d/%m/%Y") %>
+                    <% end %>
+                  </td>
                   <td><%= project.description%></td>
-          
+           
+                  <td>
+                    <%= link_to dashboard_project_path(project), class: "btn btn-sm btn-success" do %>
+                      <i class="fa fa-eye"></i>
+                    <% end %>
+                  </td>
                 </tr>
                 <%end%>
               </tbody></table>
               <%= paginate @projects %>
               <hr>
-              
+              <div class="pull-right">
+                <%= link_to new_administrative_project_path, class: "btn btn-success" do %>
+                Novo <i class="fa fa-plus"></i>
+                <% end %>
+              </div>
             </div>
             <!— /.box-body —>
           </div>
