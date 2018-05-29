@@ -22,14 +22,8 @@
 //= require app
 //= require_tree .
 
-$(document).ready(function() {
-  // Global ajax cursor change
-  $(document)
-    .ajaxStart(function () {
-        $('#global-spin').fadeIn('slow');
-    })
-    .ajaxStop(function () {
-        $('#global-spin').fadeOut('slow');
-    });
+$(".timeline-picker").datepicker({
+    onSelect: function(dateText) {
+        $(".timeline-form").submit();
+    }
 });
-

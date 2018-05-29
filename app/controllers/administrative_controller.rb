@@ -4,7 +4,7 @@ class AdministrativeController < ApplicationController
   def index
     
     month = params[:month]
-    if month.nil?
+    if month.nil? or month == ''
       month = Date.today.to_s
     end
     @data = Date.parse(month)
