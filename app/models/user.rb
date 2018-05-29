@@ -1,8 +1,8 @@
 class User < ApplicationRecord
 
-  has_many :contributions
+  has_many :contributions, dependent: :destroy
   has_many :projects, through: :contributions
-  has_many :participations
+  has_many :participations, dependent: :destroy
   has_many :events, through: :participations
   
   mount_uploader :photo, AvatarUploader

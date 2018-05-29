@@ -88,10 +88,15 @@
             <!-- /.box-header -->
             <div class="box-body" style="">
               <ul class="nav nav-stacked">
-                <li><a href="#">Projeto 1</a></li>
-                <li><a href="#">Projeto 2</a></li>
-                <li><a href="#">Projeto 3</a></li>
-                <li><a href="#">Projeto 4</a></li>
+                <% @user_projects.each do |project| %>
+                  <li>
+                    <% if controller_path == "administrative/users" %>
+                      <%= link_to "#{project.name}", administrative_project_path(project.id) %>
+                    <% else %>
+                      <%= link_to "#{project.name}", dashboard_project_path(project.id) %>
+                    <% end %>
+                  </li>
+                <% end %>
               </ul>
             </div>
             <!-- /.box-body -->
@@ -110,8 +115,15 @@
             <!-- /.box-header -->
             <div class="box-body" style="">
               <ul class="nav nav-stacked">
-                <li><a href="#">Evento 1</a></li>
-                <li><a href="#">Evento 2</a></li>
+                <% @user_events.each do |event| %>
+                  <li>
+                    <% if controller_path == "administrative/users" %>
+                      <%= link_to "#{event.name}", administrative_project_path(event.id) %>
+                    <% else %>
+                      <%= link_to "#{event.name}", dashboard_project_path(event.id) %>
+                    <% end %>
+                  </li>
+                <% end %>
               </ul>
             </div>
             <!-- /.box-body -->

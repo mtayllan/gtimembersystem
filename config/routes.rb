@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  namespace :dashboard do
-    get 'users/index'
-  end
-
   get 'administrative', to: 'administrative#index'
   get 'dashboard', to: 'dashboard#index'
   
@@ -16,12 +12,12 @@ Rails.application.routes.draw do
     get 'search/events', to: 'search#events'
     get 'search/projects', to: 'search#projects'
     post 'projects/:id/user_id=:user_id', to: 'projects#create_contributions'
-    post 'events/:id/user_id=:user_id', to: 'events#create_participation'
+    post 'events/:id/user_id=:user_id&act=:act', to: 'events#edit_participation'
   end
   
   namespace :dashboard do
     get 'transfers/index'
-    get 'events/index'
+    resources :events, only: [:index, :show]
     resources :projects, only: [:index, :show]
     resources :users, only: [:index, :show]
     resources :profile, only: [:edit, :update]

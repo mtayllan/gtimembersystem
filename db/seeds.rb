@@ -16,4 +16,3 @@ User.create!(name: "Default" , email: 'u@u.com',
 			  password: "123456", password_confirmation: "123456")
 
 puts "Usuário Padrão Cadastrado com sucesso!"
-
