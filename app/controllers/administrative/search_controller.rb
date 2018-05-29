@@ -7,6 +7,8 @@ class Administrative::SearchController < AdministrativeController
   def events
     @events = Event.search(params[:q], params[:page])
   end
-  
+  def projects 
+  	@projects = Project.search(params[:q], params[:page])
+  end
   
 end

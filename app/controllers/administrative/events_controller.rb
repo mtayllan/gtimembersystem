@@ -54,7 +54,7 @@ class Administrative::EventsController < AdministrativeController
   def create_participation
     event = Event.find(params[:id])
     user = User.find(params[:user_id])
-    event.participations.create!(user: user)
+    event.participations.create(user: user)
     if event.save
       redirect_to administrative_event_path(event.id), notice: "Membro adicionado com sucesso!"
     else
