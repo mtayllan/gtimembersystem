@@ -1,6 +1,10 @@
 class Dashboard::ProjectsController < DashboardController
   def index
-  	@projects = Project.order(:name).page(params[:page]).per(7)
+  	query = ''
+    if(params[:q])
+      query = params[:q]
+    end
+    @projects = Project.search(query, params[:page])
   end
   
   def show

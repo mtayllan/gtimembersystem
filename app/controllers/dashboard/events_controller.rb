@@ -5,7 +5,7 @@ class Dashboard::EventsController < DashboardController
     if(params[:q])
       query = params[:q]
     end
-   @events = Event.search(query, params[:page])
+    @events = Event.search(query, params[:page])
   end
   
   def show

@@ -40,7 +40,11 @@
           <% else %>
             <img src="/images/gti_user_pic.png" class="img-list-event" alt="User Image" />
           <% end %>
-          <%= link_to "#{user.name}", administrative_user_path(user), class:"users-list-name" %>
+          <% if controller_path.include? 'administrative' %>
+            <%= link_to "#{user.name}", administrative_user_path(user), class:"users-list-name" %>
+          <% elsif controller_path.include? 'dashboard' %>
+            <%= link_to "#{user.name}", dashboard_user_path(user), class:"users-list-name" %>
+          <% end %>
           <span class="users-list-date"><%= user.role %></span>
         </li>
       <% end %>
