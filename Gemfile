@@ -57,6 +57,8 @@ gem 'jbuilder', '~> 2.5'
 # Classier solution for file uploads for Rails, Sinatra and other Ruby web frameworks 
 gem 'carrierwave', '~> 1.0'
 
+gem 'birthday', '~> 0.3.0'
+
 # Mini_magick
 gem "mini_magick"
 

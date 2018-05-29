@@ -5,6 +5,8 @@ class User < ApplicationRecord
   has_many :participations, dependent: :destroy
   has_many :events, through: :participations
   
+  acts_as_birthday :birth_date
+  
   mount_uploader :photo, AvatarUploader
   
   scope :search, ->(term, page = 1) {

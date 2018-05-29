@@ -1,34 +1,99 @@
-<ul class="timeline">
-
-    <!-- timeline time label -->
-    <li class="time-label">
-        <span class="bg-red">
-            10 Feb. 2014
-        </span>
-    </li>
-    <!-- /.timeline-label -->
-
-    <!-- timeline item -->
-    <li>
-        <!-- timeline icon -->
-        <i class="fa fa-envelope bg-blue"></i>
-        <div class="timeline-item">
-            <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
-
-            <h3 class="timeline-header"><a href="#">Support Team</a> ...</h3>
-
-            <div class="timeline-body">
-                ...
-                Content goes here
-            </div>
-
-            <div class="timeline-footer">
-                <a class="btn btn-primary btn-xs">...</a>
-            </div>
+<div class="box box-default">
+  <div class="box-header with-border">
+    <i class="fa fa-clock-o"></i>
+    <h3 class="box-title">Timeline</h3>
+  </div>
+  <!-- /.box-header -->
+  <div class="box-body">
+    <%= form_tag administrative_path, method: :get do %>
+      <div class="input-group input-group-sm">
+        <div class="input-group-btn">
+          <%= button_tag(type: "submit", class: "btn btn-default") do %>
+              <i class="fa fa-calendar"></i>
+          <% end %>
         </div>
-    </li>
-    <!-- END timeline item -->
+        <%= text_field_tag(:month, params[:month] , { class:"form-control datepicker", placeholder: "Intervalo", autocomplete: "off" }) %>
+      </div>
+    <% end %>
+  </div>
+  <!-- /.box-body -->
+</div>
+<ul class="timeline">
+    <!-- timeline time label -->
+    <% @dates.each do |date| %>
+      <li class="time-label">
+        <span class="bg-gray">
+            <%= date.strftime("%d %b %y") %>
+        </span>
+      </li>
+      <% @users.each do |user| %>
+        <% if user.birth_date.month == date.month && user.birth_date.day == date.day %>
+          <li>
+            <i class="fa fa-birthday-cake bg-red"></i>
+            <div class="timeline-item">
+              <h3 class="timeline-header">Aniversário</h3>
+              <div class="timeline-body"> 
+                <span class="text-red"><%= user.name %></span> está completando <%= user.birth_date_age %>!
+              </div>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+      <% @events.each do |event| %>
+        <% if event.date.month == date.month && event.date.day == date.day %>
+          <li>
+            <i class="fa fa-location-arrow bg-yellow"></i>
+            <div class="timeline-item">
+              <h3 class="timeline-header">Evento</h3>
+              <div class="timeline-body"> 
+                <span class="text-yellow"><%= event.name %></span> acontecerá nesse dia!
+              </div>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+      <% @projects_start.each do |project| %>
+        <% if project.start_date.month == date.month && project.start_date.day == date.day %>
+          <li>
+            <i class="fa fa-bolt bg-light-blue"></i>
+            <div class="timeline-item">
+              <h3 class="timeline-header">Início de Projeto</h3>
+              <div class="timeline-body"> 
+                <span class="text-light-blue"><%= project.name %></span> começa nesse dia!
+              </div>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+      <% @projects_end.each do |project| %>
+        <% if project.end_date.month == date.month && project.end_date.day == date.day %>
+          <li>
+            <i class="fa fa-check bg-navy"></i>
+            <div class="timeline-item">
+              <h3 class="timeline-header">Fim de Projeto</h3>
+              <div class="timeline-body"> 
+                <span class="text-navy"><%= project.name %></span> termina nesse dia!
+              </div>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+      <% @projects_expected.each do |project| %>
+        <% if project.expected_date.month == date.month && project.expected_date.day == date.day %>
+          <li>
+            <i class="fa fa-thumbs-o-up bg-aqua"></i>
+            <div class="timeline-item">
+              <h3 class="timeline-header">Final Esperado</h3>
+              <div class="timeline-body"> 
+                <span class="text-aqua"><%= project.name %></span> tem data de termino prevista neste dia!
+              </div>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+    
+    
+    <% end %>
 
-    ...
 
 </ul>
