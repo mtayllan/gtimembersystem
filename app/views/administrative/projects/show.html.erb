@@ -1,52 +1,11 @@
 
-  <div class="box box-info">
-    <div class="box-header">
-      <i class="fa fa-location-arrow"></i>
-      <h3 class="box-title"><%= @project.name %></h3>
-      <!-- tools box -->
-      <div class="pull-right box-tools">
-        <% if @project.start_date? %>
-          <span>Data de Início: <%= @project.start_date.strftime("%d/%m/%Y") %></span>
-        <% end %>
-      </div>
-      <!-- /. tools -->
-    </div>
-    <div class="box-body">
-      <p class="text-muted">Sobre o Projeto:</p><%= @project.description %>
-    </div>
-  </div>
-
 <div class="row">
   <div class="col-md-8 col-sm-12">
-    <div class="box box-danger">
-      <div class="box-header with-border">
-        <h3 class="box-title">Participantes</h3>
-        <div class="box-tools pull-right">
-          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-        </div>
-      </div>
-      <!-- /.box-header -->
-      <div class="box-body">
-        <ul class="users-list clearfix">
-          <% @project_users.each do |user| %>
-            <li>
-              <% #user = User.find(pt.user_id)  %>
-              <% if user.photo? %>
-                <%= image_tag(user.photo.profile.url, :class => "img-circle img-list-event") %>
-              <% else %>
-                <img src="/images/gti_user_pic.png" class="img-list-event" alt="User Image" />
-              <% end %>
-              <%= link_to "#{user.name}", administrative_user_path(user), class:"users-list-name" %>
-              <span class="users-list-date"><%= user.role %></span>
-            </li>
-          <% end %>
-        </ul>
-        <!-- /.users-list -->
-      </div>
-    </div>
+    <%= render partial: "shared/show/project" %>
   </div>
+  <div class="col-md-4 col-sm-12">
   <%= form_tag administrative_search_users_path, method: :get do %>
-    <div class="col-md-4 col-sm-12">
+  
       <div class="box box-default">
         <div class="box-header with-border">
           <h3 class="box-title">Adicionar Participantes</h3>
@@ -71,20 +30,21 @@
               <tr>
                 <th>Nome</th>
                 <th>Cargo</th>
-                <th></th>
               </tr>
               <% @users.each do |user| %>
                 <tr>
                   <td> <%= user.name %> </td>
                   <td> <%= user.role %> </td>
-                  <td>
+                     <td>
                     <% unless @project.users.include? user %>
-                      <%= link_to "/administrative/projects/#{@project.id}/user_id=#{user.id}", method: :POST, class: "btn btn-sm btn-success" do %>
+                      <%= link_to "/administrative/projects/#{@project.id}/user_id=#{user.id}&act=add", method: :POST, class: "btn btn-sm btn-success" do %>
                         <i class="fa fa-plus"></i>
                       <% end %>
                     <% else %>
-                      -
-                    <% end %>
+                      <%= link_to "/administrative/projects/#{@project.id}/user_id=#{user.id}&act=remove", method: :POST, class: "btn btn-sm btn-danger" do %>
+                        <i class="fa fa-minus"></i>
+                      <% end %>
+                      <% end %>
                   </td>
                 </tr>
               <% end %>
@@ -94,6 +54,7 @@
         </div>
         <!-- /.box-body -->
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
+ 

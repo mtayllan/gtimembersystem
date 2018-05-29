@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     get 'search/users', to: 'search#users'
     get 'search/events', to: 'search#events'
     get 'search/projects', to: 'search#projects'
-    post 'projects/:id/user_id=:user_id', to: 'projects#create_contributions'
+    post 'projects/:id/user_id=:user_id&act=:act', to: 'projects#edit_contributions'
     post 'events/:id/user_id=:user_id&act=:act', to: 'events#edit_participation'
   end
   

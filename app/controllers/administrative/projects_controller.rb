@@ -2,7 +2,11 @@ class Administrative::ProjectsController < AdministrativeController
   before_action :set_project, only: [:edit,  :update, :destroy, :show]
   
   def index
-     @projects = Project.order(:name).page(params[:page]).per(5)
+    query = ''
+    if(params[:q])
+      query = params[:q]
+    end
+   @projects = Project.search(query, params[:page]) 
   end
   
   def new 
@@ -32,16 +36,30 @@ class Administrative::ProjectsController < AdministrativeController
     end
   end 
 
-  def create_contributions
+  def edit_contributions
     project = Project.find(params[:id])
     user = User.find(params[:user_id])
-    project.contributions.create(user: user)
+    act = params[:act]
+    if act == 'add'
+      project.contributions.create(user: user)
     if project.save
       redirect_to administrative_project_path(project.id), notice: "Membro adicionado com sucesso!"
     else
       render :show
     end
+    elsif act == 'remove'
+      p = project.contributions.where("project_id=#{project.id} AND user_id=#{user.id}")
+      if project.contributions.delete(p)
+        project.save
+        redirect_to administrative_project_path(project.id), notice: "Participante removido."
+      else
+        render :show
+      end
+    end
   end
+
+ 
+
 
 
 
