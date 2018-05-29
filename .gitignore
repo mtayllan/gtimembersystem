@@ -2,6 +2,7 @@
 capybara-*.html
 .rspec
 log/development.log
+/public/adminLTE
 /log
 /tmp
 /db/*.sqlite3
