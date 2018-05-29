@@ -10,8 +10,10 @@ class User < ApplicationRecord
   mount_uploader :photo, AvatarUploader
   
   scope :search, ->(term, page = 1) {
-    where("lower(name) LIKE ?", "%#{term.downcase}%").order(:name).page(page).per(6)
+    where("lower(name) LIKE ?", "%#{term.downcase}%").order("LOWER(name)").page(page).per(6)
   }
+
+  validates :name, :email, :password, :password_confirmation, :birth_date, :role, presence: true
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

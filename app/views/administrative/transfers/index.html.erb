@@ -38,7 +38,7 @@
             <%= link_to edit_administrative_transfer_path(transfer), class: "btn btn-sm btn-warning" do %>
               <i class="fa fa-edit"></i>
             <% end %>
-            <%= link_to administrative_transfer_path(transfer), method: :delete, class: "btn btn-sm btn-danger" do %>
+            <%= link_to administrative_transfer_path(transfer), method: :delete, data: { confirm: "Tem certeza que deseja excluir?" }, class: "btn btn-sm btn-danger" do %>
               <i class="fa fa-trash"></i>
             <% end %>
           </div>

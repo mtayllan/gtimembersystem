@@ -12,7 +12,10 @@ puts 'Administrador cadastrado com sucesso!'
 
 puts "Cadastrando Usuario Padrão"
 
-User.create!(name: "Default" , email: 'u@u.com',
-			  password: "123456", password_confirmation: "123456")
+User.create!(name: "Default" , 
+						email: 'u@u.com',
+			  		password: "123456", password_confirmation: "123456",
+			  		birth_date: Date.today - 18.year,
+						role: 'Gerente')
 
 puts "Usuário Padrão Cadastrado com sucesso!"

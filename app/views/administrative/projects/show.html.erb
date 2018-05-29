@@ -4,7 +4,7 @@
     <%= render partial: "shared/show/project" %>
   </div>
   <div class="col-md-4 col-sm-12">
-  <%= form_tag administrative_search_users_path, method: :get do %>
+  <%= form_tag administrative_project_path(@project), method: :get do %>
   
       <div class="box box-default">
         <div class="box-header with-border">

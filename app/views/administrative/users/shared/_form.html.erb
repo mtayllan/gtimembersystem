@@ -20,12 +20,6 @@
     <div class="panel-body">
         <div class="col-lg-6">
             <%= form_for([:administrative, @user], :html => { :multipart => true }) do |f| %>
-
-              <div class="form-group">
-                  <%= f.label :photo %>
-                  <%= image_tag(@user.photo.thumb.url, :class => "img-responsive") if @user.photo? %>
-                  <%= f.file_field :photo, value: "#{@user.photo_identifier}" %>
-              </div>
               <div class="form-group">
                 <%= f.label :name %>
                 <div class="input-group">
@@ -105,6 +99,11 @@
                   <span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
                    <%= f.text_field :role, class: "form-control", placeholder: "Cargo" %>
                 </div>
+              </div>
+              <div class="form-group">
+                <%= f.label :photo %>
+                <%= image_tag(@user.photo.thumb.url, :class => "img-responsive") if @user.photo? %>
+                <%= f.file_field :photo, value: "#{@user.photo_identifier}" %>
               </div>
               
               <%= submit_tag "Salvar", class: " btn btn-block btn-success btn-flat" %> 

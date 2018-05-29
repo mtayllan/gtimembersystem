@@ -5,7 +5,12 @@
   </div>
   <!-- /.box-header -->
   <div class="box-body">
-    <%= form_tag administrative_path, class:"timeline-form", method: :get do %>
+    <% if controller_path.include? 'administrative' %>
+      <% path = administrative_path %>
+    <% elsif controller_path.include? 'dashboard' %>
+      <% path = dashboard_path  %>
+    <% end %>
+    <%= form_tag path, class:"timeline-form", method: :get do %>
       <div class="input-group input-group-sm">
         <div class="input-group-btn">
           <%= button_tag(type: "button", class: "btn btn-default") do %>
