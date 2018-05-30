@@ -5,7 +5,7 @@ class Transfer < ApplicationRecord
   # Enums
   enum category: CATEGORIES
   
-  validades :description, :category, :price_cents, :date
+  validates :description, :category, :price_cents, :date, presence: true
   
   
   monetize :price_cents
