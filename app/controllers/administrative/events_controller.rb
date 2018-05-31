@@ -60,8 +60,7 @@ class Administrative::EventsController < AdministrativeController
     user = User.find(params[:user_id])
     act = params[:act]
     if act == 'add'
-      event.participations.create(user: user)
-      if event.save
+      if event.participations.create(user: user)
         redirect_to administrative_event_path(event.id), notice: "Participante Adicionado."
       else
         render :show
@@ -69,7 +68,6 @@ class Administrative::EventsController < AdministrativeController
     elsif act == 'remove'
       p = event.participations.where("event_id=#{event.id} AND user_id=#{user.id}")
       if event.participations.delete(p)
-        event.save
         redirect_to administrative_event_path(event.id), notice: "Participante removido."
       else
         render :show

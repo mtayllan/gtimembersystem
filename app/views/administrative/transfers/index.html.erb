@@ -9,7 +9,7 @@
     </div>
   </div>
   <!-- /.box-header -->
-  <div class="box-body" style="">
+  <div class="box-body table-responsive" style="">
     <table class="table table-hover">
       <tbody><tr>
         <th>Descrição</th>
@@ -32,7 +32,7 @@
           <% if transfer.date? %> 
             <%= transfer.date.strftime("%d/%m/%Y") %>
           <% end %>
-          </td>
+        </td>
         <td>
           <div class="btn-group-vertical">
             <%= link_to edit_administrative_transfer_path(transfer), class: "btn btn-sm btn-warning" do %>

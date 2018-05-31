@@ -8,15 +8,12 @@ Rails.application.routes.draw do
     resources :events
     resources :projects
     resources :users
-    get 'search/users', to: 'search#users'
-    get 'search/events', to: 'search#events'
-    get 'search/projects', to: 'search#projects'
     post 'projects/:id/user_id=:user_id&act=:act', to: 'projects#edit_contributions'
     post 'events/:id/user_id=:user_id&act=:act', to: 'events#edit_participation'
   end
   
   namespace :dashboard do
-    get 'transfers/index'
+    get 'transfers', to: "transfers#index"
     resources :events, only: [:index, :show]
     resources :projects, only: [:index, :show]
     resources :users, only: [:index, :show]

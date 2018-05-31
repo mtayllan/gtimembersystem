@@ -13,7 +13,7 @@ class User < ApplicationRecord
     where("lower(name) LIKE ?", "%#{term.downcase}%").order("LOWER(name)").page(page).per(6)
   }
 
-  validates :name, :email, :password, :password_confirmation, :birth_date, :role, presence: true
+  validates :name, :email, :birth_date, :role, presence: true
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

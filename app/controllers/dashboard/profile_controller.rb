@@ -16,8 +16,10 @@ class Dashboard::ProfileController < DashboardController
   private
   
     def params_profile
-        params.require(:user).permit(:name,:birth_date,:address, :postal_code, :city, :gender, :phone, :photo, :role)
+      params.require(:user).permit(:name,:birth_date,:address, :postal_code, :city, :gender, :phone, :photo, :role)
     end
+    
+  
   
     def set_user
       @user = User.find(current_user.id)

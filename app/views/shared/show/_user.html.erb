@@ -118,9 +118,9 @@
                 <% @user_events.each do |event| %>
                   <li>
                     <% if controller_path == "administrative/users" %>
-                      <%= link_to "#{event.name}", administrative_project_path(event.id) %>
+                      <%= link_to "#{event.name}", administrative_event_path(event.id) %>
                     <% else %>
-                      <%= link_to "#{event.name}", dashboard_project_path(event.id) %>
+                      <%= link_to "#{event.name}", dashboard_event_path(event.id) %>
                     <% end %>
                   </li>
                 <% end %>

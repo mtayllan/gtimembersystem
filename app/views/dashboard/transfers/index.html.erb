@@ -2,10 +2,9 @@
   <div class="box-header with-border">
     <h3 class="box-title">Últimas Transferências</h3>
     <!-- /.box-header -->
-  <div class="box-body" style="">
+  <div class="box-body table-responsive" style="">
     <table class="table table-hover">
       <tbody><tr>
-        <th>ID</th>
         <th>Descrição</th>
         <th>Tipo</th>
         <th>Valor</th>
@@ -14,7 +13,6 @@
       </tr>
       <% @transferences.each do |transfer| %>
       <tr>
-        <td><%= transfer.id %></td>
         <td><%= transfer.description %></td>
         <% if transfer.category == 'in' %>
           <td><span class="label bg-teal-active color-palette">Entrada</span></td>
@@ -22,9 +20,11 @@
           <td><span class="label bg-orange-active color-palette ">Saída</span></td>
         <% end %>
         <td><%= humanized_money_with_symbol transfer.price %></td>
-        <td><%= transfer.created_at %></td>
-        
-        
+        <td>
+          <% if transfer.date? %> 
+            <%= transfer.date.strftime("%d/%m/%Y") %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
     </tbody>
