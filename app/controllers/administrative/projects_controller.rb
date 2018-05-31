@@ -40,14 +40,18 @@ class Administrative::ProjectsController < AdministrativeController
     project = Project.find(params[:id])
     user = User.find(params[:user_id])
     act = params[:act]
+    p = project.contributions.where("project_id=#{project.id} AND user_id=#{user.id}")
     if act == 'add'
-      if project.contributions.create(user: user)
-        redirect_to administrative_project_path(project.id), notice: "Membro adicionado com sucesso!"
+      unless p.exists?
+        if project.contributions.create(user: user)
+          redirect_to administrative_project_path(project.id), notice: "Membro adicionado com sucesso!"
+        else
+          render :show
+        end
       else
-        render :show
+        redirect_to administrative_project_path(project.id), notice: "Membro já foi adicionado!"
       end
     elsif act == 'remove'
-      p = project.contributions.where("project_id=#{project.id} AND user_id=#{user.id}")
       if project.contributions.delete(p)
         redirect_to administrative_project_path(project.id), notice: "Participante removido."
       else
